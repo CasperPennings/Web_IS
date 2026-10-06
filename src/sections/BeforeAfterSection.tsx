@@ -7,14 +7,14 @@ export function BeforeAfterSection() {
   return (
     <section className="section section--soft">
       <div className="container">
-        <SectionHead eyebrow="Before / after" title="The same order, minutes instead of busywork.">
-          One concrete workflow, step by step. <ExampleTag />
+        <SectionHead eyebrow="Before / after" title="The same task, without the busywork.">
+          An everyday example: processing supplier invoices. <ExampleTag />
         </SectionHead>
         <BeforeAfter
           before={beforeSteps}
           after={afterSteps}
-          beforeLabel="Manual today"
-          afterLabel="Agent + MCP bridge"
+          beforeLabel="Today, by hand"
+          afterLabel="With the assistant"
           brand="Intelligent Software"
         />
         <p className="caption">{examplesCaption}</p>

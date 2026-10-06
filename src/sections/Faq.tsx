@@ -5,7 +5,7 @@ export function Faq() {
   return (
     <section className="section section--soft" id="faq">
       <div className="container">
-        <SectionHead eyebrow="FAQ" title="Questions we get asked." />
+        <SectionHead eyebrow="Questions" title="What people usually ask us." />
         <div className="faq">
           {faq.map((item) => (
             <details key={item.q}>

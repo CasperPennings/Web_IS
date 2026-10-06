@@ -9,7 +9,6 @@ import { Faq } from "./sections/Faq";
 import { Footer } from "./sections/Footer";
 import { Hero } from "./sections/Hero";
 import { HowItWorks } from "./sections/HowItWorks";
-import { LiveDemo } from "./sections/LiveDemo";
 import { Nav } from "./sections/Nav";
 import { Pricing } from "./sections/Pricing";
 import { Problem } from "./sections/Problem";
@@ -26,14 +25,13 @@ export function App() {
       <Nav onContact={openContact} />
       <main>
         <Hero />
-        <LiveDemo />
-        <WorksWith />
         <Problem />
         <BeforeAfterSection />
+        <WorksWith />
         <HowItWorks />
         <Calculator />
-        <Results />
         <Cases />
+        <Results />
         <Safety />
         <Pricing onContact={openContact} />
         <Faq />
@@ -43,7 +41,7 @@ export function App() {
       <Popover
         open={contactOpen}
         onOpenChange={setContactOpen}
-        title="Book a process review"
+        title="Start with a free conversation"
         closeLabel="Close"
         closeOnEscape
         closeOnBackdrop

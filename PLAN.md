@@ -10,6 +10,27 @@ payback time, each with a stated basis. The look should be bold, the claims hone
 - **Status:** no client numbers or client names yet, so the page launches with
   **clearly managed placeholders** (see section 2b).
 
+## 0. Audience and tone (revised)
+
+The site is for **directors and managers of medium-sized organisations that don't use AI
+yet**, for example a school director, the head of a care organisation or the owner of a
+wholesale business. They are not technical, so the site must be understandable without
+any IT knowledge.
+
+- **Plain words only.** Use "digital assistant" rather than agent or MCP server, "your
+  existing software" rather than legacy system/ERP/API, "everything is written down"
+  rather than audit log, and "earned back in X months" rather than payback period.
+- **One familiar reference point:** "Think of ChatGPT, but working inside the software you already use."
+- **Examples from their world:** invoices, absence records, pupil enrolments, staff schedules and weekly reports.
+- **Software named by kind** ("accounting software", "student administration"), not by
+  brand, so we don't claim compatibility we haven't proven.
+- **No code on the page.** The hero shows an example conversation with the assistant
+  instead. The term "MCP" appears only in one FAQ answer, "What should I tell our IT person?"
+- **Reassurance up front:** "You stay in control", "you decide after each step", and an honest "no" if it doesn't pay off.
+
+The sections below still describe the component choices. Where their example copy uses
+technical terms, the plain-language rules above take precedence.
+
 ---
 
 ## 1. Component library: performative-ui, used seriously

@@ -1,33 +1,6 @@
-import { Button, EyebrowPill, MockIDE, NodeGraphBackground, WordRoll } from "performative-ui";
-import type { IdeToken } from "performative-ui";
-import { rollingSystems } from "../content/process";
-
-const toolDefinition: IdeToken[] = [
-  { c: "server", cls: "key" },
-  { c: "." },
-  { c: "tool", cls: "fn" },
-  { c: "(\n  " },
-  { c: '"create_order"', cls: "str" },
-  { c: ",\n  " },
-  { c: '"Create a sales order in the ERP"', cls: "str" },
-  { c: ",\n  { " },
-  { c: "customer", cls: "key" },
-  { c: ": string, " },
-  { c: "lines", cls: "key" },
-  { c: ": OrderLine[] },\n  " },
-  { c: "async", cls: "key" },
-  { c: " (args) => {\n    " },
-  { c: "await", cls: "key" },
-  { c: " erp." },
-  { c: "validate", cls: "fn" },
-  { c: "(args);\n    " },
-  { c: "return", cls: "key" },
-  { c: " erp.orders." },
-  { c: "create", cls: "fn" },
-  { c: "(args); " },
-  { c: "// audited", cls: "com" },
-  { c: "\n  }\n);" },
-];
+import { Button, EyebrowPill, NodeGraphBackground, WordRoll } from "performative-ui";
+import { rollingTasks } from "../content/process";
+import { AssistantChat } from "./AssistantChat";
 
 export function Hero() {
   return (
@@ -42,24 +15,25 @@ export function Hero() {
       />
       <div className="container hero__grid">
         <div>
-          <EyebrowPill>MCP bridge servers for legacy software</EyebrowPill>
+          <EyebrowPill>For organisations drowning in admin</EyebrowPill>
           <h1>
-            Let AI agents do the work in your <WordRoll gradient words={rollingSystems} />
+            Let a digital assistant do the <WordRoll gradient words={rollingTasks} />
           </h1>
           <p className="hero__sub">
-            We build MCP servers that give AI agents safe, audited access to your ERP, AS/400 and
-            desktop software. The repetitive work gets automated, and nothing has to be replaced.
+            Think of ChatGPT, but working inside the software you already use. It takes over the
+            repetitive computer work, so your team gets hours back every week. No new systems, no
+            technical knowledge needed.
           </p>
           <div className="hero__ctas">
             <Button as="a" href="#calculator" variant="glow" size="lg">
-              Calculate your savings
+              Calculate what it saves
             </Button>
             <Button as="a" href="#how" variant="ghost" size="lg">
-              See how it works
+              How does it work?
             </Button>
           </div>
         </div>
-        <MockIDE filename="orders.mcp.ts" tokens={toolDefinition} thinkingLabel={false} />
+        <AssistantChat />
       </div>
     </section>
   );

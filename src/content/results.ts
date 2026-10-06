@@ -3,7 +3,6 @@ export interface ResultStat {
   placeholder: boolean;
   source: string;
   value: number;
-  decimals?: number;
   prefix?: string;
   suffix: string;
   label: string;
@@ -12,33 +11,33 @@ export interface ResultStat {
 export const results: ResultStat[] = [
   {
     placeholder: true,
-    source: "Calculator: 800 orders/month × 6 min × 60% automated",
+    source: "800 invoices a month × 6 minutes, of which 60% is taken over",
     value: 48,
-    suffix: " h",
-    label: "returned to the team per month, per workflow",
+    suffix: " hours",
+    label: "back for your team every month, for one task",
   },
   {
     placeholder: true,
-    source: "Example: typical re-keying error rate before vs after validation",
+    source: "typical number of typing errors before and after automatic checking",
     value: 80,
     prefix: "−",
     suffix: "%",
-    label: "re-keying errors",
+    label: "fewer typing errors",
   },
   {
     placeholder: true,
-    source: "Example: build cost vs net monthly saving",
+    source: "set-up cost compared with the monthly saving",
     value: 5,
     prefix: "~",
     suffix: " months",
-    label: "typical payback period",
+    label: "until the investment has earned itself back",
   },
   {
     placeholder: true,
-    source: "Example: process review to pilot in production",
+    source: "from first conversation to a working trial",
     value: 5,
     prefix: "~",
     suffix: " weeks",
-    label: "from kick-off to a live pilot",
+    label: "before you see it working",
   },
 ];

@@ -58,42 +58,43 @@ export function Calculator() {
   return (
     <section className="section" id="calculator">
       <div className="container">
-        <SectionHead eyebrow="Savings calculator" title="Test it with your own numbers.">
-          Enter what a workflow costs you today. The formula is shown below the result, and if the
-          numbers don't work, this page will say so.
+        <SectionHead eyebrow="What would it save you?" title="Fill in your own numbers.">
+          Pick one task your team does often. Fill in roughly how much time it takes. The calculation
+          is shown below the result, and if it isn't worth it, we'll say so.
         </SectionHead>
         <div className="calc">
           <GlassCard>
             <div className="calc__fields">
-              <NumberField label="Tasks per month" value={tasks} onChange={setTasks} />
-              <NumberField label="Minutes per task" value={minutes} onChange={setMinutes} />
-              <NumberField label="Loaded hourly cost (€)" value={rate} onChange={setRate} />
-              <NumberField label="One-off build cost (€)" value={build} onChange={setBuild} step={500} />
-              <NumberField label="Monthly run cost (€)" value={run} onChange={setRun} step={50} />
+              <NumberField label="How often per month?" value={tasks} onChange={setTasks} />
+              <NumberField label="Minutes each time?" value={minutes} onChange={setMinutes} />
+              <NumberField label="Cost of an hour of work (€)" value={rate} onChange={setRate} />
+              <NumberField label="One-time set-up cost (€)" value={build} onChange={setBuild} step={500} />
+              <NumberField label="Monthly cost to keep it running (€)" value={run} onChange={setRun} step={50} />
             </div>
             <div className="calc__label" id="share-label">
-              How much of the task time gets automated?
+              How much of the work can the assistant take over?
             </div>
             <div className="calc__temp" role="group" aria-labelledby="share-label">
               <Temperature
                 options={shareOptions}
                 value={share}
                 onChange={setShare}
-                labelLow="Conservative"
-                labelHigh="Optimistic"
+                labelLow="Careful estimate"
+                labelHigh="Optimistic estimate"
               />
             </div>
             <p className="caption">
-              Build and run costs are example assumptions until you have a quote.
+              An hour of work includes employer costs (roughly salary × 1.3). The set-up and monthly
+              costs are example amounts until you have a quote from us.
             </p>
           </GlassCard>
 
           <GlassCard className="calc__out" aria-live="polite">
             <div>
               <div className="big-num">
-                <StatCounter target={Math.round(r.hoursSavedPerMonth)} durationMs={600} /> <small>h / month</small>
+                <StatCounter target={Math.round(r.hoursSavedPerMonth)} durationMs={600} /> <small>hours / month</small>
               </div>
-              <div className="out-label">hours returned to your team</div>
+              <div className="out-label">back for your team, every month</div>
             </div>
             <div>
               <div className="big-num big-num--accent">
@@ -103,23 +104,24 @@ export function Calculator() {
                   format={(n) => eur.format(n)}
                 />
               </div>
-              <div className="out-label">net saving per year, after running costs</div>
+              <div className="out-label">saved per year, after the monthly costs</div>
             </div>
             <div>
               <div className="big-num">
                 {r.paybackMonths === null ? "—" : r.paybackMonths.toFixed(1)}{" "}
                 <small>months</small>
               </div>
-              <div className="out-label">payback period on the build cost</div>
+              <div className="out-label">until the set-up cost has earned itself back</div>
             </div>
             {longPayback ? (
               <div className="notice">
-                With these inputs this workflow may not be worth automating. We'll tell you that in
-                the review, before you spend on a build.
+                With these numbers, this task is probably not worth automating. We'd tell you that in
+                the first conversation, before you spend anything.
               </div>
             ) : null}
             <div className="formula">
-              savings = tasks × minutes/60 × hourly cost × automation share − run cost
+              saving per month = times per month × minutes ÷ 60 × cost per hour × share taken over −
+              monthly cost
             </div>
           </GlassCard>
         </div>

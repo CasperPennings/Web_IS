@@ -1,110 +1,118 @@
+/** Words that roll through the hero headline. */
+export const rollingTasks = [
+  "data entry",
+  "invoice checks",
+  "absence records",
+  "weekly reports",
+  "copy-pasting",
+];
+
 export const problemPoints = [
   {
-    title: "No API, so people are the API",
-    body: "Your ERP, AS/400 or desktop tool holds the business-critical data, but the only way in is a screen. Staff copy between systems all day.",
+    title: "Typing the same thing twice",
+    body: "Information arrives by email or on paper, and someone types it over into your administration software. Every day, by hand.",
   },
   {
-    title: "The same checks, every day",
-    body: "Re-keying orders, matching invoices, pulling the weekly report. Predictable work that eats hours and still produces typos.",
+    title: "Programs that don't talk to each other",
+    body: "The finance system, the HR system and the scheduling program each live on their own island. Your staff are the bridge between them.",
   },
   {
-    title: "Replacing it is a multi-year project",
-    body: "Rip-and-replace is expensive and risky. You need the work automated now, on the systems you already run.",
+    title: "Replacing everything is not an option",
+    body: "New software takes years, costs a fortune and means retraining everyone. You want the work to get lighter now, with the programs you already have.",
   },
 ];
 
 export const beforeSteps = [
-  "Open the order email and re-type it into the ERP (~6 min)",
-  "Check stock on a second screen (~2 min)",
-  "Typos are found later, during invoicing",
+  "Open each supplier invoice and type the amounts into the accounting program (~5 min each)",
+  "Look up the matching order in another program to check it (~3 min)",
+  "Typing errors only come to light at month-end",
 ];
 
 export const afterSteps = [
-  "Agent reads the order and calls create_order (~20 s)",
-  "check_stock runs as part of the same flow",
-  "Validated before it is written, every action logged",
+  "The assistant reads the invoices and enters them for you (seconds each)",
+  "It checks each one against the order automatically",
+  "Anything that doesn't match is set aside for a person to look at",
 ];
 
 export const steps = [
   {
     icon: "1",
-    title: "Process review",
-    body: "1–2 weeks. We map the workflows and measure how long each task takes today, so the business case is based on your numbers.",
+    title: "A free conversation",
+    body: "You tell us which tasks take up the most time. We listen, and say honestly whether we can help.",
   },
   {
     icon: "2",
-    title: "Bridge build",
-    body: "We build an MCP server that exposes specific, scoped tools for your system: via API, database, terminal or UI automation, whichever is safest.",
+    title: "We measure and calculate",
+    body: "We look at how long the work takes today. You get a clear calculation of what it would save, before you spend anything on building.",
   },
   {
     icon: "3",
-    title: "Pilot one workflow",
-    body: "The agent runs next to the manual process. We compare time, errors and exceptions, and only then scale up.",
+    title: "We connect and test",
+    body: "We securely connect the assistant to your existing software. It works alongside your team for a few weeks, so you can see the results for yourself.",
   },
   {
     icon: "4",
-    title: "Production & handover",
-    body: "Monitoring, audit log, documentation and training for your team. You own the integration.",
+    title: "It keeps running",
+    body: "Once it works, it keeps working. We keep an eye on it, fix anything that comes up and help you add the next task.",
   },
 ];
 
 export const safety = [
   {
     icon: "⌖",
-    title: "Scoped tools only",
-    body: "The agent can do only what the MCP server exposes. No tool, no access.",
+    title: "It can only do what you allow",
+    body: "We agree beforehand exactly which tasks the assistant may do. Everything else is simply impossible for it.",
   },
   {
     icon: "◐",
-    title: "Read-only by default",
-    body: "Writes are enabled per tool, with optional human approval for sensitive actions.",
+    title: "Looking first, changing later",
+    body: "It starts by only reading information. It can only change things once you've said it may, and if you like, a person approves every change.",
   },
   {
     icon: "☰",
-    title: "Full audit log",
-    body: "Every tool call is recorded: who, what, when, with which parameters.",
+    title: "Everything is written down",
+    body: "Every action is recorded: what it did, when and why. You can always check it.",
   },
   {
     icon: "⌂",
-    title: "Your infrastructure",
-    body: "Runs on-prem or in your own cloud. Your data stays where it is.",
+    title: "Your data stays with you",
+    body: "The assistant works in your own systems. We don't collect your data elsewhere.",
   },
   {
     icon: "✓",
-    title: "Tested before it ships",
-    body: "Every tool is tried against a test copy of your system before it goes near production.",
+    title: "Tested before it's used",
+    body: "Every task is first tried out on a test copy, not on your real administration.",
   },
   {
     icon: "⇄",
-    title: "No lock-in",
-    body: "MCP is an open standard. Works with any MCP-capable client or model.",
+    title: "You're not tied to us",
+    body: "It's built on an open, widely used standard. You own it, and another supplier could take it over.",
   },
 ];
 
-export const systems = [
-  "SAP",
-  "IBM i / AS/400",
-  "Exact",
-  "AFAS",
-  "Oracle E-Business Suite",
-  "Microsoft Access",
-  "Mainframe terminals",
-  "Windows desktop apps",
-  "Excel macros",
-  "Delphi applications",
+/** Kinds of software, not specific brands: we don't claim compatibility we haven't proven. */
+export const softwareKinds = [
+  "Accounting software",
+  "Student administration",
+  "HR & payroll",
+  "Scheduling & rosters",
+  "Order & stock systems",
+  "Excel spreadsheets",
+  "Older desktop programs",
+  "Email inboxes",
+  "Customer records",
+  "Web-based portals",
 ];
 
 export const tasks = [
-  "Order intake",
-  "Invoice matching",
-  "Master-data updates",
-  "Weekly reporting",
-  "Employee onboarding",
-  "Stock reconciliation",
-  "Email triage",
-  "Data migration checks",
-  "Quote preparation",
-  "Compliance exports",
+  "Entering invoices",
+  "Registering absences",
+  "Processing enrolments",
+  "Making the weekly report",
+  "Updating staff records",
+  "Checking orders",
+  "Sorting incoming email",
+  "Filling in forms",
+  "Preparing quotes",
+  "Year-end exports",
 ];
-
-export const rollingSystems = ["ERP", "AS/400", "desktop apps", "Excel macros", "mainframes"];

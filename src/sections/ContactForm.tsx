@@ -17,11 +17,11 @@ export function ContactForm() {
       `Name: ${data.get("name")}`,
       `Company: ${data.get("company")}`,
       `Email: ${data.get("email")}`,
-      `System: ${data.get("system")}`,
+      `Program: ${data.get("system")}`,
       "",
       `${data.get("process")}`,
     ].join("\n");
-    const subject = `Process review request from ${data.get("company")}`;
+    const subject = `Conversation request from ${data.get("company")}`;
     window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSent(true);
   }
@@ -44,16 +44,16 @@ export function ContactForm() {
           <input id={`${id}-email`} name="email" type="email" required autoComplete="email" />
         </label>
         <label className="field" htmlFor={`${id}-system`}>
-          Which system do you use?
-          <input id={`${id}-system`} name="system" placeholder="e.g. AS/400, SAP" />
+          Which program is it about?
+          <input id={`${id}-system`} name="system" placeholder="e.g. our accounting program" />
         </label>
       </div>
       <label className="field" htmlFor={`${id}-process`}>
-        Which process would you like to automate?
+        Which task takes up too much time?
         <textarea id={`${id}-process`} name="process" rows={4} required />
       </label>
       <Button type="submit" variant="glow" size="lg" block>
-        Request a process review
+        Request a free conversation
       </Button>
       <p className="form__note" role="status">
         {sent

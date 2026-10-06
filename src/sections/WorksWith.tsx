@@ -1,17 +1,17 @@
 import { SlippyWords } from "performative-ui";
-import { systems, tasks } from "../content/process";
+import { softwareKinds, tasks } from "../content/process";
 import { SectionHead } from "./shared";
 
 export function WorksWith() {
   return (
     <section className="section section--soft" style={{ overflow: "hidden" }}>
       <div className="container">
-        <SectionHead eyebrow="Works with" title="The systems you run, and the work you want gone.">
-          Compatibility, not a client list. If a person can operate it, we can build a bridge to
-          it.
+        <SectionHead eyebrow="Works with what you have" title="Your programs stay. The busywork goes.">
+          If a person can do it on a computer, step by step, the assistant can usually learn to do
+          it too.
         </SectionHead>
       </div>
-      <SlippyWords rows={[systems.concat(systems), tasks.concat(tasks)]} fade />
+      <SlippyWords rows={[softwareKinds.concat(softwareKinds), tasks.concat(tasks)]} fade />
     </section>
   );
 }

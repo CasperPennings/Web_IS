@@ -15,9 +15,9 @@ export function Contact() {
         baseOpacity={0.35}
       />
       <div className="container contact__inner">
-        <SectionHead eyebrow="Get started" title="Book a process review.">
-          Tell us which workflow eats the most hours. We'll measure it, build the business case and
-          tell you honestly whether it's worth automating. Prefer email?{" "}
+        <SectionHead eyebrow="Get in touch" title="Start with a free conversation.">
+          Tell us which task eats up the most time. We'll tell you honestly whether we can help, and
+          what it would roughly save. No obligations, no technical talk. Prefer email?{" "}
           <a href={`mailto:${site.email}`}>{site.email}</a>
         </SectionHead>
         <ContactForm />

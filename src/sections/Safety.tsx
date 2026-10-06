@@ -6,8 +6,8 @@ export function Safety() {
   return (
     <section className="section section--soft">
       <div className="container">
-        <SectionHead eyebrow="Safety & control" title="Will an AI break our core system? Not by design.">
-          The bridge decides what the agent may do. You keep control and the paper trail.
+        <SectionHead eyebrow="Is it safe?" title="You stay in control. Always.">
+          The most common worry we hear is “what if it does something it shouldn’t?” This is how we prevent that.
         </SectionHead>
         <div className="grid grid--3">
           {safety.map((s) => (

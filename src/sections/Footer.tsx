@@ -7,18 +7,18 @@ export function Footer() {
       company="Intelligent Software"
       columns={[
         {
-          heading: "Product",
+          heading: "The service",
           links: [
             { label: "How it works", href: "#how" },
-            { label: "Savings calculator", href: "#calculator" },
-            { label: "Pricing", href: "#pricing" },
+            { label: "What it saves", href: "#calculator" },
+            { label: "Costs", href: "#pricing" },
           ],
         },
         {
-          heading: "Company",
+          heading: "More",
           links: [
-            { label: "Results", href: "#results" },
-            { label: "FAQ", href: "#faq" },
+            { label: "Examples", href: "#examples" },
+            { label: "Questions", href: "#faq" },
             { label: "Contact", href: "#contact" },
           ],
         },

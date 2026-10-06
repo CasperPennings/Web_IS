@@ -2,31 +2,31 @@
 export interface CaseStudy {
   placeholder: boolean;
   client: string;
-  system: string;
   task: string;
+  before: string;
   result: string;
 }
 
 export const cases: CaseStudy[] = [
   {
     placeholder: true,
-    client: "Example wholesaler",
-    system: "ERP without API",
-    task: "Order intake from email",
-    result: "~6 min → ~20 s per order",
+    client: "Secondary school, ~1,200 pupils",
+    task: "Processing new enrolments",
+    before: "The office typed every online enrolment form over into the student administration.",
+    result: "Forms go in automatically; staff only check them",
   },
   {
     placeholder: true,
-    client: "Example accounting firm",
-    system: "Desktop bookkeeping software",
-    task: "Invoice matching",
-    result: "Manual matching reduced by ~70%",
+    client: "Wholesaler, ~80 employees",
+    task: "Entering supplier invoices",
+    before: "Two people spent most of their week typing invoices into the accounting program.",
+    result: "About 5 minutes → seconds per invoice",
   },
   {
     placeholder: true,
-    client: "Example manufacturer",
-    system: "IBM i (AS/400)",
-    task: "Daily production reports",
-    result: "Report ready before the shift starts",
+    client: "Care organisation, ~250 employees",
+    task: "Weekly staffing report",
+    before: "Every Monday, a manager copied figures from three programs into one spreadsheet.",
+    result: "The report is ready before the week starts",
   },
 ];

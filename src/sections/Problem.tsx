@@ -6,9 +6,9 @@ export function Problem() {
   return (
     <section className="section problem">
       <div className="container">
-        <SectionHead eyebrow="The problem" title="Your systems hold the data. Your people carry it around.">
-          Legacy software keeps businesses running, but it was never built to talk to anything
-          else.
+        <SectionHead eyebrow="Sound familiar?" title="Your people spend hours being the link between programs.">
+          Most organisations run on software that works fine, but was never made to work
+          together. So people fill the gaps by hand.
         </SectionHead>
         <div className="grid grid--3">
           {problemPoints.map((p) => (

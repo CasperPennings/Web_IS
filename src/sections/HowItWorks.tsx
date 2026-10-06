@@ -6,8 +6,8 @@ export function HowItWorks() {
   return (
     <section className="section" id="how">
       <div className="container">
-        <SectionHead eyebrow="How it works" title="Measure first. Automate second. Scale third.">
-          You see the numbers before you commit to a build.
+        <SectionHead eyebrow="How it works" title="Four simple steps. You decide after each one.">
+          You see what it will save before you commit to anything.
         </SectionHead>
         <div className="grid grid--4">
           {steps.map((s) => (
