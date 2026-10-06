@@ -1,13 +1,14 @@
-# Plan: single-page website for Inteligent Software
+# Plan: single-page website for Intelligent Software
 
-**Goal:** A one-page site that explains what Inteligent Software builds, which is MCP
+**Goal:** A one-page site that explains what Intelligent Software builds, which is MCP
 (Model Context Protocol) bridge servers that let AI agents operate legacy software. The
 page should make the value concrete and checkable: hours saved, errors avoided, and
-payback time, each with a stated basis. No hype, no invented numbers.
+payback time, each with a stated basis. The look should be bold, the claims honest.
 
-> **Check before building:** the company name is written "inteligent software" (one "l").
-> Confirm whether that is the intended brand spelling or a typo for "Intelligent". The
-> name appears in the wordmark footer, the page title and the meta tags.
+- **Company:** Intelligent Software
+- **Domain:** https://intelligentsoftware.nl/ (canonical URL, Open Graph `og:url`, `Organization` JSON-LD)
+- **Status:** no client numbers or client names yet, so the page launches with
+  **clearly managed placeholders** (see section 2b).
 
 ---
 
@@ -41,7 +42,7 @@ text and props**, so none of the defaults reach the page.
 | Safety and control | `GlassCard`, `MockIDE` | Optional: a short snippet of the audit log or a scoped-permission config. |
 | Engagement | `PricingCard` ×3 (`featured` on Pilot) | Real prices or "from €X". |
 | Contact | `Popover` + `Button`, or an inline form | The `Popover` opens **only on click** (no `timer`), with `closeOnEscape`, `closeOnBackdrop` and `closeLabel="Close"`. |
-| Footer | `BigBack` | `company="Inteligent Software"`, `gradient` optional. |
+| Footer | `BigBack` | `company="Intelligent Software"`, `gradient` optional. |
 
 **Not used**, because they don't fit this message: `WaitlistForm` (it's a service, not a
 product launch), `ChatFAB` (no live chat behind it), `PromptHero`/`Prompt` (they suggest
@@ -57,10 +58,9 @@ graph already provide the motion). Any of these can be added later if a section 
 - `npm i performative-ui`, then `import "performative-ui/styles.css"` once in `main.tsx`.
 - **Theming:** override the `--pui-*` tokens in `src/theme.css`:
   - `--pui-bg`, `--pui-bg-soft`, `--pui-bg-elev`, `--pui-fg`, `--pui-fg-dim`, `--pui-fg-mute`, `--pui-border`
-  - Set `--pui-grad-from`, `--pui-grad-mid` and `--pui-grad-to` to a narrow, sober brand range (for example deep blue to teal) instead of the default neon.
-  - Lower `--pui-glow` and `--pui-glow-strong` close to transparent.
-  - `--pui-font-sans`: a neutral face such as Inter.
-  - The library supports `data-theme="light"` and `prefers-reduced-motion`. Respect both, with light as the default for a B2B audience.
+  - Fill them with the brand palette from section 2a.
+  - The library supports `data-theme="light"` and `prefers-reduced-motion`. **Dark is the default** (startup look),
+    with a light theme available that follows the visitor's system setting.
 - **Content in data files** (`src/content/*.ts`) so that numbers and case studies can be
   updated without touching layout, and so every figure sits next to its source.
 - Deploy as static files (Vercel, Netlify or GitHub Pages).
@@ -72,6 +72,76 @@ src/
   sections/  Nav, Hero, LiveDemo, WorksWith, Problem, BeforeAfterSection, HowItWorks, RoiCalculator,
              Results, UseCases, Safety, Engagement, Faq, Contact, Footer
 ```
+
+### 2a. Brand: a bold, fast-moving startup
+
+The direction: a young company that changes how work gets done. Confident, energetic and
+technical, but still trustworthy for operations managers and IT leads.
+
+**Name and wordmark**
+- Wordmark: `intelligent software` in lowercase, set in a geometric grotesk, with the
+  "i" dots (or a small connector glyph, `⟷` / `◆–◆`) in the gradient. The connector is a
+  nod to "bridge" and doubles as the favicon.
+- Tagline: **"Your legacy software, finally on autopilot."**
+  Alternatives: "Old systems. New workforce." or "Bridging legacy software and AI agents."
+
+**Palette (dark default)**
+
+| Token | Value | Use |
+|---|---|---|
+| `--pui-bg` | `#0B0B14` | Page background (near-black with a blue cast) |
+| `--pui-bg-soft` / `--pui-bg-elev` | `#12121F` / `#1A1A2B` | Sections, cards |
+| `--pui-fg` / `--pui-fg-dim` / `--pui-fg-mute` | `#F4F4FB` / `#B4B4CC` / `#7A7A96` | Text |
+| `--pui-border` | `#2A2A40` | Lines |
+| `--pui-grad-from` | `#7C3AED` (electric violet) | Gradient start |
+| `--pui-grad-mid` | `#3B82F6` (signal blue) | Gradient middle |
+| `--pui-grad-to` | `#22D3EE` (cyan) | Gradient end: "connected", "live" |
+| accent | `#A3E635` (lime) | Success states, `StatusDot`, savings figures. Used sparingly. |
+| `--pui-glow` | violet at about 35% alpha | Card hover glow |
+
+The light theme uses the same gradient on `#FAFAFC`, with text at `#0B0B14`.
+Check contrast to WCAG AA: gradient text only at large sizes, body text always solid.
+
+**Typography**
+- Headings: **Space Grotesk** (or Satoshi or General Sans), 600–700, tight letter-spacing, large sizes (`clamp(2.5rem, 6vw, 5rem)` for the H1).
+- Body: **Inter** 400/500.
+- Code and tool names: **JetBrains Mono** (`--pui-font-mono`), used in `MockIDE` and inline tool names such as `create_order`.
+
+**Visual language**
+- Gradients on key words only (the `WordRoll` systems, one stat, the CTA), not on everything.
+- `NodeGraphBackground` in violet and cyan nodes as the recurring "bridge" motif. Reuse it faintly behind the final CTA.
+- Glass cards with a soft violet glow on hover; rounded `--pui-radius` of 16–20 px.
+- Bold claims stay specific ("Hours back every week"), never vague ("10x your business").
+
+### 2b. Placeholder strategy (no real numbers or clients yet)
+
+The page launches with sample content, handled so it can never pass for a real claim:
+
+1. **One source of truth.** All figures, clients, quotes and prices live in `src/content/*.ts`,
+   and each item has `placeholder: true` plus a `source` field.
+2. **Visible label.** Anything with `placeholder: true` renders a small "Example" tag, and the
+   section gets a caption: *"Illustrative figures based on a typical order-intake workflow.
+   Real case studies coming soon."*
+3. **Plausible, conservative values.** Placeholders are derived from the calculator formula
+   with modest inputs (for example 800 orders/month × 6 min × 60% automated ≈ 48 h/month)
+   rather than spectacular numbers.
+4. **Fictional clients that are clearly fictional.** Names such as "Bakker Logistiek BV
+   (example)" or "A mid-size wholesaler", with no logos of real companies. In the "Works with"
+   row, platform names (SAP, IBM i, Exact, AFAS) are fine, because they describe compatibility.
+5. **Swap-out checklist.** A `PLACEHOLDERS.md` lists every placeholder. A script
+   (`npm run check:placeholders`) prints what remains and can be made to fail the
+   production build once you decide that real data is required.
+
+Current placeholder set:
+
+| Where | Placeholder |
+|---|---|
+| Measured results | "~48 h/month returned per workflow", "−80% re-keying errors", "Payback in ~4–6 months", "Pilot live in 4–6 weeks" |
+| Before / After timings | 6 min → 20 s per order; 2 min stock check → automatic |
+| Case studies (3) | Example wholesaler (order intake, ERP), example accounting firm (invoice matching), example manufacturer (production reports from IBM i) |
+| Testimonial (optional) | One quote marked "Example quote" |
+| Pricing | Process review "from €X", Pilot "from €Y", Production "from €Z/month", literal `€X`-style tokens until set |
+| Contact | `hallo@intelligentsoftware.nl`, KvK/VAT "to be added" |
 
 ---
 
@@ -119,7 +189,7 @@ One concrete workflow, written as steps with times:
 | Check stock in a second screen (~2 min) | `check_stock` runs as part of the same flow |
 | Fix typos later during invoicing | Validation happens before the write, and every action is logged |
 
-`brand="with Inteligent Software"`. Add a footnote: *"Example timings from [client/pilot], measured over N weeks."*
+`brand="with Intelligent Software"`. Add a footnote: *"Example timings from [client/pilot], measured over N weeks."*
 
 ### 3.5 How it works (3–4 `GlassCard`s)
 1. **Process review (1–2 weeks):** we map the workflows and measure the current time per task.
@@ -149,8 +219,8 @@ Three to four figures from **real** projects, each with a source line, for examp
 - "**−82%** data-entry corrections · invoice reconciliation pilot, 3 months"
 - "**4.5 months** median payback across N production deployments"
 
-> ⚠️ **Placeholder rule:** until real figures exist, this section shows nothing, or only
-> pilot-stage figures labelled as such. Never ship with invented numbers.
+> ⚠️ For now these are placeholders (section 2b), shown with the "Example" tag and the
+> "illustrative figures" caption until real measurements replace them.
 
 ### 3.8 Use cases / case studies (`GlassCard` grid, `StatusDot static` marks "in production")
 For example: order intake into the ERP, invoice matching, HR onboarding in an HR system
@@ -182,7 +252,7 @@ with a `Button` submit. It sits inline at the bottom of the page and also opens 
 (click only: no `timer`, `closeOnEscape`, `closeOnBackdrop`, `closeLabel="Close"`). Copy: "We reply within one business day. The first review call is free."
 
 ### 3.13 Footer (`BigBack`)
-`company="Inteligent Software"`, link columns (Product, Company, Legal), and a KvK/VAT
+`company="Intelligent Software"`, link columns (Product, Company, Legal), and a KvK/VAT
 number and address for B2B trust.
 
 ---
@@ -210,11 +280,14 @@ number and address for B2B trust.
 8. SEO: title, meta description, Open Graph image, `Organization` JSON-LD.
 9. Deploy and add privacy-friendly analytics (Plausible) to track CTA clicks and calculator use.
 
-## 6. Inputs needed from you
+## 6. Settled and still open
 
-- Confirm the company name spelling and send a logo and brand colours.
-- Real project metrics with permission to publish (anonymised is fine).
-- Client names or logos you are allowed to show (otherwise none are shown).
-- Pricing, or "from" figures, for the engagement models.
-- Contact details, KvK/VAT number, privacy policy.
-- Which language(s): English, Dutch, or both.
+**Settled:** name "Intelligent Software", domain intelligentsoftware.nl, a bold startup
+brand (section 2a), and placeholder numbers, clients and prices (section 2b).
+
+**Still open (not blocking; there are defaults):**
+- Language: defaults to **English**, with all copy kept in `src/content` so a Dutch (`/nl`)
+  version is easy to add given the .nl audience.
+- A real logo, if you have one; otherwise we use the wordmark from section 2a.
+- Contact email or phone, KvK/VAT number and a privacy policy before going live.
+- Real metrics, clients and prices as they come in: replace the items listed in `PLACEHOLDERS.md`.
