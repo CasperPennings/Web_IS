@@ -11,37 +11,43 @@ payback time, each with a stated basis. No hype, no invented numbers.
 
 ---
 
-## 1. A caveat about the component library
+## 1. Component library: performative-ui, used seriously
 
-`performative-ui` (v0.7.0, MIT, React 18/19) is a **parody** library. Its own description
-is *"AI-native React components that signal how oversubscribed your funding round is."*
-The components work and look polished, but many are built to imitate AI-startup hype
-(fake logo walls, vanity counters, screen-takeover popups, waitlists).
+`performative-ui` (v0.7.0, MIT, React 18/19) provides polished, modern landing-page
+components. Its authors present it with a tongue-in-cheek tone, and some **default
+texts and props** reflect that ("AI is writing…", "Maybe later", "Trusted by", the
+"ludicrous" tier). We use the components for their quality, and we **always pass our own
+text and props**, so none of the defaults reach the page.
 
-That is the opposite of the "real returns, no fake promises" message. So the plan
-**uses only the components that carry real content well, and tones them down**:
+**Rules for using it seriously**
+- Always override default labels. Never ship a default string such as `"AI is writing…"`, `"Maybe later"`, `"Cheaper"`/`"Faster"` or `"Trusted by"`.
+- Motion should support the content, never compete with it. Use at most one animated background per viewport, slow speeds, and respect `prefers-reduced-motion` (built in).
+- Theme everything through the `--pui-*` tokens (section 2), so every component shares one calm brand palette instead of the default neon.
+- Every number shown in a component (`StatCounter`, `PricingCard`) comes from a real source.
 
-| Use | Component | Why / how |
+**Component map**
+
+| Section | Components | Serious configuration |
 |---|---|---|
-| ✅ | `BeforeAfter` (+ `.Before/.After/.Arrow`) | The core of the pitch: today's manual process next to the automated one. |
-| ✅ | `GlassCard` (+ `.Icon/.Title/.Body/.Link`) | Cards for "How it works", use cases and guarantees. Use `glowOnHover` only, no `breathing`. |
-| ✅ | `MockIDE` | Shows a real MCP tool definition or call against a legacy system. Set `thinkingLabel={false}` and `loop={false}`. |
-| ✅ | `StatCounter` / `useCounter` | **Only** for measured figures from real projects, each with a footnote giving its source. |
-| ✅ | `PricingCard` (+ subparts) | Engagement models (Pilot / Production / Managed) with plain, fixed scopes. |
-| ✅ | `EyebrowPill` | Small section labels ("How it works", "Measured results"). |
-| ✅ | `Button` | Calls to action. |
-| ✅ | `StatusDot` (`static`) | Marks "in production" next to case studies. Not used as a decorative "live" pulse. |
-| ✅ | `BigBack` | Footer with the company wordmark and contact and legal links. Keep `gradient` off. |
-| ⚠️ | `Aurora` | Optional hero background only. Use `static` with low-saturation brand colours, or leave it out. |
-| ⚠️ | `GradientText` | At most one phrase in the hero. |
-| ⚠️ | `LogoRow` | Only with real clients who have given written permission. Otherwise leave it out. |
-| ❌ | `LogoMarquee`, `CommunityBadge`, `StickyBanner` | Social-proof theatre. |
-| ❌ | `Popover` (auto `timer`), `ChatFAB`, `WaitlistForm` | Pushy or misleading for a B2B service. Use a normal contact form instead. |
-| ❌ | `PromptHero`, `Prompt`, `Temperature`, `WibblingSpinner`, `TokenStream`, `Rotator`, `WordRoll`, `SlippyWords`, `Sparkle`, `FloatingSparkles`, `Goldeneye`, `AsciiHero`, `NodeGraphBackground`, `QuestText` | Hype signals that add motion without adding information. |
+| Nav / announcement | `StickyBanner`, `Button` | Banner only for real news (for example "New case study: order intake at X"), with `hideSparkle`. |
+| Hero | `EyebrowPill`, `GradientText`, `WordRoll`, `Button`, `NodeGraphBackground` | `WordRoll` cycles through the systems you bridge ("ERP", "AS/400", "desktop apps", "Excel macros"). The node graph is the "connecting systems" metaphor: low `density` (~40), slow `speed`, brand `colors`, subtle `baseOpacity`. |
+| Live demo | `ChatBubble`, `TokenStream`, `MockIDE` | A user asks the agent, the agent calls a real MCP tool (shown in `MockIDE`), and the result comes back. `thinking="calling create_order…"` and `thinkingLabel={false}`, with no fake "reasoning". |
+| Systems we connect | `LogoRow` *or* `SlippyWords` | `heading="Works with"` and text nodes for system *types* or platforms (SAP, AS/400 / IBM i, Exact, AFAS, Oracle, MS Access, mainframe terminals). Label it as compatibility, not as clients. `SlippyWords` rows can also list automated tasks ("Order intake", "Invoice matching", …). |
+| Before / After | `BeforeAfter` | The core of the pitch: manual steps with times next to the automated flow. |
+| How it works | `GlassCard` ×4 | `glowOnHover`, numbered `.Icon`s. |
+| Savings calculator | `Temperature`, `StatCounter`, `GlassCard` | `Temperature` becomes the **automation-share selector**: custom `options` Conservative 30% / Realistic 50% / Strong 70% with flat brand colours (no `ludicrous`), `labelLow="Conservative"`, `labelHigh="Optimistic"`. Results are shown with `StatCounter`. |
+| Measured results | `StatCounter`, `StatusDot` | Real figures with a source line under each. `StatusDot` marks "in production since …". |
+| Use cases | `GlassCard` grid, `StatusDot` | System, task, measured result and time in production. |
+| Safety and control | `GlassCard`, `MockIDE` | Optional: a short snippet of the audit log or a scoped-permission config. |
+| Engagement | `PricingCard` ×3 (`featured` on Pilot) | Real prices or "from €X". |
+| Contact | `Popover` + `Button`, or an inline form | The `Popover` opens **only on click** (no `timer`), with `closeOnEscape`, `closeOnBackdrop` and `closeLabel="Close"`. |
+| Footer | `BigBack` | `company="Inteligent Software"`, `gradient` optional. |
 
-If the parody styling still shows through after theming, a fallback is to keep the same
-page structure and swap the components for a neutral library such as shadcn/ui. The
-content plan below does not depend on the library.
+**Not used**, because they don't fit this message: `WaitlistForm` (it's a service, not a
+product launch), `ChatFAB` (no live chat behind it), `PromptHero`/`Prompt` (they suggest
+a self-serve product), and `WibblingSpinner`, `Sparkle`/`FloatingSparkles`, `QuestText`,
+`Goldeneye`, `AsciiHero`, `Aurora` and `Rotator` (decorative; `WordRoll` and the node
+graph already provide the motion). Any of these can be added later if a section calls for it.
 
 ---
 
@@ -63,7 +69,7 @@ content plan below does not depend on the library.
 src/
   main.tsx, App.tsx, theme.css
   content/   hero.ts, process.ts, results.ts, cases.ts, pricing.ts, faq.ts
-  sections/  Nav, Hero, Problem, BeforeAfterSection, HowItWorks, RoiCalculator,
+  sections/  Nav, Hero, LiveDemo, WorksWith, Problem, BeforeAfterSection, HowItWorks, RoiCalculator,
              Results, UseCases, Safety, Engagement, Faq, Contact, Footer
 ```
 
@@ -73,17 +79,31 @@ src/
 
 ### 3.1 Nav (sticky, minimal)
 Wordmark · How it works · Results · Pricing · FAQ · **[Book a 30-min process review]** (`Button`)
+Optional `StickyBanner` above it, only when there is real news (a new case study or event).
 
 ### 3.2 Hero
 - `EyebrowPill`: "MCP bridge servers for legacy software"
-- **H1:** "Let AI agents do the work in the systems you already run."
-  Put one phrase in `GradientText`, or none.
+- **H1:** "Let AI agents do the work in your `WordRoll`[ERP · AS/400 · desktop apps · Excel macros]."
+  Use `WordRoll` with `gradient` for the system names. Optionally, a `GradientText` phrase in the subhead.
 - **Subhead:** "We build MCP servers that give AI agents safe, audited access to your ERP,
   AS/400, desktop and on-prem applications, with no rip-and-replace."
 - CTAs: `Button` "Calculate your savings" (scrolls to the calculator) and a secondary
   "See how it works".
-- Visual: a `MockIDE` with a short, real-looking MCP tool definition
-  (for example `create_purchase_order` on a legacy ERP), not an "AI is writing…" animation.
+- Background: `NodeGraphBackground` (sparse, slow, brand colours) as a visual for "connecting systems".
+- Visual (right column): `MockIDE` with a short, realistic MCP tool definition
+  (for example `create_purchase_order` on a legacy ERP), with `thinkingLabel={false}`.
+
+### 3.2b See it work (`ChatBubble` + `TokenStream`)
+A short, scripted conversation that shows a real flow:
+1. `ChatBubble role="user"`: "Enter the order from Bakker BV's email into the ERP."
+2. `ChatBubble` (AI, `agent="Order agent"`, `thinking="calling create_order…"`): the answer streams in with
+   `TokenStream`: "Order 48213 created: 12 lines, stock checked, delivery date 14 Oct. Logged in the audit trail."
+3. A caption under it: "Real tool calls, scoped permissions, every step logged."
+
+### 3.2c Works with (`LogoRow` or `SlippyWords`)
+`heading="Works with"`, using text nodes for platforms and system types. If you use
+`SlippyWords`, put a row of systems and a row of automated tasks in opposite directions,
+with `fade` on. Present it as compatibility, not as a client list.
 
 ### 3.3 The problem (plain text, 3 short points)
 Legacy systems hold the business-critical data but have no modern API. So people re-key
@@ -107,11 +127,14 @@ One concrete workflow, written as steps with times:
 3. **Pilot on one workflow:** run it next to the manual process and measure.
 4. **Production and handover:** monitoring, audit log, documentation and your team trained.
 
-### 3.6 ROI calculator (custom component, no library equivalent)
+### 3.6 Savings calculator (custom logic built from library components)
 The section that best supports "real returns, not promises", because **visitors enter
 their own numbers**:
-- Inputs: tasks per month, minutes per task, loaded hourly cost, expected automation share
-  (default a conservative 50–70%, adjustable), plus a one-off build cost and a monthly run cost.
+- Inputs: tasks per month, minutes per task, loaded hourly cost, a one-off build cost and a monthly run cost
+  (plain number inputs inside a `GlassCard`).
+- Automation share is set with `Temperature`: custom `options`
+  `[{key:"30",label:"Conservative · 30%"},{key:"50",label:"Realistic · 50%"},{key:"70",label:"Strong · 70%"}]`,
+  flat brand colours, `labelLow="Conservative"`, `labelHigh="Optimistic"`, default `"50"`.
 - Outputs: hours saved per month, € saved per year, **payback period in months**.
 - Show the formula openly below the result:
   `savings = tasks × minutes/60 × hourly cost × automation share − run cost`.
@@ -154,8 +177,9 @@ What is MCP? · Which systems do you support? · What if our system has no API? 
 What does it cost to run? · What if automation doesn't pay off? · Who owns the code?
 
 ### 3.12 Contact
-A plain form (name, company, email, the system you use, the process you want to automate)
-with a `Button` submit. Copy: "We reply within one business day. The first review call is free."
+A form (name, company, email, the system you use, the process you want to automate)
+with a `Button` submit. It sits inline at the bottom of the page and also opens in a `Popover` from the nav CTA
+(click only: no `timer`, `closeOnEscape`, `closeOnBackdrop`, `closeLabel="Close"`). Copy: "We reply within one business day. The first review call is free."
 
 ### 3.13 Footer (`BigBack`)
 `company="Inteligent Software"`, link columns (Product, Company, Legal), and a KvK/VAT
@@ -177,13 +201,14 @@ number and address for B2B trust.
 
 1. Scaffold Vite + React + TS, install `performative-ui`, add `theme.css` token overrides.
 2. Build the static sections with content in `src/content/*` (start with Hero, BeforeAfter, HowItWorks, Footer).
-3. Build the `RoiCalculator` with unit tests for the formula (Vitest).
+3. Build the savings calculator (`RoiCalculator`) with unit tests for the formula (Vitest).
 4. Add Results, Cases, Safety, Engagement, FAQ and Contact.
 5. Contact form backend: Formspree, a Netlify Forms or Vercel function, or a mailto fallback.
 6. Polish: responsive down to 360 px, light and dark themes, reduced motion, keyboard
    navigation, alt text, a Lighthouse score of 90 or more on every metric.
-7. SEO: title, meta description, Open Graph image, `Organization` JSON-LD.
-8. Deploy and add privacy-friendly analytics (Plausible) to track CTA clicks and calculator use.
+7. Check that no library default string (for example "AI is writing…", "Maybe later" or "Trusted by") is rendered.
+8. SEO: title, meta description, Open Graph image, `Organization` JSON-LD.
+9. Deploy and add privacy-friendly analytics (Plausible) to track CTA clicks and calculator use.
 
 ## 6. Inputs needed from you
 
