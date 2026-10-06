@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Popover } from "performative-ui";
+import { useCopy } from "./i18n/LanguageContext";
 import { BeforeAfterSection } from "./sections/BeforeAfterSection";
 import { Calculator } from "./sections/Calculator";
 import { Cases } from "./sections/Cases";
@@ -17,6 +18,7 @@ import { Safety } from "./sections/Safety";
 import { WorksWith } from "./sections/WorksWith";
 
 export function App() {
+  const t = useCopy().contact;
   const [contactOpen, setContactOpen] = useState(false);
   const openContact = () => setContactOpen(true);
 
@@ -41,8 +43,8 @@ export function App() {
       <Popover
         open={contactOpen}
         onOpenChange={setContactOpen}
-        title="Start with a free conversation"
-        closeLabel="Close"
+        title={t.title}
+        closeLabel={t.close}
         closeOnEscape
         closeOnBackdrop
       >

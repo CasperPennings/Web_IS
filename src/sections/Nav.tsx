@@ -1,20 +1,25 @@
 import { Button } from "performative-ui";
+import { useCopy } from "../i18n/LanguageContext";
+import { LanguageSwitch } from "./LanguageSwitch";
 import { Logo } from "./shared";
 
 export function Nav({ onContact }: { onContact: () => void }) {
+  const t = useCopy().nav;
   return (
     <header className="nav">
       <div className="container nav__inner">
         <Logo />
-        <nav className="nav__links" aria-label="Main">
-          <a href="#how">How it works</a>
-          <a href="#calculator">What it saves</a>
-          <a href="#examples">Examples</a>
-          <a href="#pricing">Costs</a>
-          <a href="#faq">Questions</a>
+        <nav className="nav__links" aria-label={t.label}>
+          <a href="#how">{t.how}</a>
+          <a href="#calculator">{t.saves}</a>
+          <a href="#examples">{t.examples}</a>
+          <a href="#pricing">{t.costs}</a>
+          <a href="#faq">{t.questions}</a>
         </nav>
+        <LanguageSwitch />
         <Button className="nav__cta" size="sm" variant="glow" onClick={onContact}>
-          <span className="nav__long">Free </span>conversation
+          <span className="nav__long">{t.cta}</span>
+          <span className="nav__short">{t.ctaShort}</span>
         </Button>
       </div>
     </header>

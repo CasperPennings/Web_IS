@@ -1,30 +1,34 @@
 import { BigBack } from "performative-ui";
 import { site } from "../content/site";
+import { useCopy } from "../i18n/LanguageContext";
 
 export function Footer() {
+  const copy = useCopy();
+  const t = copy.footer;
+  const nav = copy.nav;
   return (
     <BigBack
       company="Intelligent Software"
       columns={[
         {
-          heading: "The service",
+          heading: t.service,
           links: [
-            { label: "How it works", href: "#how" },
-            { label: "What it saves", href: "#calculator" },
-            { label: "Costs", href: "#pricing" },
+            { label: nav.how, href: "#how" },
+            { label: nav.saves, href: "#calculator" },
+            { label: nav.costs, href: "#pricing" },
           ],
         },
         {
-          heading: "More",
+          heading: t.more,
           links: [
-            { label: "Examples", href: "#examples" },
-            { label: "Questions", href: "#faq" },
-            { label: "Contact", href: "#contact" },
+            { label: nav.examples, href: "#examples" },
+            { label: nav.questions, href: "#faq" },
+            { label: t.contactLink, href: "#contact" },
           ],
         },
         {
-          heading: "Contact",
-          links: [{ label: site.email, href: `mailto:${site.email}` }, { label: site.registration }],
+          heading: t.contact,
+          links: [{ label: site.email, href: `mailto:${site.email}` }, { label: t.registration }],
         },
       ]}
       copyright={`© ${new Date().getFullYear()} Intelligent Software · ${site.domain}`}

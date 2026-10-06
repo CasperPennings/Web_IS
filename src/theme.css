@@ -182,6 +182,43 @@ a {
   flex-shrink: 0;
 }
 
+.nav__short {
+  display: none;
+}
+
+.lang-switch {
+  display: inline-flex;
+  flex-shrink: 0;
+  padding: 2px;
+  border: 1px solid var(--pui-border);
+  border-radius: 999px;
+}
+
+.lang-switch button {
+  border: 0;
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: transparent;
+  color: var(--pui-fg-mute);
+  font: 500 0.75rem/1.2 var(--pui-font-mono);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.lang-switch button:hover {
+  color: var(--pui-fg);
+}
+
+.lang-switch button[aria-pressed="true"] {
+  background: var(--pui-bg-elev);
+  color: var(--pui-fg);
+}
+
+.lang-switch button:focus-visible {
+  outline: 2px solid var(--pui-grad-mid);
+  outline-offset: 1px;
+}
+
 @media (max-width: 860px) {
   .nav__links {
     display: none;
@@ -189,8 +226,14 @@ a {
   .nav__long {
     display: none;
   }
-  .nav__cta {
+  .nav__short {
+    display: inline;
+  }
+  .lang-switch {
     margin-left: auto;
+  }
+  .nav__inner {
+    gap: 12px;
   }
 }
 
@@ -204,6 +247,12 @@ a {
   letter-spacing: -0.02em;
   text-decoration: none;
   white-space: nowrap;
+}
+
+@media (max-width: 420px) {
+  .wordmark__text {
+    display: none;
+  }
 }
 
 .wordmark svg {

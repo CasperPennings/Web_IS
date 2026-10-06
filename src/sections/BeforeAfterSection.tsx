@@ -1,23 +1,24 @@
 import { BeforeAfter } from "performative-ui";
-import { afterSteps, beforeSteps } from "../content/process";
-import { examplesCaption } from "../content/site";
+import { useCopy } from "../i18n/LanguageContext";
 import { ExampleTag, SectionHead } from "./shared";
 
 export function BeforeAfterSection() {
+  const copy = useCopy();
+  const t = copy.beforeAfter;
   return (
     <section className="section section--soft">
       <div className="container">
-        <SectionHead eyebrow="Before / after" title="The same task, without the busywork.">
-          An everyday example: processing supplier invoices. <ExampleTag />
+        <SectionHead eyebrow={t.eyebrow} title={t.title}>
+          {t.intro} <ExampleTag />
         </SectionHead>
         <BeforeAfter
-          before={beforeSteps}
-          after={afterSteps}
-          beforeLabel="Today, by hand"
-          afterLabel="With the assistant"
+          before={t.before}
+          after={t.after}
+          beforeLabel={t.beforeLabel}
+          afterLabel={t.afterLabel}
           brand="Intelligent Software"
         />
-        <p className="caption">{examplesCaption}</p>
+        <p className="caption">{copy.common.examplesCaption}</p>
       </div>
     </section>
   );

@@ -1,8 +1,10 @@
 import type { ReactNode } from "react";
 import { EyebrowPill } from "performative-ui";
+import { useCopy } from "../i18n/LanguageContext";
 
-export function ExampleTag({ label = "Example" }: { label?: string }) {
-  return <span className="example-tag">{label}</span>;
+export function ExampleTag({ label }: { label?: string }) {
+  const t = useCopy();
+  return <span className="example-tag">{label ?? t.common.example}</span>;
 }
 
 export function SectionHead({
@@ -24,8 +26,9 @@ export function SectionHead({
 }
 
 export function Logo() {
+  const t = useCopy();
   return (
-    <a className="wordmark" href="#top" aria-label="Intelligent Software, home">
+    <a className="wordmark" href="#top" aria-label={t.common.logoLabel}>
       <svg viewBox="0 0 64 64" aria-hidden="true">
         <defs>
           <linearGradient id="logo-g" x1="0" y1="0" x2="1" y2="1">
@@ -43,7 +46,7 @@ export function Logo() {
           fill="none"
         />
       </svg>
-      intelligent software
+      <span className="wordmark__text">intelligent software</span>
     </a>
   );
 }

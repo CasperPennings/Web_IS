@@ -28,6 +28,10 @@ any IT knowledge.
   instead. The term "MCP" appears only in one FAQ answer, "What should I tell our IT person?"
 - **Reassurance up front:** "You stay in control", "you decide after each step", and an honest "no" if it doesn't pay off.
 
+**Language:** Dutch is the default and English is selectable. The Dutch uses the informal
+"je", which fits the startup tone. Numbers and currency follow each language's format
+(`€ 16.800` / `€16,800`).
+
 The sections below still describe the component choices. Where their example copy uses
 technical terms, the plain-language rules above take precedence.
 

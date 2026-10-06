@@ -1,12 +1,14 @@
 import { useId, useState } from "react";
 import { Button } from "performative-ui";
 import { site } from "../content/site";
+import { useCopy } from "../i18n/LanguageContext";
 
 /**
  * No backend yet: submitting opens the visitor's mail client with the
  * details prefilled. Swap `handleSubmit` for a fetch() to a form service later.
  */
 export function ContactForm() {
+  const t = useCopy().form;
   const id = useId();
   const [sent, setSent] = useState(false);
 
@@ -14,14 +16,14 @@ export function ContactForm() {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     const body = [
-      `Name: ${data.get("name")}`,
-      `Company: ${data.get("company")}`,
-      `Email: ${data.get("email")}`,
-      `Program: ${data.get("system")}`,
+      `${t.name}: ${data.get("name")}`,
+      `${t.company}: ${data.get("company")}`,
+      `${t.email}: ${data.get("email")}`,
+      `${t.program} ${data.get("system")}`,
       "",
       `${data.get("process")}`,
     ].join("\n");
-    const subject = `Conversation request from ${data.get("company")}`;
+    const subject = `${t.mailSubject} ${data.get("company")}`;
     window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSent(true);
   }
@@ -30,35 +32,33 @@ export function ContactForm() {
     <form className="form" onSubmit={handleSubmit}>
       <div className="form__row">
         <label className="field" htmlFor={`${id}-name`}>
-          Name
+          {t.name}
           <input id={`${id}-name`} name="name" required autoComplete="name" />
         </label>
         <label className="field" htmlFor={`${id}-company`}>
-          Company
+          {t.company}
           <input id={`${id}-company`} name="company" required autoComplete="organization" />
         </label>
       </div>
       <div className="form__row">
         <label className="field" htmlFor={`${id}-email`}>
-          Work email
+          {t.email}
           <input id={`${id}-email`} name="email" type="email" required autoComplete="email" />
         </label>
         <label className="field" htmlFor={`${id}-system`}>
-          Which program is it about?
-          <input id={`${id}-system`} name="system" placeholder="e.g. our accounting program" />
+          {t.program}
+          <input id={`${id}-system`} name="system" placeholder={t.programPlaceholder} />
         </label>
       </div>
       <label className="field" htmlFor={`${id}-process`}>
-        Which task takes up too much time?
+        {t.task}
         <textarea id={`${id}-process`} name="process" rows={4} required />
       </label>
       <Button type="submit" variant="glow" size="lg" block>
-        Request a free conversation
+        {t.submit}
       </Button>
       <p className="form__note" role="status">
-        {sent
-          ? "Your email app should have opened with the details filled in. Just press send."
-          : "We reply within one business day. The first call is free."}
+        {sent ? t.sent : t.note}
       </p>
     </form>
   );

@@ -1,13 +1,14 @@
-import { faq } from "../content/faq";
+import { useCopy } from "../i18n/LanguageContext";
 import { SectionHead } from "./shared";
 
 export function Faq() {
+  const t = useCopy().faq;
   return (
     <section className="section section--soft" id="faq">
       <div className="container">
-        <SectionHead eyebrow="Questions" title="What people usually ask us." />
+        <SectionHead eyebrow={t.eyebrow} title={t.title} />
         <div className="faq">
-          {faq.map((item) => (
+          {t.items.map((item) => (
             <details key={item.q}>
               <summary>{item.q}</summary>
               <p>{item.a}</p>

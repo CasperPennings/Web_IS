@@ -1,9 +1,11 @@
 import { NodeGraphBackground } from "performative-ui";
 import { site } from "../content/site";
+import { useCopy } from "../i18n/LanguageContext";
 import { ContactForm } from "./ContactForm";
 import { SectionHead } from "./shared";
 
 export function Contact() {
+  const t = useCopy().contact;
   return (
     <section className="section contact" id="contact">
       <NodeGraphBackground
@@ -15,10 +17,8 @@ export function Contact() {
         baseOpacity={0.35}
       />
       <div className="container contact__inner">
-        <SectionHead eyebrow="Get in touch" title="Start with a free conversation.">
-          Tell us which task eats up the most time. We'll tell you honestly whether we can help, and
-          what it would roughly save. No obligations, no technical talk. Prefer email?{" "}
-          <a href={`mailto:${site.email}`}>{site.email}</a>
+        <SectionHead eyebrow={t.eyebrow} title={t.title}>
+          {t.intro} {t.emailPrompt} <a href={`mailto:${site.email}`}>{site.email}</a>
         </SectionHead>
         <ContactForm />
       </div>

@@ -12,7 +12,10 @@ npm run build        # typecheck + production build into dist/
 npm run check:placeholders
 ```
 
-- Content (copy, figures, prices) lives in `src/content/`, sections in `src/sections/`.
+- The site is **Dutch by default, with English selectable** (NL | EN switch in the nav). The
+  choice is remembered in the browser, and `?lang=en` links straight to English.
+- All text lives in `src/content/nl.ts` and `src/content/en.ts`, which share the `Copy` type in
+  `src/i18n/types.ts`, so a missing translation is a type error. Sections are in `src/sections/`.
 - Brand tokens override the library's `--pui-*` variables in `src/theme.css`. Dark is the default,
   and light follows the visitor's system setting.
 - Sample content is tracked in [PLACEHOLDERS.md](PLACEHOLDERS.md).

@@ -1,13 +1,8 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { GlassCard, StatCounter, Temperature } from "performative-ui";
+import { useCopy } from "../i18n/LanguageContext";
 import { calculateRoi } from "../lib/roi";
 import { SectionHead } from "./shared";
-
-const eur = new Intl.NumberFormat("en-GB", {
-  style: "currency",
-  currency: "EUR",
-  maximumFractionDigits: 0,
-});
 
 const shareOptions = [
   { key: "0.3", label: "30%", color: "#d4920a" },
@@ -37,6 +32,17 @@ function NumberField(props: {
 }
 
 export function Calculator() {
+  const copy = useCopy();
+  const t = copy.calc;
+  const fmt = useMemo(
+    () => ({
+      eur: new Intl.NumberFormat(copy.locale, { style: "currency", currency: "EUR", maximumFractionDigits: 0 }),
+      int: new Intl.NumberFormat(copy.locale, { maximumFractionDigits: 0 }),
+      oneDecimal: new Intl.NumberFormat(copy.locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 }),
+    }),
+    [copy.locale],
+  );
+
   const [tasks, setTasks] = useState("800");
   const [minutes, setMinutes] = useState("6");
   const [rate, setRate] = useState("45");
@@ -58,71 +64,64 @@ export function Calculator() {
   return (
     <section className="section" id="calculator">
       <div className="container">
-        <SectionHead eyebrow="What would it save you?" title="Fill in your own numbers.">
-          Pick one task your team does often. Fill in roughly how much time it takes. The calculation
-          is shown below the result, and if it isn't worth it, we'll say so.
+        <SectionHead eyebrow={t.eyebrow} title={t.title}>
+          {t.intro}
         </SectionHead>
         <div className="calc">
           <GlassCard>
             <div className="calc__fields">
-              <NumberField label="How often per month?" value={tasks} onChange={setTasks} />
-              <NumberField label="Minutes each time?" value={minutes} onChange={setMinutes} />
-              <NumberField label="Cost of an hour of work (€)" value={rate} onChange={setRate} />
-              <NumberField label="One-time set-up cost (€)" value={build} onChange={setBuild} step={500} />
-              <NumberField label="Monthly cost to keep it running (€)" value={run} onChange={setRun} step={50} />
+              <NumberField label={t.tasks} value={tasks} onChange={setTasks} />
+              <NumberField label={t.minutes} value={minutes} onChange={setMinutes} />
+              <NumberField label={t.rate} value={rate} onChange={setRate} />
+              <NumberField label={t.build} value={build} onChange={setBuild} step={500} />
+              <NumberField label={t.run} value={run} onChange={setRun} step={50} />
             </div>
             <div className="calc__label" id="share-label">
-              How much of the work can the assistant take over?
+              {t.shareQuestion}
             </div>
             <div className="calc__temp" role="group" aria-labelledby="share-label">
               <Temperature
                 options={shareOptions}
                 value={share}
                 onChange={setShare}
-                labelLow="Careful estimate"
-                labelHigh="Optimistic estimate"
+                labelLow={t.low}
+                labelHigh={t.high}
               />
             </div>
-            <p className="caption">
-              An hour of work includes employer costs (roughly salary × 1.3). The set-up and monthly
-              costs are example amounts until you have a quote from us.
-            </p>
+            <p className="caption">{t.footnote}</p>
           </GlassCard>
 
           <GlassCard className="calc__out" aria-live="polite">
             <div>
               <div className="big-num">
-                <StatCounter target={Math.round(r.hoursSavedPerMonth)} durationMs={600} /> <small>hours / month</small>
+                <StatCounter
+                  target={Math.round(r.hoursSavedPerMonth)}
+                  durationMs={600}
+                  format={(n) => fmt.int.format(n)}
+                />{" "}
+                <small>{t.hoursUnit}</small>
               </div>
-              <div className="out-label">back for your team, every month</div>
+              <div className="out-label">{t.hoursLabel}</div>
             </div>
             <div>
               <div className="big-num big-num--accent">
                 <StatCounter
                   target={Math.round(r.netYearlySaving)}
                   durationMs={600}
-                  format={(n) => eur.format(n)}
+                  format={(n) => fmt.eur.format(n)}
                 />
               </div>
-              <div className="out-label">saved per year, after the monthly costs</div>
+              <div className="out-label">{t.yearLabel}</div>
             </div>
             <div>
               <div className="big-num">
-                {r.paybackMonths === null ? "—" : r.paybackMonths.toFixed(1)}{" "}
-                <small>months</small>
+                {r.paybackMonths === null ? "—" : fmt.oneDecimal.format(r.paybackMonths)}{" "}
+                <small>{t.monthsUnit}</small>
               </div>
-              <div className="out-label">until the set-up cost has earned itself back</div>
+              <div className="out-label">{t.paybackLabel}</div>
             </div>
-            {longPayback ? (
-              <div className="notice">
-                With these numbers, this task is probably not worth automating. We'd tell you that in
-                the first conversation, before you spend anything.
-              </div>
-            ) : null}
-            <div className="formula">
-              saving per month = times per month × minutes ÷ 60 × cost per hour × share taken over −
-              monthly cost
-            </div>
+            {longPayback ? <div className="notice">{t.notice}</div> : null}
+            <div className="formula">{t.formula}</div>
           </GlassCard>
         </div>
       </div>

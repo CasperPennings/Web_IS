@@ -1,8 +1,10 @@
 import { Button, EyebrowPill, NodeGraphBackground, WordRoll } from "performative-ui";
-import { rollingTasks } from "../content/process";
+import { useLanguage } from "../i18n/LanguageContext";
 import { AssistantChat } from "./AssistantChat";
 
 export function Hero() {
+  const { lang, copy } = useLanguage();
+  const t = copy.hero;
   return (
     <section className="hero" id="top">
       <NodeGraphBackground
@@ -15,21 +17,18 @@ export function Hero() {
       />
       <div className="container hero__grid">
         <div>
-          <EyebrowPill>For organisations drowning in admin</EyebrowPill>
+          <EyebrowPill>{t.eyebrow}</EyebrowPill>
           <h1>
-            Let a digital assistant do the <WordRoll gradient words={rollingTasks} />
+            {t.titleStart} <WordRoll key={lang} gradient words={t.rolling} />
+            {t.titleEnd ? <> {t.titleEnd}</> : null}
           </h1>
-          <p className="hero__sub">
-            Think of ChatGPT, but working inside the software you already use. It takes over the
-            repetitive computer work, so your team gets hours back every week. No new systems, no
-            technical knowledge needed.
-          </p>
+          <p className="hero__sub">{t.sub}</p>
           <div className="hero__ctas">
             <Button as="a" href="#calculator" variant="glow" size="lg">
-              Calculate what it saves
+              {t.ctaPrimary}
             </Button>
             <Button as="a" href="#how" variant="ghost" size="lg">
-              How does it work?
+              {t.ctaSecondary}
             </Button>
           </div>
         </div>

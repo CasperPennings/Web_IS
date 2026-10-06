@@ -1,27 +1,28 @@
 import { ChatBubble, TokenStream } from "performative-ui";
+import { useLanguage } from "../i18n/LanguageContext";
 import { useInView } from "../lib/useInView";
-
-const reply =
-  "Done. 37 invoices are entered and checked against the orders. 2 didn't match, so I've set them aside for you to look at.";
 
 /** A short scripted conversation that shows what working with the assistant feels like. */
 export function AssistantChat() {
+  const { lang, copy } = useLanguage();
+  const t = copy.chat;
   const [ref, inView] = useInView<HTMLDivElement>(0.3);
   return (
     <div className="chat" ref={ref}>
-      <ChatBubble role="user">Can you process this week's supplier invoices?</ChatBubble>
-      <ChatBubble role="ai" agent="Your assistant" thinking="working in the accounting program…">
+      <ChatBubble role="user">{t.question}</ChatBubble>
+      <ChatBubble role="ai" agent={t.agent} thinking={t.thinking}>
         <span className="stream-sizer">
           <span className="stream-sizer__ghost" aria-hidden="true">
-            {reply}
+            {t.reply}
           </span>
           <span className="stream-sizer__live" aria-hidden="true">
-            {inView ? <TokenStream text={reply} speedMs={[30, 70]} hideCaret /> : null}
+            {/* keyed by language so switching restarts the stream */}
+            {inView ? <TokenStream key={lang} text={t.reply} speedMs={[30, 70]} hideCaret /> : null}
           </span>
-          <span className="sr-only">{reply}</span>
+          <span className="sr-only">{t.reply}</span>
         </span>
       </ChatBubble>
-      <p className="chat__caption">Example conversation</p>
+      <p className="chat__caption">{t.caption}</p>
     </div>
   );
 }

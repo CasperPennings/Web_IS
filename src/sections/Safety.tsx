@@ -1,16 +1,17 @@
 import { GlassCard } from "performative-ui";
-import { safety } from "../content/process";
+import { useCopy } from "../i18n/LanguageContext";
 import { SectionHead } from "./shared";
 
 export function Safety() {
+  const t = useCopy().safety;
   return (
     <section className="section section--soft">
       <div className="container">
-        <SectionHead eyebrow="Is it safe?" title="You stay in control. Always.">
-          The most common worry we hear is “what if it does something it shouldn’t?” This is how we prevent that.
+        <SectionHead eyebrow={t.eyebrow} title={t.title}>
+          {t.intro}
         </SectionHead>
         <div className="grid grid--3">
-          {safety.map((s) => (
+          {t.items.map((s) => (
             <GlassCard key={s.title}>
               <GlassCard.Icon>{s.icon}</GlassCard.Icon>
               <GlassCard.Title>{s.title}</GlassCard.Title>

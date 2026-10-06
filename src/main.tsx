@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "performative-ui/styles.css";
 import "./theme.css";
 import { App } from "./App";
+import { LanguageProvider } from "./i18n/LanguageContext";
 
 // Dark is the default; follow the visitor's system if they prefer light.
 if (window.matchMedia?.("(prefers-color-scheme: light)").matches) {
@@ -11,6 +12,8 @@ if (window.matchMedia?.("(prefers-color-scheme: light)").matches) {
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <LanguageProvider>
+      <App />
+    </LanguageProvider>
   </StrictMode>,
 );
