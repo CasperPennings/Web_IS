@@ -259,7 +259,7 @@ number and address for B2B trust.
 
 ## 4. Copy principles (to keep it honest)
 
-1. Every number has a source line, or it doesn't go on the page.
+1. Every number has a source line, or an "Example" label while placeholders are in use (section 2b).
 2. Use ranges and "typically" instead of absolute guarantees, and explain what drives the variance.
 3. Say what you *don't* automate (judgement calls, exceptions) and that people stay in the loop.
 4. Lead with the outcome in hours and euros, and keep jargon such as "AI-native" or "agentic" out.
