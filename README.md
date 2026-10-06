@@ -19,3 +19,14 @@ npm run check:placeholders
 - Brand tokens override the library's `--pui-*` variables in `src/theme.css`. Dark is the default,
   and light follows the visitor's system setting.
 - Sample content is tracked in [PLACEHOLDERS.md](PLACEHOLDERS.md).
+
+## Deployment
+
+`.github/workflows/deploy.yml` tests, builds and publishes `dist/` to GitHub Pages on every push
+to the default branch. One-time setup (needs repository admin):
+
+1. GitHub → Settings → Pages → Source: **GitHub Actions**.
+2. Settings → Pages → Custom domain: `intelligentsoftware.nl` (the `CNAME` file in `public/` already says so), then tick **Enforce HTTPS** once the certificate is ready.
+3. At your domain registrar, create the DNS records: for the apex domain four `A` records
+   (`185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`) and a `CNAME`
+   record for `www` pointing to `casperpennings.github.io`.
