@@ -342,6 +342,30 @@ export const nl: Copy = {
       },
     ],
   },
+  teach: {
+    eyebrow: "Na de livegang",
+    title: `${P} Teach: laat zien hoe het moet, en de assistent wordt beter.`,
+    intro:
+      "Doet de assistent iets niet goed, of komt er een nieuw geval bij, zoals een leverancier met een andere factuur? Dan hoeft u niets uit te leggen of te specificeren. U laat het gewoon zien.",
+    steps: [
+      {
+        icon: "record",
+        title: "1. U laat het zien",
+        body: "Een medewerker neemt kort op hoe de taak hoort te gaan, met één regel over het juiste resultaat. Bij een fout kan dat direct vanuit het logboek.",
+      },
+      {
+        icon: "test",
+        title: "2. Wij testen en verbeteren",
+        body: "Wij maken van elke opname eerst een test, en passen daarna de assistent aan. Alle bestaande tests draaien opnieuw op een kopie van uw systeem, zodat niets anders stukgaat.",
+      },
+      {
+        icon: "grow",
+        title: "3. Live, en u ziet de status",
+        body: "U ziet per opname waar die staat: ontvangen, in test, live. Kleine verbeteringen staan binnen tien werkdagen live, en elke wijziging is terug te draaien.",
+      },
+    ],
+    note: "Fouten en kleine varianten zijn inbegrepen in de ondersteuning; een nieuwe taak is een uitbreiding. De assistent krijgt pas nieuwe rechten na uw schriftelijk akkoord. Opnames worden nooit gebruikt om AI te trainen en 90 dagen na de verbetering verwijderd.",
+  },
   safety: {
     eyebrow: "Is het veilig?",
     title: "U houdt de regie. Altijd.",
@@ -426,6 +450,7 @@ export const nl: Copy = {
           "Bewaking, onderhoud en het oplossen van storingen",
           "AI-gebruik inbegrepen tot een afgesproken maximum",
           "Beheer van maximaal twee taken",
+          "Verbeteringen via Pontis Teach inbegrepen",
           "Elk kwartaal een besparingsoverzicht",
           "Looptijd minimaal 12 maanden, daarna 3 maanden opzegtermijn",
         ],
@@ -468,6 +493,10 @@ export const nl: Copy = {
       {
         q: "Wordt er meegekeken met mijn medewerkers?",
         a: "Nee. Wij meten het werk in uw systemen, en een medewerker neemt alleen zelf een taak op als voorbeeld. Er wordt geen hele werkdag opgenomen en uitkomsten gaan per taak, nooit per persoon. Alleen als u kiest voor het optioneel bijhouden welke programma's openstaan, vragen wij vooraf om instemming van de ondernemingsraad.",
+      },
+      {
+        q: "Wordt de assistent na de oplevering nog beter?",
+        a: `Ja. Met ${P} Teach laat een medewerker kort zien hoe een taak hoort te gaan, bijvoorbeeld na een fout of bij een nieuwe leverancier. Wij maken daar eerst een test van en verbeteren dan de assistent. Fouten en kleine varianten vallen onder de ondersteuning; een nieuwe taak is een uitbreiding.`,
       },
       {
         q: "Neemt de assistent beslissingen over mensen?",

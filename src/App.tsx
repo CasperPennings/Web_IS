@@ -16,6 +16,7 @@ import { Pricing } from "./sections/Pricing";
 import { Problem } from "./sections/Problem";
 import { Results } from "./sections/Results";
 import { Safety } from "./sections/Safety";
+import { Teach } from "./sections/Teach";
 import { WhyNow } from "./sections/WhyNow";
 import { Workday } from "./sections/Workday";
 import { WorksWith } from "./sections/WorksWith";
@@ -41,6 +42,7 @@ export function App() {
         <Cases />
         <Results />
         <Safety />
+        <Teach />
         <Pricing onContact={openContact} />
         <Faq />
         <Contact />

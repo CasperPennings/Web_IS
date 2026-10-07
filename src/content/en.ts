@@ -339,6 +339,30 @@ export const en: Copy = {
       },
     ],
   },
+  teach: {
+    eyebrow: "After go-live",
+    title: `${P} Teach: show how it should be done, and the assistant gets better.`,
+    intro:
+      "Does the assistant get something wrong, or is there a new case, such as a supplier with a different invoice? You don't need to explain or write a specification. You simply show it.",
+    steps: [
+      {
+        icon: "record",
+        title: "1. You show it",
+        body: "An employee briefly records how the task should go, with one line on the right result. For a mistake, this can start straight from the log.",
+      },
+      {
+        icon: "test",
+        title: "2. We test and improve",
+        body: "We first turn every recording into a test, then adjust the assistant. All existing tests run again on a copy of your system, so nothing else breaks.",
+      },
+      {
+        icon: "grow",
+        title: "3. Live, and you see the status",
+        body: "You see where each recording stands: received, in test, live. Small improvements go live within ten working days, and every change can be rolled back.",
+      },
+    ],
+    note: "Fixes and small variants are included in support; a new task is an add-on. New rights for the assistant need your written approval. Recordings are never used to train AI and are deleted 90 days after the improvement.",
+  },
   safety: {
     eyebrow: "Is it safe?",
     title: "You stay in control. Always.",
@@ -422,6 +446,7 @@ export const en: Copy = {
           "Monitoring, maintenance and fixes",
           "AI usage included up to an agreed cap",
           "Up to two built tasks running",
+          "Improvements through Pontis Teach included",
           "A savings overview every quarter",
           "Minimum 12 months, 3 months' notice",
         ],
@@ -464,6 +489,10 @@ export const en: Copy = {
       {
         q: "Will my employees be watched?",
         a: "No. We measure the work in your systems, and an employee only records a task themselves as an example. No working day is recorded and results are per task, never per person. Only if you choose the optional logging of which programs are open do we ask your works council for approval first.",
+      },
+      {
+        q: "Does the assistant keep improving after delivery?",
+        a: `Yes. With ${P} Teach an employee briefly shows how a task should be done, for example after a mistake or for a new supplier. We turn that into a test first and then improve the assistant. Fixes and small variants are covered by support; a new task is an add-on.`,
       },
       {
         q: "Does the assistant make decisions about people?",

@@ -131,6 +131,8 @@ export interface Copy {
   };
   cases: { eyebrow: string; title: string; intro: string; items: CaseStudy[] };
   results: { eyebrow: string; title: string; intro: string; sourcePrefix: string; items: ResultStat[] };
+  /** Pontis Teach: customers show corrections and new cases after go-live. */
+  teach: { eyebrow: string; title: string; intro: string; steps: TextCard[]; note: string };
   safety: { eyebrow: string; title: string; intro: string; items: TextCard[] };
   pricing: {
     eyebrow: string;

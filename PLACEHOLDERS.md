@@ -22,6 +22,7 @@ add-on task €6,000, 25% off the first three trials, all excluding VAT.
 | `pricing.founding` | Remove or change once the three founding places are taken. |
 | `safety.items` (last item), `faq` (lock-in answer) | The parallel-run guarantee and the licence terms: have a lawyer confirm the contract wording. |
 | `workday.privacy`, `faq` (employees watched) | The Pontis Scan promises (no full-day recording, results per task, optional program logging, deletion after the quickscan): confirm with a privacy lawyer and a DPIA. |
+| `teach.note`, `teach.steps`, `faq` (Pontis Teach) | The Pontis Teach promises (fixes live within 10 working days, recordings deleted 90 days after the improvement, never used to train AI): confirm they can be met and put them in the support contract. |
 | `footer.registration` | KvK / btw numbers. |
 
 Outside the language files:
