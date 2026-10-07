@@ -206,7 +206,7 @@ export const nl: Copy = {
       {
         icon: "2",
         title: "Quickscan (1–2 weken)",
-        body: "Met toestemming van een medewerker nemen wij een werkdag op. Daaruit halen wij de terugkerende taken en berekenen wij wat automatiseren oplevert, voordat u iets uitgeeft aan bouwen.",
+        body: "Wij meten de volumes in uw systemen en een medewerker laat zelf zien hoe de taak gaat. Daarmee berekenen wij wat automatiseren oplevert, voordat u iets uitgeeft aan bouwen.",
       },
       {
         icon: "3",
@@ -222,18 +222,18 @@ export const nl: Copy = {
   },
   workday: {
     eyebrow: "De quickscan",
-    title: "Eén werkdag laat zien wat u kunt automatiseren.",
-    intro: `Medewerkers weten zelf vaak niet meer hoeveel tijd routinewerk kost; het is gewoonte geworden. Daarom kijken wij niet alleen naar wat er gezegd wordt, maar naar wat er werkelijk op het scherm gebeurt. ${P} Scan neemt een werkdag op en zet die om in concrete automatiseringen.`,
+    title: "Wij meten het werk, niet uw medewerkers.",
+    intro: `Medewerkers weten zelf vaak niet meer hoeveel tijd routinewerk kost; het is gewoonte geworden. ${P} Scan brengt dat in kaart zonder iemand te volgen: wij kijken naar de cijfers in uw systemen en laten de medewerker zelf zien hoe een taak gaat.`,
     steps: [
       {
-        icon: "record",
-        title: "1. Opnemen",
-        body: "Een medewerker werkt een of enkele dagen zoals altijd, terwijl het scherm wordt opgenomen. Hij of zij kan de opname op elk moment pauzeren.",
+        icon: "analyze",
+        title: "1. Meten in uw systemen",
+        body: "Uw boekhouding en ordersysteem houden zelf bij hoeveel facturen en orders er binnenkomen en hoe lang ze blijven liggen. Daaruit halen wij de volumes, zonder iemand op te nemen.",
       },
       {
-        icon: "analyze",
-        title: "2. Analyseren",
-        body: "Onze software herkent de terugkerende handelingen: welke programma's, welke stappen en hoe vaak. Zo ziet u per taak hoeveel tijd die werkelijk kost.",
+        icon: "record",
+        title: "2. De medewerker doet het voor",
+        body: "Een medewerker neemt zelf twee of drie keer een taak op, start en stopt de opname zelf en gebruikt waar mogelijk testgegevens. Zo zien wij precies welke stappen de taak heeft.",
       },
       {
         icon: "design",
@@ -243,10 +243,11 @@ export const nl: Copy = {
     ],
     privacyTitle: "Zorgvuldig met uw medewerkers en hun gegevens",
     privacy: [
-      "Alleen met toestemming van de medewerker, en na instemming van de ondernemingsraad waar dat nodig is",
+      "Geen opname van een hele werkdag: de medewerker bepaalt zelf wat wordt vastgelegd",
+      "Uitkomsten per taak, nooit per persoon, en de medewerker ziet ze als eerste",
       "Bedoeld om werk te verbeteren, nooit om medewerkers te beoordelen",
-      "Gevoelige programma's en vensters worden uitgesloten van de opname",
-      "Opnames worden in de EU verwerkt en na afloop van de quickscan verwijderd",
+      "Optioneel en alleen na instemming: een paar dagen bijhouden welke programma's openstaan, zonder schermbeelden of toetsaanslagen",
+      "Alles wordt in de EU verwerkt en na afloop van de quickscan verwijderd",
     ],
   },
   calc: {
@@ -394,7 +395,7 @@ export const nl: Copy = {
         blurb: "Wij brengen in kaart welke taken het automatiseren waard zijn, en wat dat u oplevert.",
         features: [
           "1–2 weken, vaste prijs",
-          "Opname en analyse van een werkdag",
+          "Meting in uw systemen en een voorbeeld van de taak",
           "Een heldere besparingsberekening per taak",
           "Een eerlijk ‘nee’ als het niet loont",
         ],
@@ -466,7 +467,7 @@ export const nl: Copy = {
       },
       {
         q: "Wordt er meegekeken met mijn medewerkers?",
-        a: "Alleen tijdens de quickscan, en alleen met hun toestemming. De opname dient om terugkerende taken te vinden, niet om mensen te beoordelen. De medewerker kan de opname pauzeren, gevoelige programma's worden uitgesloten en na de quickscan wordt alles verwijderd. Heeft uw organisatie een ondernemingsraad, dan vragen wij vooraf om instemming.",
+        a: "Nee. Wij meten het werk in uw systemen, en een medewerker neemt alleen zelf een taak op als voorbeeld. Er wordt geen hele werkdag opgenomen en uitkomsten gaan per taak, nooit per persoon. Alleen als u kiest voor het optioneel bijhouden welke programma's openstaan, vragen wij vooraf om instemming van de ondernemingsraad.",
       },
       {
         q: "Neemt de assistent beslissingen over mensen?",

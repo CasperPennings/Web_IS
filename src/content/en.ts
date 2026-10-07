@@ -203,7 +203,7 @@ export const en: Copy = {
       {
         icon: "2",
         title: "Quickscan (1–2 weeks)",
-        body: "With an employee's consent, we record a working day. From it we pick out the recurring tasks and calculate what automating them saves, before you spend anything on building.",
+        body: "We measure the volumes in your systems and an employee shows us how the task is done. From that we calculate what automating it saves, before you spend anything on building.",
       },
       {
         icon: "3",
@@ -219,18 +219,18 @@ export const en: Copy = {
   },
   workday: {
     eyebrow: "The quickscan",
-    title: "One working day shows what you can automate.",
-    intro: `People often no longer notice how much time routine work takes; it has become habit. So we don't just listen to what people tell us, we look at what actually happens on screen. ${P} Scan records a working day and turns it into concrete automations.`,
+    title: "We measure the work, not your people.",
+    intro: `People often no longer notice how much time routine work takes; it has become habit. ${P} Scan maps it without following anyone: we look at the figures in your systems and let the employee show us how a task is done.`,
     steps: [
       {
-        icon: "record",
-        title: "1. Record",
-        body: "An employee works one or a few days as usual while the screen is recorded. They can pause the recording at any moment.",
+        icon: "analyze",
+        title: "1. Measure in your systems",
+        body: "Your accounting and order systems already record how many invoices and orders come in and how long they wait. We take the volumes from there, without recording anyone.",
       },
       {
-        icon: "analyze",
-        title: "2. Analyse",
-        body: "Our software recognises the recurring actions: which programs, which steps and how often. You see how much time each task really takes.",
+        icon: "record",
+        title: "2. The employee shows the task",
+        body: "An employee records a task two or three times, starts and stops the recording themselves and uses test data where possible. That shows us exactly which steps the task has.",
       },
       {
         icon: "design",
@@ -240,10 +240,11 @@ export const en: Copy = {
     ],
     privacyTitle: "Careful with your people and their data",
     privacy: [
-      "Only with the employee's consent, and with works council approval where required",
+      "No recording of a whole working day: the employee decides what is captured",
+      "Results per task, never per person, and the employee sees them first",
       "Meant to improve the work, never to assess employees",
-      "Sensitive programs and windows are excluded from the recording",
-      "Recordings are processed in the EU and deleted when the quickscan ends",
+      "Optional and only with approval: a few days of logging which programs are open, without screenshots or keystrokes",
+      "Everything is processed in the EU and deleted when the quickscan ends",
     ],
   },
   calc: {
@@ -390,7 +391,7 @@ export const en: Copy = {
         blurb: "We find out which tasks are worth automating, and what that saves you.",
         features: [
           "1–2 weeks, fixed price",
-          "A recorded working day, analysed",
+          "Measured in your systems, plus a task demo",
           "A clear savings calculation per task",
           "An honest “no” if it doesn't pay",
         ],
@@ -462,7 +463,7 @@ export const en: Copy = {
       },
       {
         q: "Will my employees be watched?",
-        a: "Only during the quickscan, and only with their consent. The recording is there to find recurring tasks, not to assess people. The employee can pause it, sensitive programs are excluded and everything is deleted after the quickscan. If your organisation has a works council, we ask for its approval first.",
+        a: "No. We measure the work in your systems, and an employee only records a task themselves as an example. No working day is recorded and results are per task, never per person. Only if you choose the optional logging of which programs are open do we ask your works council for approval first.",
       },
       {
         q: "Does the assistant make decisions about people?",
