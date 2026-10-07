@@ -569,8 +569,28 @@ a {
   margin: 0;
 }
 
+/* Contact dialog: scrolls when taller than the screen, and fits narrow phones. */
+.pui-popover-overlay {
+  overflow-y: auto;
+  align-items: flex-start;
+}
+
+.pui-popover {
+  margin: auto 0;
+}
+
 .popover-body {
-  width: min(420px, 76vw);
+  width: 100%;
+}
+
+@media (max-width: 520px) {
+  .pui-popover-overlay {
+    padding: 12px;
+  }
+
+  .pui-popover {
+    padding: 20px 18px 12px;
+  }
 }
 
 /* Hero reassurances */

@@ -470,7 +470,7 @@ export const nl: Copy = {
     company: "Organisatie",
     email: "Zakelijk e-mailadres",
     program: "Om welk programma gaat het?",
-    programPlaceholder: "bijv. ons boekhoudprogramma",
+    programPlaceholder: "bijv. de boekhouding",
     task: "Welke taak kost te veel tijd?",
     submit: "Vraag een gratis kennismaking aan",
     note: "We reageren binnen één werkdag. De kennismaking is gratis.",
