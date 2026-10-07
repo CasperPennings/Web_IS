@@ -93,32 +93,32 @@ export const en: Copy = {
       {
         icon: "⇄",
         title: "Works with old and new",
-        body: "Through an integration, the database or, when nothing else works, the screen. Including programs without modern connections.",
+        body: "It works through an integration, directly in the database or, when nothing else works, through the screen, just like a member of staff. So older programs work too.",
       },
       {
-        icon: "⌖",
-        title: "A barrier, not an open door",
-        body: "The assistant can only perform the actions you approved in advance. Anything else, it simply can't do.",
-      },
-      {
-        icon: "☰",
-        title: "Everything in the log",
-        body: "Every action is recorded: what, when and why. You can always check it.",
-      },
-      {
-        icon: "⏻",
-        title: "An off switch",
-        body: "You can switch the assistant off yourself at any moment. Your team simply carries on as before.",
+        icon: "↗",
+        title: "Grows with you",
+        body: "Start with one task. Once it works, add the next one without starting over.",
       },
       {
         icon: "✓",
         title: "Tested on a copy first",
-        body: "Every new task is tested on a copy of your system first, never straight on your real records.",
+        body: "We test every new task on a copy of your system first, never straight on your real records.",
+      },
+      {
+        icon: "▦",
+        title: "Reusable building blocks",
+        body: "We reuse every connection we build, so each next task is faster to deliver and more reliable.",
+      },
+      {
+        icon: "⚙",
+        title: "Not dependent on one AI",
+        body: `${P} works with AI models from several providers. If one gets more expensive or worse, we switch.`,
       },
       {
         icon: "◎",
         title: "Open standard",
-        body: `${P} is built on an open, widely used standard. You are not tied to one AI provider, and not to us either.`,
+        body: `${P} is built on an open, widely used standard, so you are not tied to us either.`,
       },
     ],
     itNote: `For your IT person: ${P} is built on the Model Context Protocol (MCP), the open standard that lets AI models use software through clearly scoped tools. It has per-action permissions, human approval for irreversible changes and a full audit log, and runs in your own environment or in an EU region you choose.`,
