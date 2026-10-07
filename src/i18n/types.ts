@@ -99,6 +99,15 @@ export interface Copy {
   };
   worksWith: { eyebrow: string; title: string; intro: string; softwareKinds: string[]; tasks: string[] };
   how: { eyebrow: string; title: string; intro: string; steps: TextCard[] };
+  /** How the quickscan finds automations: a recorded workday, analysed. */
+  workday: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    steps: TextCard[];
+    privacyTitle: string;
+    privacy: string[];
+  };
   calc: {
     eyebrow: string;
     title: string;

@@ -741,3 +741,33 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
+
+/* Quickscan: privacy commitments for the recorded workday */
+.workday__privacy {
+  margin-top: 32px;
+  padding: 24px;
+  border: 1px solid var(--pui-border);
+  border-radius: var(--pui-radius);
+  background: var(--pui-bg-elev);
+}
+
+.workday__privacy h3 {
+  font-size: 1.125rem;
+  margin-bottom: 12px;
+}
+
+.workday__privacy ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: 10px 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--pui-fg-dim);
+}
+
+.workday__privacy li::before {
+  content: "✓";
+  color: var(--is-accent);
+  margin-right: 10px;
+}

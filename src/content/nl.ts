@@ -206,7 +206,7 @@ export const nl: Copy = {
       {
         icon: "2",
         title: "Quickscan (1–2 weken)",
-        body: "Wij meten hoe lang het werk nu duurt en berekenen wat automatiseren oplevert, voordat u iets uitgeeft aan bouwen.",
+        body: "Met toestemming van een medewerker nemen wij een werkdag op. Daaruit halen wij de terugkerende taken en berekenen wij wat automatiseren oplevert, voordat u iets uitgeeft aan bouwen.",
       },
       {
         icon: "3",
@@ -218,6 +218,35 @@ export const nl: Copy = {
         title: "Het blijft draaien",
         body: "Werkt het, dan bewaken wij de assistent, lossen wij storingen op en helpen wij u met de volgende taak.",
       },
+    ],
+  },
+  workday: {
+    eyebrow: "De quickscan",
+    title: "Eén werkdag laat zien wat u kunt automatiseren.",
+    intro: `Medewerkers weten zelf vaak niet meer hoeveel tijd routinewerk kost; het is gewoonte geworden. Daarom kijken wij niet alleen naar wat er gezegd wordt, maar naar wat er werkelijk op het scherm gebeurt. ${P} Scan neemt een werkdag op en zet die om in concrete automatiseringen.`,
+    steps: [
+      {
+        icon: "record",
+        title: "1. Opnemen",
+        body: "Een medewerker werkt een of enkele dagen zoals altijd, terwijl het scherm wordt opgenomen. Hij of zij kan de opname op elk moment pauzeren.",
+      },
+      {
+        icon: "analyze",
+        title: "2. Analyseren",
+        body: "Onze software herkent de terugkerende handelingen: welke programma's, welke stappen en hoe vaak. Zo ziet u per taak hoeveel tijd die werkelijk kost.",
+      },
+      {
+        icon: "design",
+        title: "3. Ontwerpen",
+        body: "Voor de taken die het meeste opleveren ontwerpen wij een automatisering, met een besparingsberekening. U kiest welke taak als eerste wordt gebouwd.",
+      },
+    ],
+    privacyTitle: "Zorgvuldig met uw medewerkers en hun gegevens",
+    privacy: [
+      "Alleen met toestemming van de medewerker, en na instemming van de ondernemingsraad waar dat nodig is",
+      "Bedoeld om werk te verbeteren, nooit om medewerkers te beoordelen",
+      "Gevoelige programma's en vensters worden uitgesloten van de opname",
+      "Opnames worden in de EU verwerkt en na afloop van de quickscan verwijderd",
     ],
   },
   calc: {
@@ -365,7 +394,7 @@ export const nl: Copy = {
         blurb: "Wij brengen in kaart welke taken het automatiseren waard zijn, en wat dat u oplevert.",
         features: [
           "1–2 weken, vaste prijs",
-          "Gebaseerd op hoe uw team nu werkt",
+          "Opname en analyse van een werkdag",
           "Een heldere besparingsberekening per taak",
           "Een eerlijk ‘nee’ als het niet loont",
         ],
@@ -434,6 +463,10 @@ export const nl: Copy = {
       {
         q: "Gaan er banen verloren?",
         a: "Dat bepaalt u. In de praktijk neemt de assistent het saaie, herhalende deel van iemands dag over. De vrijgekomen tijd gaat naar werk waar echt een mens voor nodig is, of u hoeft een vacature niet opnieuw in te vullen. In de quickscan rekenen wij beide scenario's door.",
+      },
+      {
+        q: "Wordt er meegekeken met mijn medewerkers?",
+        a: "Alleen tijdens de quickscan, en alleen met hun toestemming. De opname dient om terugkerende taken te vinden, niet om mensen te beoordelen. De medewerker kan de opname pauzeren, gevoelige programma's worden uitgesloten en na de quickscan wordt alles verwijderd. Heeft uw organisatie een ondernemingsraad, dan vragen wij vooraf om instemming.",
       },
       {
         q: "Neemt de assistent beslissingen over mensen?",

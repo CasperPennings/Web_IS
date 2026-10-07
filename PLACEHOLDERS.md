@@ -21,6 +21,7 @@ add-on task €6,000, 25% off the first three trials, all excluding VAT.
 | `chat` | The example conversation in the hero (37 invoices, 2 set aside). |
 | `pricing.founding` | Remove or change once the three founding places are taken. |
 | `safety.items` (last item), `faq` (lock-in answer) | The parallel-run guarantee and the licence terms: have a lawyer confirm the contract wording. |
+| `workday.privacy`, `faq` (employees watched) | The recording promises (consent, works council, exclusions, deletion after the quickscan): confirm with a privacy lawyer and a DPIA. |
 | `footer.registration` | KvK / btw numbers. |
 
 Outside the language files:

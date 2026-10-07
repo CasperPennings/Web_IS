@@ -203,7 +203,7 @@ export const en: Copy = {
       {
         icon: "2",
         title: "Quickscan (1–2 weeks)",
-        body: "We measure how long the work takes today and calculate what automating it saves, before you spend anything on building.",
+        body: "With an employee's consent, we record a working day. From it we pick out the recurring tasks and calculate what automating them saves, before you spend anything on building.",
       },
       {
         icon: "3",
@@ -215,6 +215,35 @@ export const en: Copy = {
         title: "It keeps running",
         body: "If it works, we keep an eye on it, fix problems and help you with the next task.",
       },
+    ],
+  },
+  workday: {
+    eyebrow: "The quickscan",
+    title: "One working day shows what you can automate.",
+    intro: `People often no longer notice how much time routine work takes; it has become habit. So we don't just listen to what people tell us, we look at what actually happens on screen. ${P} Scan records a working day and turns it into concrete automations.`,
+    steps: [
+      {
+        icon: "record",
+        title: "1. Record",
+        body: "An employee works one or a few days as usual while the screen is recorded. They can pause the recording at any moment.",
+      },
+      {
+        icon: "analyze",
+        title: "2. Analyse",
+        body: "Our software recognises the recurring actions: which programs, which steps and how often. You see how much time each task really takes.",
+      },
+      {
+        icon: "design",
+        title: "3. Design",
+        body: "For the tasks that save the most, we design an automation with a savings calculation. You choose which task gets built first.",
+      },
+    ],
+    privacyTitle: "Careful with your people and their data",
+    privacy: [
+      "Only with the employee's consent, and with works council approval where required",
+      "Meant to improve the work, never to assess employees",
+      "Sensitive programs and windows are excluded from the recording",
+      "Recordings are processed in the EU and deleted when the quickscan ends",
     ],
   },
   calc: {
@@ -361,7 +390,7 @@ export const en: Copy = {
         blurb: "We find out which tasks are worth automating, and what that saves you.",
         features: [
           "1–2 weeks, fixed price",
-          "Measured on how your team works today",
+          "A recorded working day, analysed",
           "A clear savings calculation per task",
           "An honest “no” if it doesn't pay",
         ],
@@ -430,6 +459,10 @@ export const en: Copy = {
       {
         q: "Will jobs disappear?",
         a: "That's your choice, but in practice it's the dull, repetitive part of someone's day. The time freed up goes to work that really needs a person, or a vacancy doesn't need refilling. The quickscan calculates both.",
+      },
+      {
+        q: "Will my employees be watched?",
+        a: "Only during the quickscan, and only with their consent. The recording is there to find recurring tasks, not to assess people. The employee can pause it, sensitive programs are excluded and everything is deleted after the quickscan. If your organisation has a works council, we ask for its approval first.",
       },
       {
         q: "Does the assistant make decisions about people?",

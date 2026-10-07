@@ -17,6 +17,7 @@ import { Problem } from "./sections/Problem";
 import { Results } from "./sections/Results";
 import { Safety } from "./sections/Safety";
 import { WhyNow } from "./sections/WhyNow";
+import { Workday } from "./sections/Workday";
 import { WorksWith } from "./sections/WorksWith";
 
 export function App() {
@@ -35,6 +36,7 @@ export function App() {
         <Platform />
         <WorksWith />
         <HowItWorks />
+        <Workday />
         <Calculator />
         <Cases />
         <Results />
