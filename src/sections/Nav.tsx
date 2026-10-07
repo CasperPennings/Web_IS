@@ -10,9 +10,9 @@ export function Nav({ onContact }: { onContact: () => void }) {
       <div className="container nav__inner">
         <Logo />
         <nav className="nav__links" aria-label={t.label}>
+          <a href="#platform">{t.platform}</a>
           <a href="#how">{t.how}</a>
           <a href="#calculator">{t.saves}</a>
-          <a href="#examples">{t.examples}</a>
           <a href="#pricing">{t.costs}</a>
           <a href="#faq">{t.questions}</a>
         </nav>

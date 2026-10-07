@@ -1,4 +1,4 @@
-import { PricingCard } from "performative-ui";
+import { Button, GlassCard, PricingCard, StatusDot } from "performative-ui";
 import { useCopy } from "../i18n/LanguageContext";
 import { ExampleTag, SectionHead } from "./shared";
 
@@ -37,6 +37,21 @@ export function Pricing({ onContact }: { onContact: () => void }) {
             </PricingCard>
           ))}
         </div>
+        <p className="caption">
+          {t.addon} {t.vatNote}
+        </p>
+        <GlassCard className="founding">
+          <div>
+            <span className="founding__label">
+              <StatusDot color="#a3e635" /> {t.founding.label}
+            </span>
+            <h3>{t.founding.title}</h3>
+            <p>{t.founding.body}</p>
+          </div>
+          <Button variant="glow" onClick={onContact}>
+            {t.founding.cta}
+          </Button>
+        </GlassCard>
       </div>
     </section>
   );

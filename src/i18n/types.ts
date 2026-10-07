@@ -45,6 +45,7 @@ export interface Copy {
   common: { example: string; examplesCaption: string; logoLabel: string };
   nav: {
     label: string;
+    platform: string;
     how: string;
     saves: string;
     examples: string;
@@ -63,8 +64,29 @@ export interface Copy {
     sub: string;
     ctaPrimary: string;
     ctaSecondary: string;
+    /** Short reassurances under the buttons. */
+    proof: string[];
   };
   chat: { question: string; agent: string; thinking: string; reply: string; caption: string };
+  whyNow: {
+    eyebrow: string;
+    titleStart: string;
+    titleHighlight: string;
+    titleEnd: string;
+    intro: string;
+    points: TextCard[];
+    closing: string;
+  };
+  platform: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    /** The three blocks of the diagram: your software, the platform, the AI assistant. */
+    flow: { title: string; body: string }[];
+    status: string;
+    features: TextCard[];
+    itNote: string;
+  };
   problem: { eyebrow: string; title: string; intro: string; points: TextCard[] };
   beforeAfter: {
     eyebrow: string;
@@ -108,6 +130,9 @@ export interface Copy {
     recommended: string;
     priceTbd: string;
     plans: Plan[];
+    addon: string;
+    vatNote: string;
+    founding: { label: string; title: string; body: string; cta: string };
   };
   faq: { eyebrow: string; title: string; items: { q: string; a: string }[] };
   contact: { eyebrow: string; title: string; intro: string; emailPrompt: string; close: string };

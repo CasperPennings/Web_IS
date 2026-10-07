@@ -11,10 +11,12 @@ import { Footer } from "./sections/Footer";
 import { Hero } from "./sections/Hero";
 import { HowItWorks } from "./sections/HowItWorks";
 import { Nav } from "./sections/Nav";
+import { Platform } from "./sections/Platform";
 import { Pricing } from "./sections/Pricing";
 import { Problem } from "./sections/Problem";
 import { Results } from "./sections/Results";
 import { Safety } from "./sections/Safety";
+import { WhyNow } from "./sections/WhyNow";
 import { WorksWith } from "./sections/WorksWith";
 
 export function App() {
@@ -27,8 +29,10 @@ export function App() {
       <Nav onContact={openContact} />
       <main>
         <Hero />
+        <WhyNow />
         <Problem />
         <BeforeAfterSection />
+        <Platform />
         <WorksWith />
         <HowItWorks />
         <Calculator />

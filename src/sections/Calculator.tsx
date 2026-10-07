@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { GlassCard, StatCounter, Temperature } from "performative-ui";
 import { useCopy } from "../i18n/LanguageContext";
+import { prices } from "../content/site";
 import { calculateRoi } from "../lib/roi";
 import { SectionHead } from "./shared";
 
@@ -43,12 +44,12 @@ export function Calculator() {
     [copy.locale],
   );
 
-  const [tasks, setTasks] = useState("800");
+  const [tasks, setTasks] = useState("1100");
   const [minutes, setMinutes] = useState("6");
   const [rate, setRate] = useState("45");
   const [share, setShare] = useState("0.5");
-  const [build, setBuild] = useState("12000");
-  const [run, setRun] = useState("400");
+  const [build, setBuild] = useState(String(prices.quickscan + prices.trial));
+  const [run, setRun] = useState(String(prices.support));
 
   const r = calculateRoi({
     tasksPerMonth: Number(tasks),

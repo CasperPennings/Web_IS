@@ -27,10 +27,15 @@ export function Hero() {
             <Button as="a" href="#calculator" variant="glow" size="lg">
               {t.ctaPrimary}
             </Button>
-            <Button as="a" href="#how" variant="ghost" size="lg">
+            <Button as="a" href="#platform" variant="ghost" size="lg">
               {t.ctaSecondary}
             </Button>
           </div>
+          <ul className="hero__proof">
+            {t.proof.map((p) => (
+              <li key={p}>{p}</li>
+            ))}
+          </ul>
         </div>
         <AssistantChat />
       </div>

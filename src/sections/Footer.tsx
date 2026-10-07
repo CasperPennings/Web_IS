@@ -13,6 +13,7 @@ export function Footer() {
         {
           heading: t.service,
           links: [
+            { label: nav.platform, href: "#platform" },
             { label: nav.how, href: "#how" },
             { label: nav.saves, href: "#calculator" },
             { label: nav.costs, href: "#pricing" },
