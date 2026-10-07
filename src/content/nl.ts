@@ -11,13 +11,13 @@ const foundingTrial = prices.trial * (1 - prices.foundingDiscount);
 export const nl: Copy = {
   locale: "nl-NL",
   meta: {
-    title: `Intelligent Software – Laat AI je computerwerk doen, met ${P}`,
-    description: `Een AI-assistent die het herhalende computerwerk overneemt, in de software die je al gebruikt. ${P} koppelt je bestaande programma's veilig aan AI. Vaste prijzen, en eerst meten wat het oplevert.`,
+    title: `Intelligent Software – Laat AI uw computerwerk overnemen, met ${P}`,
+    description: `Een AI-assistent die het herhalende computerwerk overneemt, in de software die u al gebruikt. ${P} koppelt uw bestaande programma's veilig aan AI. Vaste prijzen, en vooraf inzicht in wat het oplevert.`,
   },
   common: {
     example: "Voorbeeld",
     examplesCaption:
-      "Voorbeeldcijfers, gebaseerd op het verwerken van inkoopfacturen. Zodra we echte klantresultaten hebben, vervangen die deze cijfers.",
+      "Voorbeeldcijfers, gebaseerd op het verwerken van inkoopfacturen. Zodra wij echte klantresultaten hebben, vervangen die deze cijfers.",
     logoLabel: "Intelligent Software – terug naar boven",
   },
   nav: {
@@ -28,40 +28,40 @@ export const nl: Copy = {
     examples: "Voorbeelden",
     costs: "Kosten",
     questions: "Vragen",
-    cta: "Gratis kennismaking",
+    cta: "Plan een kennismaking",
     ctaShort: "Contact",
     langLabel: "Taal",
   },
   hero: {
-    eyebrow: "Dit is je kans: doe mee met de AI-revolutie",
+    eyebrow: "De volgende stap in AI, voor uw organisatie",
     titleStart: "Laat AI",
-    rolling: ["het typewerk", "de facturen", "de orderinvoer", "het controlewerk", "het saaie werk"],
-    titleEnd: "doen.",
-    sub: `AI kan nu meer dan praten: het kan zelf werk uitvoeren. Met ${P} koppelen we je bestaande software veilig aan een AI-assistent die het herhalende computerwerk overneemt. Zo is je team elke week uren minder kwijt aan overtypen. En voordat je investeert, weet je precies wat het oplevert.`,
+    rolling: ["het typewerk", "de facturen", "de orderinvoer", "het controlewerk", "het routinewerk"],
+    titleEnd: "overnemen.",
+    sub: `AI kan inmiddels zelfstandig taken uitvoeren in bestaande software. Met ${P} koppelen wij uw systemen veilig aan een AI-assistent die herhalend computerwerk overneemt. Uw medewerkers krijgen tijd voor werk dat ertoe doet, en u weet vooraf wat het oplevert.`,
     ctaPrimary: "Bereken wat het oplevert",
     ctaSecondary: `Wat is ${P}?`,
-    proof: ["Werkt met je huidige software", "Vaste prijzen", "Eerst meten, dan bouwen"],
+    proof: ["Werkt met uw huidige software", "Vaste prijzen", "Eerst meten, dan bouwen"],
   },
   chat: {
     question: "Kun je de inkoopfacturen van deze week verwerken?",
-    agent: "Jouw assistent",
+    agent: "Uw assistent",
     thinking: "bezig in het boekhoudprogramma…",
     reply:
-      "Klaar. Ik heb 37 facturen ingevoerd en vergeleken met de bestellingen. Twee klopten niet; die heb ik apart gezet, zodat je ze even kunt bekijken.",
+      "Klaar. Ik heb 37 facturen ingevoerd en vergeleken met de bestellingen. Twee klopten niet; die heb ik apart gezet, zodat u ze kunt bekijken.",
     caption: "Voorbeeldgesprek",
   },
   whyNow: {
     eyebrow: "Waarom nu",
     titleStart: "De",
     titleHighlight: "AI-revolutie",
-    titleEnd: "is begonnen. Dit is je moment om mee te doen.",
+    titleEnd: "is begonnen. Dit is het moment om mee te doen.",
     intro:
-      "Tot voor kort kon AI vooral teksten schrijven en vragen beantwoorden. Nu kan een AI-assistent zelf aan de slag: gegevens opzoeken, invoeren en controleren in de programma's die je al gebruikt. Dat heet agentic AI: AI die zelf handelt. En dat verandert kantoorwerk ingrijpend.",
+      "Tot voor kort kon AI vooral teksten schrijven en vragen beantwoorden. Nu kan een AI-assistent zelf aan de slag: gegevens opzoeken, invoeren en controleren in de programma's die u al gebruikt. Dat heet agentic AI: AI die zelf handelt. En dat verandert kantoorwerk ingrijpend.",
     points: [
       {
         icon: "01",
         title: "AI doet het werk nu zelf",
-        body: "ChatGPT vertelt je hoe je een factuur boekt. Onze assistent leest de factuur, zoekt de bestelling op en boekt hem, terwijl jij meekijkt.",
+        body: "ChatGPT legt uit hoe u een factuur boekt. Onze assistent leest de factuur, zoekt de bestelling op en boekt hem, terwijl u meekijkt.",
       },
       {
         icon: "02",
@@ -71,24 +71,24 @@ export const nl: Copy = {
       {
         icon: "03",
         title: "Wie nu begint, loopt voor",
-        body: "Elke taak die je overdraagt, scheelt maand na maand weer uren. En je team leert nu al met AI werken, in plaats van over een paar jaar een achterstand te moeten inhalen.",
+        body: "Elke taak die u overdraagt, scheelt maand na maand weer uren. En uw team leert nu al met AI werken, in plaats van over een paar jaar een achterstand te moeten inhalen.",
       },
       {
         icon: "04",
         title: "Geen gok",
-        body: "Je begint met één taak, tegen een vaste prijs, en we meten wat het oplevert. Loont het niet, dan zeggen we dat voordat je investeert.",
+        body: "U begint met één taak, tegen een vaste prijs, en wij meten wat het oplevert. Loont het niet, dan zeggen wij dat voordat u investeert.",
       },
     ],
-    closing: "Geen hype, maar resultaat: tijdwinst die je zelf kunt narekenen.",
+    closing: "Geen hype, maar resultaat: tijdwinst die u zelf kunt narekenen.",
   },
   platform: {
     eyebrow: "Het platform",
-    title: `${P}: de brug tussen je software en AI.`,
-    intro: `${P} (Latijn: ‘van de brug’) is ons platform dat je bestaande programma's veilig koppelt aan een AI-assistent, ook als ze oud zijn of niet met elkaar praten. Je hoeft niets te vervangen: de assistent werkt in de software die je team al kent.`,
+    title: `${P}: de brug tussen uw software en AI.`,
+    intro: `${P} (Latijn: ‘van de brug’) is ons platform dat uw bestaande programma's veilig koppelt aan een AI-assistent, ook als ze oud zijn of niet met elkaar praten. U hoeft niets te vervangen: de assistent werkt in de software die uw team al kent.`,
     flow: [
-      { title: "Jouw software", body: "Boekhouding, ordersysteem (ERP), leerlingadministratie, Excel en oudere programma's" },
+      { title: "Uw software", body: "Boekhouding, ordersysteem (ERP), leerlingadministratie, Excel en oudere programma's" },
       { title: P, body: "Laat alleen afgesproken handelingen door, vraagt waar nodig om goedkeuring en houdt alles bij" },
-      { title: "AI-assistent", body: "Begrijpt de vraag van je team en voert de stappen uit" },
+      { title: "AI-assistent", body: "Begrijpt de vraag van uw team en voert de stappen uit" },
     ],
     status: "verbonden",
     features: [
@@ -99,49 +99,49 @@ export const nl: Copy = {
       },
       {
         icon: "grow",
-        title: "Groeit met je mee",
-        body: "Begin met één taak. Werkt die, dan voeg je de volgende toe, zonder opnieuw te beginnen.",
+        title: "Groeit met u mee",
+        body: "U begint met één taak. Werkt die, dan voegt u de volgende toe, zonder opnieuw te beginnen.",
       },
       {
         icon: "test",
         title: "Eerst op een testkopie",
-        body: "Elke nieuwe taak testen we eerst op een kopie van je systeem, nooit meteen op je echte administratie.",
+        body: "Elke nieuwe taak testen wij eerst op een kopie van uw systeem, nooit meteen op uw echte administratie.",
       },
       {
         icon: "blocks",
         title: "Herbruikbare bouwstenen",
-        body: "Elke koppeling die we bouwen, hergebruiken we. Zo gaat elke volgende taak sneller en wordt hij betrouwbaarder.",
+        body: "Elke koppeling die wij bouwen, hergebruiken wij. Zo gaat elke volgende taak sneller en wordt hij betrouwbaarder.",
       },
       {
         icon: "layers",
         title: "Niet afhankelijk van één AI",
-        body: `${P} werkt met AI-modellen van meerdere aanbieders. Wordt er één duurder of slechter, dan stappen we over.`,
+        body: `${P} werkt met AI-modellen van meerdere aanbieders. Wordt er één duurder of slechter, dan stappen wij over.`,
       },
       {
         icon: "open",
         title: "Open standaard",
-        body: `${P} is gebouwd op een open, veelgebruikte standaard. Je zit dus ook niet vast aan ons.`,
+        body: `${P} is gebouwd op een open, veelgebruikte standaard. U zit dus ook niet aan ons vast.`,
       },
     ],
-    itNote: `Voor je IT'er: ${P} is gebouwd op het Model Context Protocol (MCP), de open standaard waarmee AI-modellen software gebruiken via afgebakende tools, met rechten per handeling, menselijke goedkeuring voor onomkeerbare wijzigingen en een volledig auditlog. Het draait in je eigen omgeving of in een EU-regio naar keuze.`,
+    itNote: `Voor uw IT-afdeling: ${P} is gebouwd op het Model Context Protocol (MCP), de open standaard waarmee AI-modellen software gebruiken via afgebakende tools, met rechten per handeling, menselijke goedkeuring voor onomkeerbare wijzigingen en een volledig auditlog. Het draait in uw eigen omgeving of in een EU-regio naar keuze.`,
   },
   problem: {
     eyebrow: "Herkenbaar?",
-    title: "Je medewerkers zijn uren kwijt aan het overtypen van gegevens.",
+    title: "Uw medewerkers zijn uren kwijt aan het overtypen van gegevens.",
     intro:
-      "De meeste organisaties draaien op software die prima werkt, maar nooit is gemaakt om samen te werken. Wat de programma's niet doen, doen je medewerkers met de hand.",
+      "De meeste organisaties draaien op software die prima werkt, maar nooit is gemaakt om samen te werken. Wat de programma's niet doen, doen uw medewerkers met de hand.",
     points: [
       {
         title: "Alles twee keer intypen",
-        body: "Informatie komt binnen per mail of op papier, en iemand typt die over in je administratie. Elke dag, met de hand.",
+        body: "Informatie komt binnen per mail of op papier, en iemand typt die over in uw administratie. Elke dag, met de hand.",
       },
       {
         title: "Programma's die niet met elkaar praten",
-        body: "De financiële administratie, het personeelssysteem en het orderprogramma zijn losse eilandjes. Je medewerkers zijn de brug ertussen.",
+        body: "De financiële administratie, het personeelssysteem en het orderprogramma zijn losse eilandjes. Uw medewerkers zijn de brug ertussen.",
       },
       {
         title: "Alles vervangen is geen optie",
-        body: "Nieuwe software kost jaren en een fortuin, en iedereen moet opnieuw leren werken. Je wilt dat het werk nú lichter wordt, met de programma's die je al hebt.",
+        body: "Nieuwe software kost jaren en een fortuin, en iedereen moet opnieuw leren werken. U wilt dat het werk nú lichter wordt, met de programma's die u al hebt.",
       },
     ],
   },
@@ -157,14 +157,14 @@ export const nl: Copy = {
       "Typefouten komen pas aan het eind van de maand aan het licht",
     ],
     after: [
-      "De assistent leest de facturen en voert ze voor je in (enkele seconden per stuk)",
+      "De assistent leest de facturen en voert ze in (enkele seconden per stuk)",
       "Hij vergelijkt elke factuur automatisch met de bestelling",
       "Wat niet klopt, wordt apart gezet, zodat een medewerker ernaar kan kijken",
     ],
   },
   worksWith: {
-    eyebrow: "Werkt met wat je al hebt",
-    title: "Je programma's blijven. Het geregel verdwijnt.",
+    eyebrow: "Werkt met wat u al hebt",
+    title: "Uw programma's blijven. Het handwerk verdwijnt.",
     intro:
       "Kan een medewerker een taak stap voor stap op de computer uitvoeren, dan kan de assistent die meestal ook leren.",
     // Soorten software, geen merken: we beloven geen koppelingen die we nog niet hebben bewezen.
@@ -195,36 +195,36 @@ export const nl: Copy = {
   },
   how: {
     eyebrow: "Hoe het werkt",
-    title: "Vier stappen. Na elke stap beslis jij.",
-    intro: "Je ziet wat het oplevert voordat je ergens aan vastzit.",
+    title: "Vier stappen. Na elke stap beslist u.",
+    intro: "U ziet wat het oplevert voordat u zich ergens aan verbindt.",
     steps: [
       {
         icon: "1",
-        title: "Gratis kennismaking",
-        body: "Een gesprek van een half uur. Jij vertelt welke taak de meeste tijd kost; wij zeggen eerlijk of we kunnen helpen.",
+        title: "Kennismakingsgesprek",
+        body: "Een vrijblijvend gesprek van een half uur. U vertelt welke taak de meeste tijd kost; wij zeggen eerlijk of wij kunnen helpen.",
       },
       {
         icon: "2",
         title: "Quickscan (1–2 weken)",
-        body: "We meten hoe lang het werk nu duurt en rekenen uit wat automatiseren oplevert, voordat je iets uitgeeft aan bouwen.",
+        body: "Wij meten hoe lang het werk nu duurt en berekenen wat automatiseren oplevert, voordat u iets uitgeeft aan bouwen.",
       },
       {
         icon: "3",
         title: "Proef met één taak (8–10 weken)",
-        body: "We bouwen en testen de assistent op een kopie van je systeem. Daarna draait hij 3 à 4 weken mee met je team, en meten we het resultaat.",
+        body: "Wij bouwen en testen de assistent op een kopie van uw systeem. Daarna draait hij 3 à 4 weken mee met uw team, en meten wij het resultaat.",
       },
       {
         icon: "4",
         title: "Het blijft draaien",
-        body: "Werkt het, dan houden wij de assistent in de gaten, lossen we storingen op en helpen we je met de volgende taak.",
+        body: "Werkt het, dan bewaken wij de assistent, lossen wij storingen op en helpen wij u met de volgende taak.",
       },
     ],
   },
   calc: {
-    eyebrow: "Wat levert het jou op?",
-    title: "Vul je eigen cijfers in.",
+    eyebrow: "Wat levert het u op?",
+    title: "Reken het zelf uit.",
     intro:
-      "Kies één taak die je team vaak doet en schat hoeveel tijd die kost. Onder de uitkomst zie je hoe we rekenen. Is het niet de moeite waard, dan zeggen we dat ook.",
+      "Kies één taak die uw team vaak uitvoert en schat hoeveel tijd die kost. Onder de uitkomst ziet u hoe wij rekenen. Is het niet de moeite waard, dan zeggen wij dat ook.",
     tasks: "Hoe vaak per maand?",
     minutes: "Hoeveel minuten per keer?",
     rate: "Kosten van een uur werk (€)",
@@ -235,12 +235,12 @@ export const nl: Copy = {
     high: "Optimistische schatting",
     footnote: `Een uur werk is inclusief werkgeverslasten (grofweg salaris × 1,3). De eenmalige kosten zijn de quickscan (${eur(prices.quickscan)}) plus de proef (${eur(prices.trial)}). De maandkosten zijn die van de ondersteuning, inclusief AI-gebruik tot een afgesproken maximum. Alle bedragen zijn exclusief btw. De terugverdientijd telt vanaf het moment dat de assistent meedraait.`,
     hoursUnit: "uur per maand",
-    hoursLabel: "tijdwinst voor je team",
+    hoursLabel: "tijdwinst voor uw team",
     yearLabel: "bespaard per jaar, na aftrek van de maandkosten",
     monthsUnit: "maanden",
     paybackLabel: "tot de eenmalige kosten zijn terugverdiend",
     notice:
-      "Met deze cijfers verdien je de kosten pas na meer dan een jaar terug. Dan is het waarschijnlijk niet de moeite waard om deze taak te automatiseren. Dat vertellen we je ook in de kennismaking, voordat je iets uitgeeft.",
+      "Met deze cijfers verdient u de kosten pas na meer dan een jaar terug. Dan is het waarschijnlijk niet de moeite waard om deze taak te automatiseren. Dat vertellen wij u ook in het kennismakingsgesprek, voordat u iets uitgeeft.",
     formula:
       "besparing per maand = aantal keer per maand × minuten per keer ÷ 60 × kosten per uur × deel dat wordt overgenomen − maandkosten",
   },
@@ -275,16 +275,16 @@ export const nl: Copy = {
   },
   results: {
     eyebrow: "Wat het oplevert",
-    title: "Meer tijd. Een besparing die je zelf kunt narekenen.",
-    intro: "We laten bij elk getal zien hoe het is berekend, zodat je het zelf kunt beoordelen.",
-    sourcePrefix: "Zo rekenen we:",
+    title: "Meer tijd. Een besparing die u zelf kunt narekenen.",
+    intro: "Bij elk getal laten wij zien hoe het is berekend, zodat u het zelf kunt beoordelen.",
+    sourcePrefix: "Zo rekenen wij:",
     items: [
       {
         placeholder: true,
         source: "1.100 facturen per maand × 6 minuten, waarvan de helft wordt overgenomen",
         value: 55,
         suffix: " uur",
-        label: "per maand tijdwinst voor je team, met één taak",
+        label: "per maand tijdwinst voor uw team, met één taak",
       },
       {
         placeholder: true,
@@ -304,7 +304,7 @@ export const nl: Copy = {
       },
       {
         placeholder: true,
-        source: "4–6 weken bouwen en testen, daarna 3–4 weken naast je team",
+        source: "4–6 weken bouwen en testen, daarna 3–4 weken naast uw team",
         value: 10,
         prefix: "≤",
         suffix: " weken",
@@ -314,39 +314,39 @@ export const nl: Copy = {
   },
   safety: {
     eyebrow: "Is het veilig?",
-    title: "Jij houdt de regie. Altijd.",
+    title: "U houdt de regie. Altijd.",
     intro:
-      "De zorg die we het vaakst horen: ‘Wat als de assistent iets doet wat niet de bedoeling is?’ Zo voorkomen we dat.",
+      "De zorg die wij het vaakst horen: ‘Wat als de assistent iets doet wat niet de bedoeling is?’ Zo voorkomen wij dat.",
     items: [
       {
         icon: "filter",
-        title: "Hij doet alleen wat jij toestaat",
-        body: "We spreken vooraf schriftelijk af welke handelingen de assistent mag doen. Al het andere kán hij simpelweg niet.",
+        title: "Hij doet alleen wat u toestaat",
+        body: "Wij leggen vooraf schriftelijk vast welke handelingen de assistent mag uitvoeren. Al het andere kán hij simpelweg niet.",
       },
       {
         icon: "eye",
         title: "Eerst kijken, dan pas wijzigen",
-        body: "In het begin leest hij alleen gegevens. Wijzigen mag pas als jij dat goedvindt, en onomkeerbare stappen keurt altijd een mens goed.",
+        body: "In het begin leest hij alleen gegevens. Wijzigen mag pas als u daarmee instemt, en onomkeerbare stappen keurt altijd een mens goed.",
       },
       {
         icon: "log",
         title: "Alles wordt vastgelegd",
-        body: "Elke handeling wordt bijgehouden: wat hij deed, wanneer en waarom. Je kunt het altijd nakijken.",
+        body: "Elke handeling wordt vastgelegd: wat hij deed, wanneer en waarom. U kunt het altijd nakijken.",
       },
       {
         icon: "power",
-        title: "Jij hebt de noodknop",
-        body: "Je kunt de assistent op elk moment zelf stilzetten, zonder ons te hoeven bellen.",
+        title: "U hebt de noodknop",
+        body: "U kunt de assistent op elk moment zelf stilzetten, zonder ons te hoeven bellen.",
       },
       {
         icon: "lock",
-        title: "Je gegevens blijven van jou",
-        body: "We tekenen een verwerkersovereenkomst, werken op je eigen systemen of in een Europees datacenter, en je gegevens worden nooit gebruikt om AI te trainen.",
+        title: "Uw gegevens blijven van u",
+        body: "Wij tekenen een verwerkersovereenkomst, werken op uw eigen systemen of in een Europees datacenter, en uw gegevens worden nooit gebruikt om AI te trainen.",
       },
       {
         icon: "guarantee",
         title: "Geen resultaat, geen risico",
-        body: "Haalt de proef het afgesproken foutpercentage niet, dan verbeteren wij de assistent eerst op onze kosten. Lukt het dan nog niet, dan kun je stoppen en krijg je de tweede termijn terug.",
+        body: "Haalt de proef het afgesproken foutpercentage niet, dan verbeteren wij de assistent eerst op onze kosten. Lukt het dan nog niet, dan kunt u stoppen en krijgt u de tweede termijn terug.",
       },
     ],
   },
@@ -354,7 +354,7 @@ export const nl: Copy = {
     eyebrow: "Wat het kost",
     title: "Begin klein. Ga alleen door als het loont.",
     intro:
-      "Vaste prijzen per stap. Na elke stap beslis jij, op basis van echte cijfers, of je verdergaat.",
+      "Vaste prijzen per stap. Na elke stap beslist u, op basis van echte cijfers, of u verdergaat.",
     recommended: "Het bewijs",
     priceTbd: "Prijs volgt",
     plans: [
@@ -362,10 +362,10 @@ export const nl: Copy = {
         placeholder: false,
         tier: "Quickscan",
         amount: eur(prices.quickscan),
-        blurb: "We zoeken uit welke taken het automatiseren waard zijn, en wat dat je oplevert.",
+        blurb: "Wij brengen in kaart welke taken het automatiseren waard zijn, en wat dat u oplevert.",
         features: [
           "1–2 weken, vaste prijs",
-          "Gebaseerd op hoe je team nu werkt",
+          "Gebaseerd op hoe uw team nu werkt",
           "Een heldere besparingsberekening per taak",
           "Een eerlijk ‘nee’ als het niet loont",
         ],
@@ -375,11 +375,11 @@ export const nl: Copy = {
         placeholder: false,
         tier: "Proef met één taak",
         amount: eur(prices.trial),
-        blurb: "Eén taak geautomatiseerd in je eigen software, met een gemeten resultaat.",
+        blurb: "Eén taak geautomatiseerd in uw eigen software, met een gemeten resultaat.",
         features: [
           "8–10 weken, vaste prijs",
-          "Gebouwd en getest op een kopie van je systeem",
-          "3–4 weken meedraaien naast je team",
+          "Gebouwd en getest op een kopie van uw systeem",
+          "3–4 weken meedraaien naast uw team",
           "Een rapport met de situatie vóór en na",
           "50% bij de start, 50% bij oplevering",
         ],
@@ -391,7 +391,7 @@ export const nl: Copy = {
         tier: "Doorlopende ondersteuning",
         amount: eur(prices.support),
         unit: "/maand",
-        blurb: "Wij houden het draaiende en helpen je met de volgende taak.",
+        blurb: "Wij houden het draaiende en helpen u met de volgende taak.",
         features: [
           "Bewaking, onderhoud en het oplossen van storingen",
           "AI-gebruik inbegrepen tot een afgesproken maximum",
@@ -402,66 +402,66 @@ export const nl: Copy = {
         cta: "Neem contact op",
       },
     ],
-    addon: `Elke extra taak bouwen we voor ${eur(prices.addon)}.`,
+    addon: `Elke extra taak bouwen wij voor ${eur(prices.addon)}.`,
     vatNote: "Alle prijzen zijn exclusief btw.",
     founding: {
       label: "Eerste klanten",
       title: `De eerste drie proeven met ${prices.foundingDiscount * 100}% korting`,
-      body: `Word een van onze eerste drie klanten: je proef kost ${eur(foundingTrial)} in plaats van ${eur(prices.trial)}. Daar vragen we drie dingen voor terug: we schrijven samen een praktijkverhaal, we mogen je naam noemen en je stelt ons voor aan twee bedrijven uit je netwerk.`,
+      body: `Word een van onze eerste drie klanten: uw proef kost ${eur(foundingTrial)} in plaats van ${eur(prices.trial)}. Daar vragen wij drie dingen voor terug: wij schrijven samen een praktijkverhaal, wij mogen uw naam noemen en u stelt ons voor aan twee bedrijven uit uw netwerk.`,
       cta: "Vraag naar een van de drie plekken",
     },
   },
   faq: {
     eyebrow: "Vragen",
-    title: "Wat mensen ons het vaakst vragen.",
+    title: "Veelgestelde vragen.",
     items: [
       {
         q: `Wat is ${P} precies?`,
-        a: `${P} is ons platform dat je bestaande software koppelt aan een AI-assistent. Het bepaalt wat de assistent mag doen, vraagt waar nodig een mens om goedkeuring en legt alles vast. Je merkt er weinig van: je team vraagt de assistent iets, en het werk gebeurt in de programma's die je al hebt.`,
+        a: `${P} is ons platform dat uw bestaande software koppelt aan een AI-assistent. Het bepaalt wat de assistent mag doen, vraagt waar nodig een mens om goedkeuring en legt alles vast. U merkt er weinig van: uw team vraagt de assistent iets, en het werk gebeurt in de programma's die u al hebt.`,
       },
       {
         q: "Wat is agentic AI, en is dat niet gewoon een hype?",
-        a: "Agentic AI is AI die niet alleen antwoord geeft, maar zelf stappen uitvoert, zoals een factuur invoeren of een bestelling controleren. Er is veel hype rond AI. Daarom beginnen wij met één taak en meten we wat het oplevert. Je betaalt voor tijdwinst die je kunt narekenen, niet voor beloftes.",
+        a: "Agentic AI is AI die niet alleen antwoord geeft, maar zelf stappen uitvoert, zoals een factuur invoeren of een bestelling controleren. Er is veel hype rond AI. Daarom beginnen wij met één taak en meten wij wat het oplevert. U betaalt voor tijdwinst die u kunt narekenen, niet voor beloftes.",
       },
       {
-        q: "Moeten we iets van AI weten?",
-        a: "Nee. Jij vertelt welk werk te veel tijd kost; wij zorgen voor de techniek. Je medewerkers blijven werken in de programma's die ze kennen, en we geven een korte training.",
+        q: "Moeten wij iets van AI weten?",
+        a: "Nee. U vertelt ons welk werk te veel tijd kost; wij zorgen voor de techniek. Uw medewerkers blijven werken in de programma's die zij kennen, en wij geven een korte training.",
       },
       {
-        q: "Moeten we onze software vervangen?",
-        a: "Nee, en dat is juist de bedoeling. De assistent werkt met de programma's die je al gebruikt, ook oudere.",
+        q: "Moeten wij onze software vervangen?",
+        a: "Nee, en dat is juist de bedoeling. De assistent werkt met de programma's die u al gebruikt, ook oudere.",
       },
       {
         q: "Gaan er banen verloren?",
-        a: "Dat bepaal jij. In de praktijk neemt de assistent het saaie, herhalende deel van iemands dag over. De vrijgekomen tijd gaat naar werk waar echt een mens voor nodig is, of je hoeft een vacature niet opnieuw in te vullen. In de quickscan rekenen we beide scenario's door.",
+        a: "Dat bepaalt u. In de praktijk neemt de assistent het saaie, herhalende deel van iemands dag over. De vrijgekomen tijd gaat naar werk waar echt een mens voor nodig is, of u hoeft een vacature niet opnieuw in te vullen. In de quickscan rekenen wij beide scenario's door.",
       },
       {
         q: "Neemt de assistent beslissingen over mensen?",
-        a: "Nee. We bouwen geen assistenten die over mensen beslissen, bijvoorbeeld bij sollicitaties, beoordelingen of toelating. Hij doet administratief werk binnen vaste afspraken.",
+        a: "Nee. Wij bouwen geen assistenten die over mensen beslissen, bijvoorbeeld bij sollicitaties, beoordelingen of toelating. Hij doet administratief werk binnen vaste afspraken.",
       },
       {
         q: "Hoe zit het met privacy?",
-        a: "De assistent ziet alleen wat hij voor de taak nodig heeft. We tekenen vooraf een verwerkersovereenkomst, werken alleen met AI-diensten die je gegevens in de EU verwerken en er nooit AI mee trainen, en leggen alle afspraken schriftelijk vast.",
+        a: "De assistent ziet alleen wat hij voor de taak nodig heeft. Wij tekenen vooraf een verwerkersovereenkomst, werken alleen met AI-diensten die uw gegevens in de EU verwerken en er nooit AI mee trainen, en leggen alle afspraken schriftelijk vast.",
       },
       {
         q: "En als het niet loont?",
-        a: "Dan zeggen we dat in de quickscan, voordat je geld uitgeeft aan bouwen. Niet elke taak is het automatiseren waard. De quickscan betaal je wel: dat eerlijke antwoord is precies wat je koopt.",
+        a: "Dan zeggen wij dat in de quickscan, voordat u geld uitgeeft aan bouwen. Niet elke taak is het automatiseren waard. De quickscan betaalt u wel: dat eerlijke antwoord is precies wat u koopt.",
       },
       {
-        q: "Zitten we daarna aan jullie vast?",
-        a: `Nee. Wat we voor je inrichten (de afspraken, rechten en tests) is van jou, en je krijgt een eeuwigdurende licentie om de opgeleverde software te gebruiken en door een andere partij te laten beheren. De ondersteuning loopt minimaal 12 maanden, daarna met 3 maanden opzegtermijn.`,
+        q: "Zitten wij daarna aan u vast?",
+        a: `Nee. Wat wij voor u inrichten (de afspraken, rechten en tests) is van u, en u krijgt een eeuwigdurende licentie om de opgeleverde software te gebruiken en door een andere partij te laten beheren. De ondersteuning loopt minimaal 12 maanden, daarna met 3 maanden opzegtermijn.`,
       },
       {
-        q: "Wat moet ik onze IT'er vertellen?",
-        a: `Dat ${P} werkt met het Model Context Protocol (MCP): een open standaard waarmee AI-assistenten bestaande software gebruiken via afgebakende handelingen, met rechten, goedkeuring en een volledig logboek. We werken graag samen met je IT-leverancier en lichten de details zelf toe.`,
+        q: "Wat moet ik onze IT-afdeling vertellen?",
+        a: `Dat ${P} werkt met het Model Context Protocol (MCP): een open standaard waarmee AI-assistenten bestaande software gebruiken via afgebakende handelingen, met rechten, goedkeuring en een volledig logboek. Wij werken graag samen met uw IT-leverancier en lichten de details zelf toe.`,
       },
     ],
   },
   contact: {
     eyebrow: "Contact",
-    title: "Begin met een gratis kennismaking.",
+    title: "Plan een vrijblijvend kennismakingsgesprek.",
     intro:
-      "Vertel ons welke taak de meeste tijd opslokt. We zeggen eerlijk of we kunnen helpen en wat het ongeveer oplevert. Geen verplichtingen, geen technisch verhaal.",
+      "Vertel ons welke taak de meeste tijd kost. Wij zeggen eerlijk of wij kunnen helpen en wat het ongeveer oplevert. Zonder verplichtingen en zonder technisch verhaal.",
     emailPrompt: "Liever mailen?",
     close: "Sluiten",
   },
@@ -472,9 +472,9 @@ export const nl: Copy = {
     program: "Om welk programma gaat het?",
     programPlaceholder: "bijv. de boekhouding",
     task: "Welke taak kost te veel tijd?",
-    submit: "Vraag een gratis kennismaking aan",
-    note: "We reageren binnen één werkdag. De kennismaking is gratis.",
-    sent: "Je mailprogramma is geopend en je gegevens zijn al ingevuld. Klik alleen nog op Verzenden.",
+    submit: "Vraag een kennismakingsgesprek aan",
+    note: "Wij reageren binnen één werkdag. Het gesprek is kosteloos.",
+    sent: "Uw mailprogramma is geopend en uw gegevens zijn al ingevuld. Klik alleen nog op Verzenden.",
     mailSubject: "Aanvraag kennismaking –",
   },
   footer: {
