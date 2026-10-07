@@ -91,32 +91,32 @@ export const en: Copy = {
     status: "connected",
     features: [
       {
-        icon: "⇄",
+        icon: "swap",
         title: "Works with old and new",
         body: "It works through an integration, directly in the database or, when nothing else works, through the screen, just like a member of staff. So older programs work too.",
       },
       {
-        icon: "↗",
+        icon: "grow",
         title: "Grows with you",
         body: "Start with one task. Once it works, add the next one without starting over.",
       },
       {
-        icon: "✓",
+        icon: "test",
         title: "Tested on a copy first",
         body: "We test every new task on a copy of your system first, never straight on your real records.",
       },
       {
-        icon: "▦",
+        icon: "blocks",
         title: "Reusable building blocks",
         body: "We reuse every connection we build, so each next task is faster to deliver and more reliable.",
       },
       {
-        icon: "⚙",
+        icon: "layers",
         title: "Not dependent on one AI",
         body: `${P} works with AI models from several providers. If one gets more expensive or worse, we switch.`,
       },
       {
-        icon: "◎",
+        icon: "open",
         title: "Open standard",
         body: `${P} is built on an open, widely used standard, so you are not tied to us either.`,
       },
@@ -316,32 +316,32 @@ export const en: Copy = {
       "The worry we hear most: “what if it does something it shouldn't?” This is how we prevent that.",
     items: [
       {
-        icon: "⌖",
+        icon: "filter",
         title: "It only does what you allow",
         body: "We agree in writing exactly which actions the assistant may take. Anything else, it simply can't do.",
       },
       {
-        icon: "◐",
+        icon: "eye",
         title: "Look first, change later",
         body: "It starts by only reading data. Changes are switched on only when you agree, and a person always approves irreversible steps.",
       },
       {
-        icon: "☰",
+        icon: "log",
         title: "Everything is recorded",
         body: "Every action is logged: what it did, when and why. You can always check it.",
       },
       {
-        icon: "⏻",
+        icon: "power",
         title: "You hold the off switch",
         body: "You can stop the assistant yourself at any moment, without having to call us.",
       },
       {
-        icon: "⌂",
+        icon: "lock",
         title: "Your data stays yours",
         body: "We sign a data processing agreement, work in your own environment or in the EU, and your data is never used to train AI.",
       },
       {
-        icon: "✓",
+        icon: "guarantee",
         title: "No result, no risk",
         body: "If the trial misses the agreed error rate, we fix it at our own cost first. If it still falls short, you can stop and get the second instalment back.",
       },

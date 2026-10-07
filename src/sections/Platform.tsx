@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { GlassCard, GradientText, StatusDot } from "performative-ui";
 import { useCopy } from "../i18n/LanguageContext";
+import { Icon } from "./Icon";
 import { SectionHead } from "./shared";
 
 export function Platform() {
@@ -34,7 +35,9 @@ export function Platform() {
         <div className="grid grid--3">
           {t.features.map((f) => (
             <GlassCard key={f.title}>
-              <GlassCard.Icon>{f.icon}</GlassCard.Icon>
+              <GlassCard.Icon>
+                <Icon name={f.icon} />
+              </GlassCard.Icon>
               <GlassCard.Title>{f.title}</GlassCard.Title>
               <GlassCard.Body>{f.body}</GlassCard.Body>
             </GlassCard>

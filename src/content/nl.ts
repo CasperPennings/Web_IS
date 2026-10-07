@@ -93,32 +93,32 @@ export const nl: Copy = {
     status: "verbonden",
     features: [
       {
-        icon: "⇄",
+        icon: "swap",
         title: "Werkt met oud en nieuw",
         body: "Hij werkt via een koppeling, rechtstreeks in de database of, als het niet anders kan, via het scherm, net als een medewerker. Dus ook met oudere programma's.",
       },
       {
-        icon: "↗",
+        icon: "grow",
         title: "Groeit met je mee",
         body: "Begin met één taak. Werkt die, dan voeg je de volgende toe, zonder opnieuw te beginnen.",
       },
       {
-        icon: "✓",
+        icon: "test",
         title: "Eerst op een testkopie",
         body: "Elke nieuwe taak testen we eerst op een kopie van je systeem, nooit meteen op je echte administratie.",
       },
       {
-        icon: "▦",
+        icon: "blocks",
         title: "Herbruikbare bouwstenen",
         body: "Elke koppeling die we bouwen, hergebruiken we. Zo gaat elke volgende taak sneller en wordt hij betrouwbaarder.",
       },
       {
-        icon: "⚙",
+        icon: "layers",
         title: "Niet afhankelijk van één AI",
         body: `${P} werkt met AI-modellen van meerdere aanbieders. Wordt er één duurder of slechter, dan stappen we over.`,
       },
       {
-        icon: "◎",
+        icon: "open",
         title: "Open standaard",
         body: `${P} is gebouwd op een open, veelgebruikte standaard. Je zit dus ook niet vast aan ons.`,
       },
@@ -319,32 +319,32 @@ export const nl: Copy = {
       "De zorg die we het vaakst horen: ‘Wat als de assistent iets doet wat niet de bedoeling is?’ Zo voorkomen we dat.",
     items: [
       {
-        icon: "⌖",
+        icon: "filter",
         title: "Hij doet alleen wat jij toestaat",
         body: "We spreken vooraf schriftelijk af welke handelingen de assistent mag doen. Al het andere kán hij simpelweg niet.",
       },
       {
-        icon: "◐",
+        icon: "eye",
         title: "Eerst kijken, dan pas wijzigen",
         body: "In het begin leest hij alleen gegevens. Wijzigen mag pas als jij dat goedvindt, en onomkeerbare stappen keurt altijd een mens goed.",
       },
       {
-        icon: "☰",
+        icon: "log",
         title: "Alles wordt vastgelegd",
         body: "Elke handeling wordt bijgehouden: wat hij deed, wanneer en waarom. Je kunt het altijd nakijken.",
       },
       {
-        icon: "⏻",
+        icon: "power",
         title: "Jij hebt de noodknop",
         body: "Je kunt de assistent op elk moment zelf stilzetten, zonder ons te hoeven bellen.",
       },
       {
-        icon: "⌂",
+        icon: "lock",
         title: "Je gegevens blijven van jou",
         body: "We tekenen een verwerkersovereenkomst, werken op je eigen systemen of in een Europees datacenter, en je gegevens worden nooit gebruikt om AI te trainen.",
       },
       {
-        icon: "✓",
+        icon: "guarantee",
         title: "Geen resultaat, geen risico",
         body: "Haalt de proef het afgesproken foutpercentage niet, dan verbeteren wij de assistent eerst op onze kosten. Lukt het dan nog niet, dan kun je stoppen en krijg je de tweede termijn terug.",
       },
