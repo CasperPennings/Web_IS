@@ -6,25 +6,6 @@ export interface TextCard {
   body: string;
 }
 
-export interface ResultStat {
-  /** Sample figure until real measurements exist. */
-  placeholder: boolean;
-  source: string;
-  value: number;
-  prefix?: string;
-  suffix: string;
-  label: string;
-}
-
-export interface CaseStudy {
-  /** Fictional scenario until real case studies exist. */
-  placeholder: boolean;
-  client: string;
-  task: string;
-  before: string;
-  result: string;
-}
-
 export interface Plan {
   /** Price not yet set. */
   placeholder: boolean;
@@ -45,10 +26,8 @@ export interface Copy {
   common: { example: string; examplesCaption: string; logoLabel: string };
   nav: {
     label: string;
-    platform: string;
-    how: string;
+    approach: string;
     saves: string;
-    examples: string;
     costs: string;
     questions: string;
     /** Call-to-action button: full label on wide screens, short one on phones. */
@@ -68,45 +47,15 @@ export interface Copy {
     proof: string[];
   };
   chat: { question: string; agent: string; thinking: string; reply: string; caption: string };
-  whyNow: {
-    eyebrow: string;
-    titleStart: string;
-    titleHighlight: string;
-    titleEnd: string;
-    intro: string;
-    points: TextCard[];
-    closing: string;
-  };
-  platform: {
-    eyebrow: string;
-    title: string;
-    intro: string;
-    /** The three blocks of the diagram: your software, the platform, the AI assistant. */
-    flow: { title: string; body: string }[];
-    status: string;
-    features: TextCard[];
-    itNote: string;
-  };
   problem: { eyebrow: string; title: string; intro: string; points: TextCard[] };
-  beforeAfter: {
-    eyebrow: string;
-    title: string;
-    intro: string;
-    beforeLabel: string;
-    afterLabel: string;
-    before: string[];
-    after: string[];
-  };
-  worksWith: { eyebrow: string; title: string; intro: string; softwareKinds: string[]; tasks: string[] };
-  how: { eyebrow: string; title: string; intro: string; steps: TextCard[] };
-  /** How the quickscan finds automations: a recorded workday, analysed. */
-  workday: {
+  /** The three-step approach and the improvement cycle drawn beside it. */
+  approach: {
     eyebrow: string;
     title: string;
     intro: string;
     steps: TextCard[];
-    privacyTitle: string;
-    privacy: string[];
+    loop: { title: string; body: string };
+    diagram: { label: string; nodes: string[]; center: string; centerSub: string; feedback: string };
   };
   calc: {
     eyebrow: string;
@@ -129,10 +78,6 @@ export interface Copy {
     notice: string;
     formula: string;
   };
-  cases: { eyebrow: string; title: string; intro: string; items: CaseStudy[] };
-  results: { eyebrow: string; title: string; intro: string; sourcePrefix: string; items: ResultStat[] };
-  /** Pontis Teach: customers show corrections and new cases after go-live. */
-  teach: { eyebrow: string; title: string; intro: string; steps: TextCard[]; note: string };
   safety: { eyebrow: string; title: string; intro: string; items: TextCard[] };
   pricing: {
     eyebrow: string;

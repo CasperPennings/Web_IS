@@ -13,8 +13,7 @@ export function Footer() {
         {
           heading: t.service,
           links: [
-            { label: nav.platform, href: "#platform" },
-            { label: nav.how, href: "#how" },
+            { label: nav.approach, href: "#approach" },
             { label: nav.saves, href: "#calculator" },
             { label: nav.costs, href: "#pricing" },
           ],
@@ -22,7 +21,6 @@ export function Footer() {
         {
           heading: t.more,
           links: [
-            { label: nav.examples, href: "#examples" },
             { label: nav.questions, href: "#faq" },
             { label: t.contactLink, href: "#contact" },
           ],

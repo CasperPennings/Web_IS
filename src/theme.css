@@ -611,102 +611,6 @@ a {
   margin-right: 8px;
 }
 
-/* Why now */
-.why-now__num {
-  font-family: var(--pui-font-mono);
-  font-size: 0.875rem;
-  color: var(--is-accent);
-  margin-bottom: 12px;
-}
-
-.why-now__closing {
-  margin: 40px 0 0;
-  font-family: var(--is-heading);
-  font-size: clamp(1.25rem, 2.5vw, 1.625rem);
-  letter-spacing: -0.01em;
-}
-
-/* Platform diagram: your software → platform → AI assistant */
-.bridge {
-  display: grid;
-  grid-template-columns: 1fr 64px 1.15fr 64px 1fr;
-  align-items: center;
-  margin-bottom: 48px;
-}
-
-.bridge__node {
-  background: var(--pui-bg-elev);
-  border: 1px solid var(--pui-border);
-  border-radius: var(--pui-radius);
-  padding: 20px;
-  min-width: 0;
-}
-
-.bridge__node p {
-  margin: 6px 0 0;
-  color: var(--pui-fg-dim);
-  font-size: 0.9375rem;
-}
-
-.bridge__node--core {
-  border-color: var(--pui-border-bright);
-  box-shadow: var(--pui-glow);
-  padding: 28px 24px;
-}
-
-.bridge__title {
-  font-family: var(--is-heading);
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-.bridge__node--core .bridge__title {
-  font-size: 1.75rem;
-}
-
-.bridge__status {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 12px;
-  font-family: var(--pui-font-mono);
-  font-size: 0.8125rem;
-  color: var(--pui-fg-mute);
-}
-
-.bridge__link {
-  height: 2px;
-  background: linear-gradient(90deg, var(--pui-grad-from), var(--pui-grad-mid), var(--pui-grad-to), var(--pui-grad-from));
-  background-size: 300% 100%;
-  animation: bridge-flow 3s linear infinite;
-}
-
-@keyframes bridge-flow {
-  to {
-    background-position: -300% 0;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .bridge__link {
-    animation: none;
-  }
-}
-
-@media (max-width: 860px) {
-  .bridge {
-    grid-template-columns: 1fr;
-  }
-
-  .bridge__link {
-    width: 2px;
-    height: 32px;
-    margin: 0 auto;
-    background: linear-gradient(180deg, var(--pui-grad-from), var(--pui-grad-to));
-    animation: none;
-  }
-}
-
 /* Founding-customer offer */
 .founding {
   margin-top: 32px;
@@ -742,32 +646,119 @@ a {
   letter-spacing: 0.06em;
 }
 
-/* Quickscan: privacy commitments for the recorded workday */
-.workday__privacy {
-  margin-top: 32px;
-  padding: 24px;
-  border: 1px solid var(--pui-border);
-  border-radius: var(--pui-radius);
-  background: var(--pui-bg-elev);
-}
-
-.workday__privacy h3 {
-  font-size: 1.125rem;
-  margin-bottom: 12px;
-}
-
-.workday__privacy ul {
+/* Approach: three steps beside the improvement cycle */
+.approach {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
-  gap: 10px 32px;
-  list-style: none;
-  padding: 0;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .approach {
+    grid-template-columns: 1fr;
+  }
+}
+
+.approach__diagram {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.approach__steps {
+  display: grid;
+  gap: 16px;
+}
+
+.approach__loop {
+  padding: 4px 4px 0;
+}
+
+.approach__loop h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.approach__loop p {
   margin: 0;
   color: var(--pui-fg-dim);
 }
 
-.workday__privacy li::before {
-  content: "✓";
-  color: var(--is-accent);
-  margin-right: 10px;
+.cycle {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.cycle__arc {
+  fill: none;
+  stroke: var(--pui-grad-mid);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.cycle__arc--feedback {
+  stroke: var(--is-accent);
+  stroke-dasharray: 8 8;
+  animation: cycle-flow 1.6s linear infinite;
+}
+
+@keyframes cycle-flow {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cycle__arc--feedback {
+    animation: none;
+  }
+}
+
+.cycle__arrowhead {
+  fill: var(--pui-grad-mid);
+}
+
+.cycle__arrowhead--feedback {
+  fill: var(--is-accent);
+}
+
+.cycle__node {
+  fill: var(--pui-bg-elev);
+  stroke: var(--pui-border-bright);
+  stroke-width: 1.5;
+}
+
+.cycle__num {
+  font-family: var(--is-heading);
+  font-size: 30px;
+  font-weight: 700;
+  fill: var(--pui-fg);
+}
+
+.cycle__label {
+  font-family: var(--is-heading);
+  font-size: 16px;
+  font-weight: 600;
+  fill: var(--pui-fg);
+}
+
+.cycle__feedback {
+  font-size: 13px;
+  font-weight: 600;
+  fill: var(--is-accent);
+}
+
+.cycle__center {
+  font-family: var(--is-heading);
+  font-size: 30px;
+  font-weight: 700;
+  fill: var(--pui-grad-mid);
+}
+
+.cycle__center-sub {
+  font-size: 13px;
+  fill: var(--pui-fg-mute);
 }

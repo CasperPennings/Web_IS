@@ -27,7 +27,7 @@ export function Hero() {
             <Button as="a" href="#calculator" variant="glow" size="lg">
               {t.ctaPrimary}
             </Button>
-            <Button as="a" href="#platform" variant="ghost" size="lg">
+            <Button as="a" href="#approach" variant="ghost" size="lg">
               {t.ctaSecondary}
             </Button>
           </div>

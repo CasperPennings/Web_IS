@@ -15,14 +15,10 @@ add-on task €6,000, 25% off the first three trials, all excluding VAT.
 
 | Where (in both nl.ts and en.ts) | What to replace |
 |---|---|
-| `results.items` | The four headline figures (worked example: 1,100 invoices × 6 min, half automated). Replace with measured results. |
-| `cases.items` | The three fictional scenarios. Replace with real customer stories (with permission). |
-| `beforeAfter.before` / `after` | The ~4 + ~2 minutes per invoice timings, once measured. |
 | `chat` | The example conversation in the hero (37 invoices, 2 set aside). |
 | `pricing.founding` | Remove or change once the three founding places are taken. |
 | `safety.items` (last item), `faq` (lock-in answer) | The parallel-run guarantee and the licence terms: have a lawyer confirm the contract wording. |
-| `workday.privacy`, `faq` (employees watched) | The Pontis Scan promises (no full-day recording, results per task, optional program logging, deletion after the quickscan): confirm with a privacy lawyer and a DPIA. |
-| `teach.note`, `teach.steps`, `faq` (Pontis Teach) | The Pontis Teach promises (fixes live within 10 working days, recordings deleted 90 days after the improvement, never used to train AI): confirm they can be met and put them in the support contract. |
+| `approach.loop`, `safety.items` | The improvement-cycle promise (feedback turned into tests, then improved) and the trial guarantee: confirm with a lawyer and put them in the contracts. |
 | `footer.registration` | KvK / btw numbers. |
 
 Outside the language files:

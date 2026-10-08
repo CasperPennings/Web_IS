@@ -11,7 +11,7 @@ export function Safety() {
         <SectionHead eyebrow={t.eyebrow} title={t.title}>
           {t.intro}
         </SectionHead>
-        <div className="grid grid--3">
+        <div className="grid grid--4">
           {t.items.map((s) => (
             <GlassCard key={s.title}>
               <GlassCard.Icon>

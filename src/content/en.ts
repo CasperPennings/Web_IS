@@ -20,10 +20,8 @@ export const en: Copy = {
   },
   nav: {
     label: "Main",
-    platform: P,
-    how: "How it works",
+    approach: "How we work",
     saves: "What it saves",
-    examples: "Examples",
     costs: "Costs",
     questions: "Questions",
     cta: "Free conversation",
@@ -37,7 +35,7 @@ export const en: Copy = {
     titleEnd: "",
     sub: `AI can now do more than talk: it can carry out work. With ${P} we connect your existing software, safely, to an AI assistant that takes over the repetitive computer work. Your team gets hours back every week, and you see what it saves before you commit.`,
     ctaPrimary: "Calculate what it saves",
-    ctaSecondary: `What is ${P}?`,
+    ctaSecondary: "How does it work?",
     proof: ["Works with your current software", "Fixed prices", "Measure first, build second"],
   },
   chat: {
@@ -47,81 +45,6 @@ export const en: Copy = {
     reply:
       "Done. 37 invoices are entered and checked against the orders. 2 didn't match, so I've set them aside for you to look at.",
     caption: "Example conversation",
-  },
-  whyNow: {
-    eyebrow: "Why now",
-    titleStart: "The",
-    titleHighlight: "AI revolution",
-    titleEnd: "has started. This is your moment to step in.",
-    intro:
-      "Until recently AI could mostly write text and answer questions. Now an AI assistant can get to work itself: looking up, entering and checking data in the programs you already use. It is called agentic AI, and it is changing how office work gets done.",
-    points: [
-      {
-        icon: "01",
-        title: "AI now does the work itself",
-        body: "ChatGPT tells you how to book an invoice. An AI assistant reads the invoice, finds the order and books it, while you keep an eye on it.",
-      },
-      {
-        icon: "02",
-        title: "No longer only for big companies",
-        body: `Large companies have their own IT teams to build this. With ${P} a mid-sized organisation can do it too, without in-house developers and without new software.`,
-      },
-      {
-        icon: "03",
-        title: "Start now, stay ahead",
-        body: "Every task you hand over gives hours back every month, and your team learns to work with AI now instead of catching up in a few years.",
-      },
-      {
-        icon: "04",
-        title: "Without a gamble",
-        body: "You start with one task, at a fixed price, and we measure what it saves. If it isn't worth it, we tell you before you invest.",
-      },
-    ],
-    closing: "No hype, just results: hours back that you can check yourself.",
-  },
-  platform: {
-    eyebrow: "The platform",
-    title: `${P}: the bridge between your software and AI.`,
-    intro: `${P} (Latin for "of the bridge") is our platform that connects your existing programs to an AI assistant, safely, even when they are old or don't talk to each other. You replace nothing: the assistant works in the software your team already knows.`,
-    flow: [
-      { title: "Your software", body: "Accounting, ERP, student records, Excel, older programs too" },
-      { title: P, body: "Lets through only agreed actions, asks for approval and records everything" },
-      { title: "AI assistant", body: "Understands your team's request and carries out the steps" },
-    ],
-    status: "connected",
-    features: [
-      {
-        icon: "swap",
-        title: "Works with old and new",
-        body: "It works through an integration, directly in the database or, when nothing else works, through the screen, just like a member of staff. So older programs work too.",
-      },
-      {
-        icon: "grow",
-        title: "Grows with you",
-        body: "Start with one task. Once it works, add the next one without starting over.",
-      },
-      {
-        icon: "test",
-        title: "Tested on a copy first",
-        body: "We test every new task on a copy of your system first, never straight on your real records.",
-      },
-      {
-        icon: "blocks",
-        title: "Reusable building blocks",
-        body: "We reuse every connection we build, so each next task is faster to deliver and more reliable.",
-      },
-      {
-        icon: "layers",
-        title: "Not dependent on one AI",
-        body: `${P} works with AI models from several providers. If one gets more expensive or worse, we switch.`,
-      },
-      {
-        icon: "open",
-        title: "Open standard",
-        body: `${P} is built on an open, widely used standard, so you are not tied to us either.`,
-      },
-    ],
-    itNote: `For your IT person: ${P} is built on the Model Context Protocol (MCP), the open standard that lets AI models use software through clearly scoped tools. It has per-action permissions, human approval for irreversible changes and a full audit log, and runs in your own environment or in an EU region you choose.`,
   },
   problem: {
     eyebrow: "Sound familiar?",
@@ -143,109 +66,39 @@ export const en: Copy = {
       },
     ],
   },
-  beforeAfter: {
-    eyebrow: "Before / after",
-    title: "The same task, without the hassle.",
-    intro: "An everyday example: processing supplier invoices at a wholesaler.",
-    beforeLabel: "Today, by hand",
-    afterLabel: "With the assistant",
-    before: [
-      "Open each invoice and type the amounts into the accounting program (~4 min each)",
-      "Look up the matching order in another program to check it (~2 min)",
-      "Typing errors only surface at month-end",
-    ],
-    after: [
-      "The assistant reads the invoices and enters them for you (seconds each)",
-      "It checks every invoice against the order automatically",
-      "Anything that doesn't match is set aside for a person to look at",
-    ],
-  },
-  worksWith: {
-    eyebrow: "Works with what you have",
-    title: "Your programs stay. The hassle goes.",
-    intro: "If a person can do it step by step on a computer, the assistant can usually learn it too.",
-    // Kinds of software, not brands: we don't promise integrations we haven't proven yet.
-    softwareKinds: [
-      "Accounting software",
-      "ERP & order systems",
-      "Stock management",
-      "HR & payroll",
-      "Planning & rosters",
-      "Student records",
-      "Excel files",
-      "Older programs",
-      "Mailboxes",
-      "Online portals",
-    ],
-    tasks: [
-      "Entering invoices",
-      "Checking orders",
-      "Transferring orders",
-      "Weekly reports",
-      "Updating staff records",
-      "Recording absences",
-      "Sorting incoming mail",
-      "Filling in forms",
-      "Preparing quotes",
-      "Processing enrolments",
-    ],
-  },
-  how: {
-    eyebrow: "How it works",
-    title: "Four steps. You decide after each one.",
-    intro: "You see what it delivers before you are tied to anything.",
-    steps: [
-      {
-        icon: "1",
-        title: "A free conversation",
-        body: "A half-hour call. You tell us which task takes the most time; we tell you honestly whether we can help.",
-      },
-      {
-        icon: "2",
-        title: "Quickscan (1–2 weeks)",
-        body: "We measure the volumes in your systems and an employee shows us how the task is done. From that we calculate what automating it saves, before you spend anything on building.",
-      },
-      {
-        icon: "3",
-        title: "Trial on one task (8–10 weeks)",
-        body: "We build and test the assistant on a copy of your system. Then it works alongside your team for 3–4 weeks, and we measure the result.",
-      },
-      {
-        icon: "4",
-        title: "It keeps running",
-        body: "If it works, we keep an eye on it, fix problems and help you with the next task.",
-      },
-    ],
-  },
-  workday: {
-    eyebrow: "The quickscan",
-    title: "We measure the work, not your people.",
-    intro: `People often no longer notice how much time routine work takes; it has become habit. ${P} Scan maps it without following anyone: we look at the figures in your systems and let the employee show us how a task is done.`,
+  approach: {
+    eyebrow: "How we work",
+    title: "Three steps, then better every round.",
+    intro:
+      "We start with one task and build from there. After go-live the cycle starts again: what shows up in daily use makes the system better every round.",
     steps: [
       {
         icon: "analyze",
-        title: "1. Measure in your systems",
-        body: "Your accounting and order systems already record how many invoices and orders come in and how long they wait. We take the volumes from there, without recording anyone.",
+        title: "1. Map your workflows",
+        body: "We measure the volume of work in your systems and an employee shows how a task is done. You get a calculation per task of what automating it saves, and an honest no if it doesn't pay.",
       },
       {
-        icon: "record",
-        title: "2. The employee shows the task",
-        body: "An employee records a task two or three times, starts and stops the recording themselves and uses test data where possible. That shows us exactly which steps the task has.",
+        icon: "swap",
+        title: "2. Build the integrations",
+        body: `With ${P} we connect your existing software to an AI assistant, safely, including older programs. The assistant can only do what you approve in advance, and we test everything on a copy of your system first.`,
       },
       {
-        icon: "design",
-        title: "3. Design",
-        body: "For the tasks that save the most, we design an automation with a savings calculation. You choose which task gets built first.",
+        icon: "grow",
+        title: "3. Automate the work",
+        body: "The assistant takes over the work, first for a few weeks alongside your team. Every action is logged and a person always approves irreversible steps.",
       },
     ],
-    privacyTitle: "Careful with your people and their data",
-    privacy: [
-      "No recording of a whole working day: the employee decides what is captured",
-      "Results per task, never per person, and the employee sees them first",
-      "Meant to improve the work, never to assess employees",
-      "Optional and only with approval: a few days of logging which programs are open, without screenshots or keystrokes",
-      "Everything is processed in the EU and deleted when the quickscan ends",
-    ],
+    loop: {
+      title: "Then: better every round",
+      body: "A mistake, a new supplier or a wish from your team goes back to step 1. We turn it into a test first and then improve the integration. That way the system gets more reliable every round and takes over more work.",
+    },
+    diagram: {
+      label: "Cycle: map, integrate, automate, and back to the start through feedback",
+      nodes: ["Map", "Integrate", "Automate"],
+      center: P,
+      centerSub: "better every round",
+      feedback: "Feedback and measurements",
+    },
   },
   calc: {
     eyebrow: "What does it save you?",
@@ -271,98 +124,6 @@ export const en: Copy = {
     formula:
       "monthly saving = times per month × minutes ÷ 60 × cost per hour × share taken over − monthly cost",
   },
-  cases: {
-    eyebrow: "Examples",
-    title: "What it looks like in practice.",
-    intro:
-      "Made-up but realistic examples. Real customer stories will replace them once our first customers are live.",
-    items: [
-      {
-        placeholder: true,
-        client: "Wholesaler, ~150 staff",
-        task: "Entering supplier invoices",
-        before: "Two people spent most of their week typing in and checking over 1,000 invoices a month.",
-        result: "From about 6 minutes to a check of seconds per invoice",
-      },
-      {
-        placeholder: true,
-        client: "Distributor, ~120 staff",
-        task: "Transferring orders from email",
-        before: "Orders arrived as PDFs and were typed into the order system by hand.",
-        result: "Orders are ready in the system; a member of staff only approves them",
-      },
-      {
-        placeholder: true,
-        client: "Secondary school, ~1,200 pupils",
-        task: "Processing new enrolments",
-        before: "The office retyped every online enrolment form into the student records system.",
-        result: "Forms go in automatically; staff only check them",
-      },
-    ],
-  },
-  results: {
-    eyebrow: "What it delivers",
-    title: "Hours back. Money you can check.",
-    intro: "We show how every number is calculated, so you can judge it yourself.",
-    sourcePrefix: "How we get there:",
-    items: [
-      {
-        placeholder: true,
-        source: "1,100 invoices a month × 6 minutes, half of it taken over",
-        value: 55,
-        suffix: " hours",
-        label: "back for your team every month, for one task",
-      },
-      {
-        placeholder: true,
-        source: `55 hours × €45 an hour, minus ${eur(prices.support)} support, × 12 months`,
-        value: 18900,
-        prefix: "€",
-        suffix: "",
-        label: "net saving per year",
-      },
-      {
-        placeholder: true,
-        source: `${eur(prices.quickscan + prices.trial)} one-off ÷ €1,575 net saving a month`,
-        value: 12,
-        prefix: "~",
-        suffix: " months",
-        label: "to earn back the investment",
-      },
-      {
-        placeholder: true,
-        source: "4–6 weeks to build and test, then 3–4 weeks alongside your team",
-        value: 10,
-        prefix: "≤",
-        suffix: " weeks",
-        label: "from the start of the trial to a measured result",
-      },
-    ],
-  },
-  teach: {
-    eyebrow: "After go-live",
-    title: `${P} Teach: show how it should be done, and the assistant gets better.`,
-    intro:
-      "Does the assistant get something wrong, or is there a new case, such as a supplier with a different invoice? You don't need to explain or write a specification. You simply show it.",
-    steps: [
-      {
-        icon: "record",
-        title: "1. You show it",
-        body: "An employee briefly records how the task should go, with one line on the right result. For a mistake, this can start straight from the log.",
-      },
-      {
-        icon: "test",
-        title: "2. We test and improve",
-        body: "We first turn every recording into a test, then adjust the assistant. All existing tests run again on a copy of your system, so nothing else breaks.",
-      },
-      {
-        icon: "grow",
-        title: "3. Live, and you see the status",
-        body: "You see where each recording stands: received, in test, live. Small improvements go live within ten working days, and every change can be rolled back.",
-      },
-    ],
-    note: "Fixes and small variants are included in support; a new task is an add-on. New rights for the assistant need your written approval. Recordings are never used to train AI and are deleted 90 days after the improvement.",
-  },
   safety: {
     eyebrow: "Is it safe?",
     title: "You stay in control. Always.",
@@ -375,19 +136,9 @@ export const en: Copy = {
         body: "We agree in writing exactly which actions the assistant may take. Anything else, it simply can't do.",
       },
       {
-        icon: "eye",
-        title: "Look first, change later",
-        body: "It starts by only reading data. Changes are switched on only when you agree, and a person always approves irreversible steps.",
-      },
-      {
-        icon: "log",
-        title: "Everything is recorded",
-        body: "Every action is logged: what it did, when and why. You can always check it.",
-      },
-      {
         icon: "power",
-        title: "You hold the off switch",
-        body: "You can stop the assistant yourself at any moment, without having to call us.",
+        title: "An off switch and a log",
+        body: "Every action is logged, and you can stop the assistant yourself at any moment, without having to call us.",
       },
       {
         icon: "lock",
@@ -412,7 +163,7 @@ export const en: Copy = {
         placeholder: false,
         tier: "Quickscan",
         amount: eur(prices.quickscan),
-        blurb: "We find out which tasks are worth automating, and what that saves you.",
+        blurb: "Step 1: we find out which tasks are worth automating, and what that saves you.",
         features: [
           "1–2 weeks, fixed price",
           "Measured in your systems, plus a task demo",
@@ -425,7 +176,7 @@ export const en: Copy = {
         placeholder: false,
         tier: "Trial on one task",
         amount: eur(prices.trial),
-        blurb: "One task automated in your own software, with a measured result.",
+        blurb: "Steps 2 and 3 for one task: integrated, automated and measured.",
         features: [
           "8–10 weeks, fixed price",
           "Built and tested on a copy of your system",
@@ -441,12 +192,12 @@ export const en: Copy = {
         tier: "Ongoing support",
         amount: eur(prices.support),
         unit: "/month",
-        blurb: "We keep it running and help you with the next task.",
+        blurb: "The improvement cycle: we keep it running and keep making it better.",
         features: [
           "Monitoring, maintenance and fixes",
           "AI usage included up to an agreed cap",
           "Up to two built tasks running",
-          "Improvements through Pontis Teach included",
+          "Continuous improvement based on feedback",
           "A savings overview every quarter",
           "Minimum 12 months, 3 months' notice",
         ],
@@ -475,28 +226,12 @@ export const en: Copy = {
         a: "Agentic AI is AI that doesn't just answer, but carries out steps itself, such as entering an invoice or checking an order. There is a lot of hype around AI, which is why we start with one task and measure what it saves. You pay for hours you can check, not for promises.",
       },
       {
-        q: "Do we need to know anything about AI?",
-        a: "No. You tell us which work takes too much time; we handle the technology. Your staff keep working in the programs they know, and we give a short training.",
-      },
-      {
         q: "Do we have to replace our software?",
         a: "No, that's the whole point. The assistant works with the programs you already use, including older ones.",
       },
       {
         q: "Will jobs disappear?",
         a: "That's your choice, but in practice it's the dull, repetitive part of someone's day. The time freed up goes to work that really needs a person, or a vacancy doesn't need refilling. The quickscan calculates both.",
-      },
-      {
-        q: "Will my employees be watched?",
-        a: "No. We measure the work in your systems, and an employee only records a task themselves as an example. No working day is recorded and results are per task, never per person. Only if you choose the optional logging of which programs are open do we ask your works council for approval first.",
-      },
-      {
-        q: "Does the assistant keep improving after delivery?",
-        a: `Yes. With ${P} Teach an employee briefly shows how a task should be done, for example after a mistake or for a new supplier. We turn that into a test first and then improve the assistant. Fixes and small variants are covered by support; a new task is an add-on.`,
-      },
-      {
-        q: "Does the assistant make decisions about people?",
-        a: "No. We don't build assistants that decide about individuals, such as job applications, appraisals or admissions. It does administrative work within fixed agreements.",
       },
       {
         q: "What about privacy?",
