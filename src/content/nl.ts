@@ -70,36 +70,36 @@ export const nl: Copy = {
   },
   approach: {
     eyebrow: "Onze werkwijze",
-    title: "Drie stappen, en daarna steeds beter.",
+    title: "Ontdekken, verbinden, automatiseren. En steeds beter.",
     intro:
       "Wij beginnen met één taak en bouwen van daaruit verder. Na de livegang begint de cirkel opnieuw: wat in de praktijk opvalt, maakt het systeem elke ronde beter.",
     steps: [
       {
         icon: "analyze",
-        title: "1. Werkprocessen in kaart brengen",
+        title: "1. Ontdekken waar de tijd zit",
         body: "Wij meten in uw systemen hoeveel werk er is en een medewerker laat zien hoe een taak gaat. U krijgt per taak een berekening van wat automatiseren oplevert, en een eerlijk nee als het niet loont.",
       },
       {
         icon: "swap",
-        title: "2. Koppelingen ontwikkelen",
+        title: "2. Verbinden met uw software",
         body: `Met ${P} verbinden wij uw bestaande software veilig met een AI-assistent, ook oudere programma's. De assistent kan alleen wat u vooraf goedkeurt, en wij testen alles eerst op een kopie van uw systeem.`,
       },
       {
         icon: "grow",
-        title: "3. Werk automatiseren",
+        title: "3. Automatiseren, met u aan het roer",
         body: "De assistent neemt het werk over, eerst een paar weken naast uw team. Elke handeling staat in een logboek en onomkeerbare stappen keurt altijd een mens goed.",
       },
     ],
     loop: {
-      title: "En dan: steeds beter",
+      title: "En dan: leren en verbeteren",
       body: "Een fout, een nieuwe leverancier of een wens van uw team gaat terug naar stap 1. Wij maken er eerst een test van en verbeteren dan de koppeling. Zo wordt het systeem elke ronde betrouwbaarder en neemt het meer werk over.",
     },
     diagram: {
-      label: "Kringloop: in kaart brengen, koppelen, automatiseren, en via feedback terug naar het begin",
-      nodes: ["In kaart brengen", "Koppelen", "Automatiseren"],
+      label: "Kringloop: ontdekken, verbinden, automatiseren, en via wat het gebruik leert terug naar het begin",
+      nodes: ["Ontdekken", "Verbinden", "Automatiseren"],
       center: P,
       centerSub: "elke ronde beter",
-      feedback: "Feedback en metingen",
+      feedback: "Leren van gebruik",
     },
   },
   calc: {

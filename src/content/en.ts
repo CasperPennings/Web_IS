@@ -68,36 +68,36 @@ export const en: Copy = {
   },
   approach: {
     eyebrow: "How we work",
-    title: "Three steps, then better every round.",
+    title: "Discover, connect, automate. And better every round.",
     intro:
       "We start with one task and build from there. After go-live the cycle starts again: what shows up in daily use makes the system better every round.",
     steps: [
       {
         icon: "analyze",
-        title: "1. Map your workflows",
+        title: "1. Discover where the time goes",
         body: "We measure the volume of work in your systems and an employee shows how a task is done. You get a calculation per task of what automating it saves, and an honest no if it doesn't pay.",
       },
       {
         icon: "swap",
-        title: "2. Build the integrations",
+        title: "2. Connect your software",
         body: `With ${P} we connect your existing software to an AI assistant, safely, including older programs. The assistant can only do what you approve in advance, and we test everything on a copy of your system first.`,
       },
       {
         icon: "grow",
-        title: "3. Automate the work",
+        title: "3. Automate, with you in control",
         body: "The assistant takes over the work, first for a few weeks alongside your team. Every action is logged and a person always approves irreversible steps.",
       },
     ],
     loop: {
-      title: "Then: better every round",
+      title: "Then: learn and improve",
       body: "A mistake, a new supplier or a wish from your team goes back to step 1. We turn it into a test first and then improve the integration. That way the system gets more reliable every round and takes over more work.",
     },
     diagram: {
-      label: "Cycle: map, integrate, automate, and back to the start through feedback",
-      nodes: ["Map", "Integrate", "Automate"],
+      label: "Cycle: discover, connect, automate, and back to the start through what daily use teaches",
+      nodes: ["Discover", "Connect", "Automate"],
       center: P,
       centerSub: "better every round",
-      feedback: "Feedback and measurements",
+      feedback: "Learning from use",
     },
   },
   calc: {
