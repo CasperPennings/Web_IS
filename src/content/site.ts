@@ -6,6 +6,11 @@ export const site = {
   domain: "intelligentsoftware.nl",
   url: "https://intelligentsoftware.nl/",
   email: "contact@intelligentsoftware.nl",
+  /**
+   * Formspree form ID (the part after https://formspree.io/f/). When empty, the
+   * contact form falls back to opening the visitor's mail app.
+   */
+  formspreeId: "",
 };
 
 /** Prices from the business plan, in euro excluding VAT. */

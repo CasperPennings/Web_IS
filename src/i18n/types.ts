@@ -101,7 +101,12 @@ export interface Copy {
     task: string;
     submit: string;
     note: string;
+    sending: string;
     sent: string;
+    /** Shown when the form falls back to the visitor's mail app. */
+    sentMail: string;
+    /** Shown when sending fails; the email address is appended. */
+    error: string;
     mailSubject: string;
   };
   footer: {

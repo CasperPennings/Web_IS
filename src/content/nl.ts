@@ -271,7 +271,10 @@ export const nl: Copy = {
     task: "Welke taak kost te veel tijd?",
     submit: "Vraag een kennismakingsgesprek aan",
     note: "We reageren binnen één werkdag. Het gesprek is kosteloos.",
-    sent: "Uw mailprogramma is geopend en uw gegevens zijn al ingevuld. U hoeft alleen nog op Verzenden te klikken.",
+    sending: "Bezig met versturen…",
+    sent: "Bedankt, uw aanvraag is verstuurd. We nemen binnen één werkdag contact met u op.",
+    sentMail: "Uw mailprogramma is geopend en uw gegevens zijn al ingevuld. U hoeft alleen nog op Verzenden te klikken.",
+    error: "Het versturen is niet gelukt. Probeer het nog eens, of mail ons op",
     mailSubject: "Aanvraag kennismaking –",
   },
   footer: {

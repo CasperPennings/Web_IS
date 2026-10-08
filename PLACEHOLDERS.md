@@ -27,5 +27,5 @@ Outside the language files:
 |---|---|
 | `src/content/site.ts` | Check the `platform` name for trademarks before launch. |
 
-Also needed before going live: a privacy policy, a contact form backend
-(`src/sections/ContactForm.tsx` currently opens the visitor's mail app), and the Open Graph image.
+Also needed before going live: a privacy policy, the Formspree form ID
+(`formspreeId` in `src/content/site.ts`; until it is set, the contact form opens the visitor's mail app), and the Open Graph image.

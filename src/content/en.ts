@@ -268,7 +268,10 @@ export const en: Copy = {
     task: "Which task takes too much time?",
     submit: "Request a free conversation",
     note: "We reply within one working day. The conversation is free.",
-    sent: "Your email app should have opened with the details filled in. Just press send.",
+    sending: "Sending…",
+    sent: "Thank you, your request has been sent. We will get back to you within one working day.",
+    sentMail: "Your email app should have opened with the details filled in. Just press send.",
+    error: "Sending didn't work. Please try again, or email us at",
     mailSubject: "Conversation request from",
   },
   footer: {

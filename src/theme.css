@@ -762,3 +762,7 @@ a {
   font-size: 13px;
   fill: var(--pui-fg-mute);
 }
+
+.form__note--error {
+  color: #e5484d;
+}
