@@ -166,7 +166,7 @@ Current placeholder set:
 | Case studies (3) | Example wholesaler (order intake, ERP), example accounting firm (invoice matching), example manufacturer (production reports from IBM i) |
 | Testimonial (optional) | One quote marked "Example quote" |
 | Pricing | Process review "from €X", Pilot "from €Y", Production "from €Z/month", literal `€X`-style tokens until set |
-| Contact | `hallo@intelligentsoftware.nl`, KvK/VAT "to be added" |
+| Contact | `contact@intelligentsoftware.nl`, KvK/VAT "to be added" |
 
 ---
 

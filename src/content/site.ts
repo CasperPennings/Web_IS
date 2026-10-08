@@ -5,8 +5,7 @@ export const site = {
   platform: "Pontis",
   domain: "intelligentsoftware.nl",
   url: "https://intelligentsoftware.nl/",
-  // placeholder: true — replace with the real address before going live
-  email: "hallo@intelligentsoftware.nl",
+  email: "contact@intelligentsoftware.nl",
 };
 
 /** Prices from the business plan, in euro excluding VAT. */

@@ -25,7 +25,7 @@ Outside the language files:
 
 | File | What to replace |
 |---|---|
-| `src/content/site.ts` | `email` (hallo@intelligentsoftware.nl). Check the `platform` name for trademarks before launch. |
+| `src/content/site.ts` | Check the `platform` name for trademarks before launch. |
 
 Also needed before going live: a privacy policy, a contact form backend
 (`src/sections/ContactForm.tsx` currently opens the visitor's mail app), and the Open Graph image.
