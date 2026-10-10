@@ -342,7 +342,7 @@ a {
 /* Problem */
 .problem h3 {
   font-size: 1.25rem;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .problem p {
@@ -1143,6 +1143,76 @@ a {
   opacity: 0.5;
 }
 
+:root[data-theme="light"] .pui-bigback__svg {
+  opacity: 0.18;
+}
+
 .hero__grid > * {
+  min-width: 0;
+}
+
+/* Round 3 */
+.chat {
+  min-width: 0;
+}
+
+.pui-bubble {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.pui-bubble__meta {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.pui-bubble__meta > * {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pui-price__amount-unit {
+  font-family: var(--pui-font-sans);
+  letter-spacing: 0;
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+.calc__sticky.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.calc__sticky {
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.pui-popover__title {
+  line-height: 1.2;
+  font-size: 1.375rem;
+  margin: 0 0 12px;
+}
+
+@media (max-width: 700px) {
+  .pui-bigback__link {
+    padding: 6px 0;
+  }
+}
+
+.contact__inner > * {
+  min-width: 0;
+}
+
+.section-head a {
+  overflow-wrap: anywhere;
+}
+
+.form {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.field input,
+.field textarea {
   min-width: 0;
 }

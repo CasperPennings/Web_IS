@@ -4,8 +4,7 @@ import { prices, site } from "./site";
 const P = site.platform;
 const eur = (n: number) =>
   new Intl.NumberFormat("nl-NL", { style: "currency", currency: "EUR", maximumFractionDigits: 0 })
-    .format(n)
-    .replace(/\s/, "");
+    .format(n);
 const foundingTrial = prices.trial * (1 - prices.foundingDiscount);
 
 export const nl: Copy = {
@@ -230,7 +229,7 @@ export const nl: Copy = {
     eyebrow: "Vragen",
     title: "Veelgestelde vragen.",
     more: "Staat uw vraag er niet bij?",
-    moreCta: "Stel hem in een gratis gesprek",
+    moreCta: "Stel uw vraag in een gratis gesprek",
     items: [
       {
         q: `Wat is ${P} precies?`,
@@ -302,7 +301,7 @@ export const nl: Copy = {
   },
   footer: {
     service: "Onze dienst",
-    more: "Meer",
+    more: "Informatie",
     contact: "Contact",
     contactLink: "Contact",
   },

@@ -9,7 +9,7 @@ const foundingTrial = prices.trial * (1 - prices.foundingDiscount);
 export const en: Copy = {
   locale: "en-GB",
   meta: {
-    title: `Intelligent Software – Step into the AI revolution with ${P}`,
+    title: `${P} by Intelligent Software – Let AI take over your routine work`,
     description: `An AI assistant that does the repetitive computer work in the software you already use. ${P} connects your existing programs to AI, safely. Fixed prices, measure first, build second.`,
   },
   common: {
@@ -30,7 +30,7 @@ export const en: Copy = {
     langLabel: "Language",
   },
   hero: {
-    eyebrow: "Your chance to step into the AI revolution",
+    eyebrow: "AI that doesn't just talk, but works",
     titleStart: "Let AI do the",
     rolling: ["data entry", "invoice checks", "absence records", "weekly reports", "copy-pasting"],
     titleEnd: "",
@@ -299,7 +299,7 @@ export const en: Copy = {
   },
   footer: {
     service: "The service",
-    more: "More",
+    more: "Information",
     contact: "Contact",
     contactLink: "Contact",
   },

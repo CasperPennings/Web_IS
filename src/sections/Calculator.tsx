@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Button, GlassCard, StatCounter } from "performative-ui";
 import { useCopy } from "../i18n/LanguageContext";
 import { prices } from "../content/site";
@@ -62,6 +62,15 @@ export function Calculator({ onContact }: { onContact: OpenContact }) {
   const [minutes, setMinutes] = useState("6");
   const [rate, setRate] = useState("45");
   const [share, setShare] = useState("0.5");
+  const outRef = useRef<HTMLDivElement>(null);
+  const [outVisible, setOutVisible] = useState(false);
+  useEffect(() => {
+    const el = outRef.current;
+    if (!el || !("IntersectionObserver" in window)) return;
+    const io = new IntersectionObserver(([e]) => setOutVisible(e.isIntersecting), { threshold: 0.25 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
   const r = calculateRoi({
     tasksPerMonth: Number(tasks),
@@ -123,10 +132,9 @@ export function Calculator({ onContact }: { onContact: OpenContact }) {
               </div>
             </fieldset>
             <p className="caption">{t.fixedLine}</p>
-            <p className="caption">{t.footnote}</p>
           </GlassCard>
 
-          <GlassCard className="calc__out">
+          <GlassCard className="calc__out" ref={outRef}>
             <div>
               <div className="big-num">
                 <StatCounter
@@ -164,13 +172,14 @@ export function Calculator({ onContact }: { onContact: OpenContact }) {
             <details className="formula">
               <summary>{t.formulaTitle}</summary>
               <p>{t.formula}</p>
+              <p>{t.footnote}</p>
             </details>
           </GlassCard>
         </div>
         <p className="sr-only" aria-live="polite">
           {announce}
         </p>
-        <div className="calc__sticky" aria-hidden="true">
+        <div className={`calc__sticky${outVisible ? " is-hidden" : ""}`} aria-hidden="true">
           <span>
             <strong>{yearly}</strong> {t.stickyYear}
           </span>
