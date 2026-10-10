@@ -39,9 +39,9 @@ export const nl: Copy = {
     sub: `Facturen overtypen, orders invoeren, gegevens controleren: met ${P} neemt een AI-assistent dit werk over in de software die u al gebruikt. U weet vooraf wat het oplevert, en u houdt zelf de regie.`,
     ctaPrimary: "Plan een gratis gesprek",
     ctaSecondary: "Bereken wat het oplevert",
-    proof: ["Werkt met uw huidige software", "Vaste prijzen", "Garantie op de proef"],
+    proof: ["Werkt met uw huidige software", "Vaste prijzen", "Garantie op de eerste taak"],
     seo: " – administratief werk automatiseren voor het mkb",
-    founding: `De eerste drie klanten krijgen ${prices.foundingDiscount * 100}% korting op de proef.`,
+    founding: `De eerste drie klanten krijgen ${prices.foundingDiscount * 100}% korting op hun eerste automatisering.`,
   },
   chat: {
     question: "Kun je de inkoopfacturen van deze week verwerken?",
@@ -56,9 +56,9 @@ export const nl: Copy = {
     title: "Uw medewerkers zijn uren kwijt aan het overtypen van gegevens.",
     intro:
       "De meeste organisaties draaien op software die prima werkt, maar nooit is gemaakt om samen te werken. Wat de programma's niet doen, doen uw medewerkers met de hand.",
-    cost: "Twee uur overtypen per dag kost u al snel bijna € 20.000 per jaar, voor werk waar niemand beter van wordt.",
+    cost: "Twee uur overtypen per dag kost u bij € 45 per uur al snel bijna € 20.000 per jaar, voor werk waar niemand beter van wordt.",
     whyNow:
-      "Tot voor kort was daar weinig aan te doen. Sinds kort kan AI bestaande programma's veilig bedienen, ook oudere. En goede administratieve krachten vinden wordt er niet makkelijker op.",
+      "Tot voor kort was daar weinig aan te doen. Inmiddels kan AI bestaande programma's veilig bedienen, ook oudere. En goede administratieve krachten vinden wordt er niet makkelijker op.",
     points: [
       {
         title: "Alles twee keer intypen",
@@ -174,8 +174,8 @@ export const nl: Copy = {
     eyebrow: "Wat het kost",
     title: "Begin klein. Ga alleen door als het loont.",
     intro:
-      `Vaste prijzen per stap. Na elke stap beslist u, op basis van echte cijfers, of u verdergaat. Reken voor het eerste jaar op ${eur(firstYear)} in totaal, inclusief een jaar ondersteuning. Of dat loont voor uw taak, ziet u direct in de rekenhulp.`,
-    recommended: "Hier begint u",
+      `U begint met een gratis gesprek over één taak. Is die kansrijk, dan volgt de quickscan. Vaste prijzen per stap. Na elke stap beslist u, op basis van echte cijfers, of u verdergaat. Reken voor het eerste jaar op ${eur(firstYear)} in totaal, inclusief een jaar ondersteuning. Of dat loont voor uw taak, ziet u direct in de rekenhulp.`,
+    recommended: "Eerste betaalde stap",
     priceTbd: "Prijs volgt",
     plans: [
       {
@@ -272,7 +272,7 @@ export const nl: Copy = {
       },
       {
         q: "En als het niet loont?",
-        a: "Dan hoort u dat in de quickscan, voordat u geld uitgeeft aan de bouw. Niet elke taak is het automatiseren waard. De quickscan betaalt u wel: dat eerlijke antwoord is precies wat u koopt.",
+        a: "Vaak kunnen we dat al in het gratis gesprek inschatten. Zeker weten doet u het na de quickscan, voordat u geld uitgeeft aan de bouw. Niet elke taak is het automatiseren waard, en dat eerlijke antwoord is precies wat de quickscan u oplevert.",
       },
       {
         q: "Zitten we daarna aan u vast?",
@@ -295,7 +295,7 @@ export const nl: Copy = {
     next: [
       "U hoort binnen één werkdag van ons.",
       "In een kort gesprek bespreken we één taak en zeggen we eerlijk of die kansrijk is. Gratis en vrijblijvend.",
-      "U krijgt een eerlijk advies, ook als automatiseren niet loont.",
+      "Is de taak kansrijk, dan ontvangt u een voorstel voor de quickscan, met vaste prijs en planning. U beslist zelf of u verdergaat.",
     ],
   },
   form: {
@@ -311,12 +311,12 @@ export const nl: Copy = {
     closeLabel: "Sluiten",
     requiredNote: "Alle velden zijn verplicht, tenzij anders aangegeven.",
     submit: "Vraag het gratis gesprek aan",
-    note: "We reageren binnen één werkdag. Het gesprek is kosteloos.",
+    note: "We reageren binnen één werkdag. Het gesprek is gratis.",
     sending: "Bezig met versturen…",
     sent: "Bedankt, uw aanvraag is verstuurd. We nemen binnen één werkdag contact met u op.",
     sentMail: "Uw mailprogramma is geopend en uw gegevens zijn al ingevuld. U hoeft alleen nog op Verzenden te klikken.",
     error: "Het versturen is niet gelukt. Probeer het nog eens, of mail ons op",
-    mailSubject: "Aanvraag kennismaking –",
+    mailSubject: "Aanvraag gratis gesprek –",
   },
   footer: {
     service: "Onze dienst",

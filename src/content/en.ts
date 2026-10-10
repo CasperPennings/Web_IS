@@ -38,9 +38,9 @@ export const en: Copy = {
     sub: `Retyping invoices, entering orders, checking data: with ${P}, an AI assistant takes over this work in the software you already use. You know the return up front, and you stay in control.`,
     ctaPrimary: "Book a free call",
     ctaSecondary: "Calculate what it saves",
-    proof: ["Works with your current software", "Fixed prices", "Guarantee on the trial"],
+    proof: ["Works with your current software", "Fixed prices", "Guarantee on the first task"],
     seo: " – automating administrative work for SMEs",
-    founding: `Our first three customers get ${prices.foundingDiscount * 100}% off the trial.`,
+    founding: `Our first three customers get ${prices.foundingDiscount * 100}% off their first automation.`,
   },
   chat: {
     question: "Can you process this week's supplier invoices?",
@@ -55,7 +55,7 @@ export const en: Copy = {
     title: "Your people spend hours being the link between programs.",
     intro:
       "Most organisations run on software that works fine, but was never made to work together. So people fill the gaps by hand.",
-    cost: "Two hours of retyping a day easily costs you nearly €20,000 a year, for work nobody benefits from.",
+    cost: "At €45 an hour, two hours of retyping a day easily costs you nearly €20,000 a year, for work nobody benefits from.",
     whyNow:
       "Until recently there was little you could do about that. AI can now safely operate existing programs, including older ones. And good administrative staff aren't getting any easier to find.",
     points: [
@@ -135,7 +135,7 @@ export const en: Copy = {
     paybackLabel: "to earn back the one-off cost",
     promising: "This looks promising. In a free call we check together whether these numbers hold up in practice.",
     notice:
-      "With these numbers payback takes more than a year, so automating this task is probably not worth it. We would tell you the same in the first conversation, before you spend anything.",
+      "With these numbers payback takes more than a year, so automating this task is probably not worth it. We would tell you the same in the free call, before you spend anything.",
     formulaTitle: "How we calculate",
     formula:
       "Times per month × minutes each time ÷ 60 × hourly cost × the share the assistant takes over, minus the monthly cost.",
@@ -172,8 +172,8 @@ export const en: Copy = {
   pricing: {
     eyebrow: "What it costs",
     title: "Start small. Only continue if it pays.",
-    intro: `Fixed prices per step. After each step you decide, based on real numbers, whether to continue. Expect ${eur(firstYear)} in total for the first year, including a year of support. The calculator shows straight away whether that pays off for your task.`,
-    recommended: "Start here",
+    intro: `You start with a free call about one task. If it's a good candidate, the quickscan follows. Fixed prices per step. After each step you decide, based on real numbers, whether to continue. Expect ${eur(firstYear)} in total for the first year, including a year of support. The calculator shows straight away whether that pays off for your task.`,
+    recommended: "First paid step",
     priceTbd: "Price to follow",
     plans: [
       {
@@ -270,7 +270,7 @@ export const en: Copy = {
       },
       {
         q: "What if it doesn't pay off?",
-        a: "Then we say so in the quickscan, before you spend money on building. Not every task is worth automating. You do pay for the quickscan: that honest answer is exactly what you buy.",
+        a: "We can often tell in the free call already. You'll know for certain after the quickscan, before you spend money on building anything. Not every task is worth automating, and that honest answer is exactly what the quickscan gives you.",
       },
       {
         q: "Are we tied to you afterwards?",
@@ -293,7 +293,7 @@ export const en: Copy = {
     next: [
       "You hear from us within one working day.",
       "In a short call we look at one task and tell you honestly whether it is a good candidate. Free, no obligation.",
-      "You get honest advice, including when automating does not pay.",
+      "If the task is a good candidate, you receive a quickscan proposal with a fixed price and schedule. You decide whether to go ahead.",
     ],
   },
   form: {
@@ -309,12 +309,12 @@ export const en: Copy = {
     closeLabel: "Close",
     requiredNote: "All fields are required unless marked optional.",
     submit: "Request the free call",
-    note: "We reply within one working day. The conversation is free.",
+    note: "We reply within one working day. The call is free.",
     sending: "Sending…",
     sent: "Thank you, your request has been sent. We will get back to you within one working day.",
     sentMail: "Your email app should have opened with the details filled in. Just press send.",
     error: "Sending didn't work. Please try again, or email us at",
-    mailSubject: "Conversation request from",
+    mailSubject: "Free call request from",
   },
   footer: {
     service: "The service",
