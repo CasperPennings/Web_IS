@@ -58,7 +58,7 @@ export function Calculator({ onContact }: { onContact: OpenContact }) {
     [copy.locale],
   );
 
-  const [tasks, setTasks] = useState("1100");
+  const [tasks, setTasks] = useState("1500");
   const [minutes, setMinutes] = useState("6");
   const [rate, setRate] = useState("45");
   const [share, setShare] = useState("0.5");
@@ -162,7 +162,7 @@ export function Calculator({ onContact }: { onContact: OpenContact }) {
               </div>
               <div className="out-label">{t.paybackLabel}</div>
             </div>
-            {longPayback ? <div className="notice">{t.notice}</div> : null}
+            {longPayback ? <div className="notice">{t.notice}</div> : <div className="notice notice--good">{t.promising}</div>}
             <div className="calc__cta">
               <Button variant="glow" onClick={discuss}>
                 {t.cta}

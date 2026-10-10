@@ -37,8 +37,8 @@ export function App() {
         <Hero onContact={openContact} />
         <Problem />
         <Approach />
-        <Calculator onContact={openContact} />
         <Safety />
+        <Calculator onContact={openContact} />
         <Pricing onContact={openContact} />
         <Faq onContact={openContact} />
         <Contact />

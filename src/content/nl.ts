@@ -6,12 +6,13 @@ const eur = (n: number) =>
   new Intl.NumberFormat("nl-NL", { style: "currency", currency: "EUR", maximumFractionDigits: 0 })
     .format(n);
 const foundingTrial = prices.trial * (1 - prices.foundingDiscount);
+const firstYear = prices.quickscan + prices.trial + 12 * prices.support;
 
 export const nl: Copy = {
   locale: "nl-NL",
   meta: {
-    title: `${P} van Intelligent Software – Laat AI uw routinewerk overnemen`,
-    description: `Een AI-assistent die herhalend computerwerk overneemt in de software die u al gebruikt. ${P} koppelt uw bestaande programma's veilig aan AI. Met vaste prijzen en vooraf een eerlijke berekening van de opbrengst.`,
+    title: `Administratief werk automatiseren met AI voor het mkb | ${P}`,
+    description: `Laat een AI-assistent facturen, orders en ander herhalend werk verwerken in de software die u al gebruikt. Voor mkb-bedrijven met 20 tot 250 medewerkers. ${P} koppelt uw bestaande programma's veilig aan AI, met vaste prijzen en eerst een eerlijke berekening.`,
   },
   common: {
     example: "Voorbeeld",
@@ -26,17 +27,17 @@ export const nl: Copy = {
     saves: "Wat het oplevert",
     costs: "Kosten",
     questions: "Vragen",
-    cta: "Plan een kennismaking",
+    cta: "Plan een gratis gesprek",
     ctaShort: "Contact",
     langLabel: "Taal",
   },
   hero: {
-    eyebrow: "AI die niet alleen praat, maar ook werkt",
+    eyebrow: "Voor mkb-bedrijven met 20 tot 250 medewerkers",
     titleStart: "Laat AI",
     rolling: ["het typewerk", "het factuurwerk", "de orderinvoer", "het controlewerk", "het routinewerk"],
     titleEnd: "overnemen.",
     sub: `Met ${P} koppelen we uw bestaande software veilig aan een AI-assistent die herhalend computerwerk overneemt. U weet vooraf wat de automatisering oplevert, en u houdt zelf de regie.`,
-    ctaPrimary: "Plan een gratis kennismaking",
+    ctaPrimary: "Plan een gratis gesprek",
     ctaSecondary: "Bereken wat het oplevert",
     proof: ["Werkt met uw huidige software", "Vaste prijzen", "Eerst meten, dan bouwen"],
   },
@@ -130,6 +131,7 @@ export const nl: Copy = {
     paybackLabel: "tot de eenmalige kosten zijn terugverdiend",
     notice:
       "Bij deze cijfers duurt het meer dan een jaar voordat u de kosten terugverdient. Dan loont het waarschijnlijk niet om deze taak te automatiseren, en dat zeggen we u ook in het kennismakingsgesprek, voordat u iets uitgeeft.",
+    promising: "Dit ziet er kansrijk uit. In een gratis gesprek toetsen we samen of deze cijfers in de praktijk kloppen.",
     formulaTitle: "Zo rekenen we",
     formula:
       "Aantal keer per maand × minuten per keer ÷ 60 × uurkosten × het deel dat de assistent overneemt, min de maandkosten.",
@@ -167,7 +169,7 @@ export const nl: Copy = {
     eyebrow: "Wat het kost",
     title: "Begin klein. Ga alleen door als het loont.",
     intro:
-      "Vaste prijzen per stap. Na elke stap beslist u, op basis van echte cijfers, of u verdergaat.",
+      `Vaste prijzen per stap. Na elke stap beslist u, op basis van echte cijfers, of u verdergaat. Reken voor het eerste jaar op ${eur(firstYear)} in totaal, inclusief een jaar ondersteuning. Of dat loont voor uw taak, ziet u direct in de rekenhulp.`,
     recommended: "Hier begint u",
     priceTbd: "Prijs volgt",
     plans: [
@@ -182,7 +184,7 @@ export const nl: Copy = {
           "Een heldere besparingsberekening per taak",
           "Een eerlijk ‘nee’ als het niet loont",
         ],
-        cta: "Start met de quickscan",
+        cta: "Bespreek de quickscan",
         featured: true,
       },
       {
@@ -197,7 +199,7 @@ export const nl: Copy = {
           "Een rapport met de situatie vóór en na",
           "50% bij de start, 50% bij oplevering",
         ],
-        cta: "Vraag naar de proef",
+        cta: "Bespreek de proef",
       },
       {
         placeholder: false,
@@ -213,7 +215,7 @@ export const nl: Copy = {
           "Elk kwartaal een besparingsoverzicht",
           "Looptijd minimaal 12 maanden, daarna 3 maanden opzegtermijn",
         ],
-        cta: "Vraag naar de ondersteuning",
+        cta: "Bespreek de ondersteuning",
       },
     ],
     addon: `Elke extra taak bouwen we voor ${eur(prices.addon)}.`,
@@ -236,12 +238,24 @@ export const nl: Copy = {
         a: `${P} is ons platform dat uw bestaande software koppelt aan een AI-assistent. Het bepaalt wat de assistent mag doen, vraagt waar nodig een mens om goedkeuring en legt alles vast. U merkt er weinig van: uw team vraagt de assistent iets, en het werk gebeurt in de programma's die u al hebt.`,
       },
       {
-        q: "Wat is agentic AI, en is dat niet gewoon een hype?",
+        q: "Is dit niet gewoon weer een AI-hype?",
         a: "Agentic AI is AI die niet alleen antwoord geeft, maar zelf stappen uitvoert, zoals een factuur invoeren of een bestelling controleren. Over AI wordt veel beloofd. Daarom beginnen we met één taak en meten we wat die oplevert. U betaalt voor tijdwinst die u kunt narekenen, niet voor mooie verhalen.",
       },
       {
         q: "Moeten we onze software vervangen?",
         a: "Nee, daar draait het juist om. De assistent werkt met de programma's die u al gebruikt, ook met oudere.",
+      },
+      {
+        q: "Waarom niet gewoon Zapier of Make?",
+        a: "Die werken goed als beide programma's een moderne koppeling hebben. Veel bedrijfssoftware, zeker oudere, heeft die niet. Daar komt " + P + " juist van pas.",
+      },
+      {
+        q: "Wat is het verschil met een RPA-robot?",
+        a: "Een RPA-robot klikt schermen na en loopt vast zodra er iets verandert op het scherm. Onze assistent werkt via vooraf afgesproken handelingen en kan beter omgaan met afwijkingen, zoals een factuur met een andere opmaak.",
+      },
+      {
+        q: "Mijn softwareleverancier biedt zelf AI aan. Waarom dan dit?",
+        a: "De AI van een leverancier werkt meestal alleen binnen dat ene pakket. Het tijdrovende werk zit vaak juist tussen pakketten: van de mail naar de boekhouding, of van het orderprogramma naar de planning.",
       },
       {
         q: "Gaan er banen verloren?",
@@ -275,7 +289,7 @@ export const nl: Copy = {
     nextTitle: "Wat er daarna gebeurt",
     next: [
       "U hoort binnen één werkdag van ons.",
-      "In een kort gesprek bespreken we de taak en de software die u gebruikt.",
+      "In een kort gesprek bespreken we één taak en zeggen we eerlijk of die kansrijk is. Gratis en vrijblijvend.",
       "U krijgt een eerlijk advies, ook als automatiseren niet loont.",
     ],
   },

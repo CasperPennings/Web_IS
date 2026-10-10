@@ -5,12 +5,13 @@ const P = site.platform;
 const eur = (n: number) =>
   new Intl.NumberFormat("en-GB", { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(n);
 const foundingTrial = prices.trial * (1 - prices.foundingDiscount);
+const firstYear = prices.quickscan + prices.trial + 12 * prices.support;
 
 export const en: Copy = {
   locale: "en-GB",
   meta: {
-    title: `${P} by Intelligent Software – Let AI take over your routine work`,
-    description: `An AI assistant that does the repetitive computer work in the software you already use. ${P} connects your existing programs to AI, safely. Fixed prices, measure first, build second.`,
+    title: `Automate administrative work with AI for SMEs | ${P}`,
+    description: `Let an AI assistant process invoices, orders and other repetitive work in the software you already use. For businesses with 20 to 250 employees. ${P} connects your existing programs to AI safely, with fixed prices and an honest calculation first.`,
   },
   common: {
     example: "Example",
@@ -25,17 +26,17 @@ export const en: Copy = {
     saves: "What it saves",
     costs: "Costs",
     questions: "Questions",
-    cta: "Free conversation",
+    cta: "Book a free call",
     ctaShort: "Contact",
     langLabel: "Language",
   },
   hero: {
-    eyebrow: "AI that doesn't just talk, but works",
+    eyebrow: "For businesses with 20 to 250 employees",
     titleStart: "Let AI do the",
     rolling: ["data entry", "invoice checks", "absence records", "weekly reports", "copy-pasting"],
     titleEnd: "",
     sub: `With ${P} we connect your existing software, safely, to an AI assistant that takes over repetitive computer work. You know up front what the automation saves, and you stay in control.`,
-    ctaPrimary: "Book a free intro call",
+    ctaPrimary: "Book a free call",
     ctaSecondary: "Calculate what it saves",
     proof: ["Works with your current software", "Fixed prices", "Measure first, build second"],
   },
@@ -127,6 +128,7 @@ export const en: Copy = {
     yearLabel: "saved per year, after the monthly cost",
     monthsUnit: "months",
     paybackLabel: "to earn back the one-off cost",
+    promising: "This looks promising. In a free call we check together whether these numbers hold up in practice.",
     notice:
       "With these numbers payback takes more than a year, so automating this task is probably not worth it. We would tell you the same in the first conversation, before you spend anything.",
     formulaTitle: "How we calculate",
@@ -165,7 +167,7 @@ export const en: Copy = {
   pricing: {
     eyebrow: "What it costs",
     title: "Start small. Only continue if it pays.",
-    intro: "Fixed prices per step. After each step you decide, based on real numbers, whether to continue.",
+    intro: `Fixed prices per step. After each step you decide, based on real numbers, whether to continue. Expect ${eur(firstYear)} in total for the first year, including a year of support. The calculator shows straight away whether that pays off for your task.`,
     recommended: "Start here",
     priceTbd: "Price to follow",
     plans: [
@@ -180,7 +182,7 @@ export const en: Copy = {
           "A clear savings calculation per task",
           "An honest “no” if it doesn't pay",
         ],
-        cta: "Start with the quickscan",
+        cta: "Discuss the quickscan",
         featured: true,
       },
       {
@@ -195,7 +197,7 @@ export const en: Copy = {
           "A before-and-after report",
           "50% at the start, 50% on completion",
         ],
-        cta: "Ask about the trial",
+        cta: "Discuss the trial",
       },
       {
         placeholder: false,
@@ -211,7 +213,7 @@ export const en: Copy = {
           "A savings overview every quarter",
           "Minimum 12 months, 3 months' notice",
         ],
-        cta: "Ask about support",
+        cta: "Discuss support",
       },
     ],
     addon: `Building an extra task costs ${eur(prices.addon)} per task.`,
@@ -234,12 +236,24 @@ export const en: Copy = {
         a: `${P} is our platform that connects your existing software to an AI assistant. It decides what the assistant may do, asks a person for approval where needed and records everything. You hardly notice it: your team asks the assistant for something, and the work happens in the programs you already have.`,
       },
       {
-        q: "What is agentic AI, and isn't it just hype?",
+        q: "Isn't this just more AI hype?",
         a: "Agentic AI is AI that doesn't just answer, but carries out steps itself, such as entering an invoice or checking an order. There is a lot of hype around AI, which is why we start with one task and measure what it saves. You pay for hours you can check, not for promises.",
       },
       {
         q: "Do we have to replace our software?",
         a: "No, that's the whole point. The assistant works with the programs you already use, including older ones.",
+      },
+      {
+        q: "Why not just use Zapier or Make?",
+        a: "They work well when both programs have a modern connection. Much business software, especially older software, doesn't. That's exactly where " + P + " helps.",
+      },
+      {
+        q: "How is this different from an RPA robot?",
+        a: "An RPA robot replays clicks on screens and gets stuck as soon as a screen changes. Our assistant works through actions agreed in advance and copes better with variation, such as an invoice with a different layout.",
+      },
+      {
+        q: "Our software vendor offers its own AI. Why this?",
+        a: "A vendor's AI usually only works inside that one package. The time-consuming work often sits between packages: from email to the accounts, or from the order system to the planning.",
       },
       {
         q: "Will jobs disappear?",
@@ -273,7 +287,7 @@ export const en: Copy = {
     nextTitle: "What happens next",
     next: [
       "You hear from us within one working day.",
-      "In a short call we discuss the task and the software you use.",
+      "In a short call we look at one task and tell you honestly whether it is a good candidate. Free, no obligation.",
       "You get honest advice, including when automating does not pay.",
     ],
   },

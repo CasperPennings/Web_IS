@@ -86,6 +86,7 @@ export interface Copy {
     monthsUnit: string;
     paybackLabel: string;
     notice: string;
+    promising: string;
     formula: string;
     formulaTitle: string;
     srSummary: string;

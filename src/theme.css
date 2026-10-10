@@ -1216,3 +1216,8 @@ a {
 .field textarea {
   min-width: 0;
 }
+
+.notice--good {
+  border-color: color-mix(in srgb, var(--is-accent) 45%, transparent);
+  color: var(--pui-fg);
+}
