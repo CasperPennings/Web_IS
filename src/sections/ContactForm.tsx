@@ -9,7 +9,7 @@ type Status = "idle" | "sending" | "sent" | "sentMail" | "error";
  * Sends the request to Formspree when `site.formspreeId` is set; otherwise
  * opens the visitor's mail app with the details prefilled.
  */
-export function ContactForm() {
+export function ContactForm({ plan, task }: { plan?: string; task?: string } = {}) {
   const t = useCopy().form;
   const id = useId();
   const [status, setStatus] = useState<Status>("idle");
@@ -26,6 +26,8 @@ export function ContactForm() {
         `${t.company}: ${data.get("company")}`,
         `${t.email}: ${data.get("email")}`,
         `${t.program} ${data.get("system")}`,
+        `${t.phone}: ${data.get("phone")}`,
+        plan ? `${t.interest} ${plan}` : "",
         "",
         `${data.get("process")}`,
       ].join("\n");
@@ -63,6 +65,12 @@ export function ContactForm() {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
+      {plan ? (
+        <p className="form__interest">
+          {t.interest} <strong>{plan}</strong>
+          <input type="hidden" name="plan" value={plan} />
+        </p>
+      ) : null}
       <div className="form__row">
         <label className="field" htmlFor={`${id}-name`}>
           {t.name}
@@ -83,9 +91,13 @@ export function ContactForm() {
           <input id={`${id}-system`} name="system" placeholder={t.programPlaceholder} />
         </label>
       </div>
+      <label className="field" htmlFor={`${id}-phone`}>
+        {t.phone}
+        <input id={`${id}-phone`} name="phone" type="tel" autoComplete="tel" />
+      </label>
       <label className="field" htmlFor={`${id}-process`}>
         {t.task}
-        <textarea id={`${id}-process`} name="process" rows={4} required />
+        <textarea id={`${id}-process`} name="process" rows={4} placeholder={t.taskPlaceholder} defaultValue={task} />
       </label>
       {/* Spam trap: people never see or fill this field; Formspree drops submissions that do. */}
       <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="sr-only" aria-hidden="true" />

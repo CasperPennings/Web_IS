@@ -64,11 +64,21 @@ export interface Copy {
     tasks: string;
     minutes: string;
     rate: string;
-    build: string;
-    run: string;
+    /** Short units shown inside the input fields. */
+    unitTimes: string;
+    unitMin: string;
+    unitRate: string;
     shareQuestion: string;
-    low: string;
-    high: string;
+    /** Three options: cautious, average, optimistic (30 / 50 / 70%). */
+    shareOptions: string[];
+    /** Read-only line with the fixed prices used in the calculation. */
+    fixedLine: string;
+    cta: string;
+    ctaNote: string;
+    /** Prefilled task text for the contact form; {tasks}, {minutes} and {year} are replaced. */
+    prefill: string;
+    stickyYear: string;
+    stickyPayback: string;
     footnote: string;
     hoursUnit: string;
     hoursLabel: string;
@@ -90,7 +100,7 @@ export interface Copy {
     vatNote: string;
     founding: { label: string; title: string; body: string; cta: string };
   };
-  faq: { eyebrow: string; title: string; items: { q: string; a: string }[] };
+  faq: { eyebrow: string; title: string; items: { q: string; a: string }[]; more: string; moreCta: string };
   contact: { eyebrow: string; title: string; intro: string; emailPrompt: string; close: string };
   form: {
     name: string;
@@ -98,7 +108,12 @@ export interface Copy {
     email: string;
     program: string;
     programPlaceholder: string;
+    phone: string;
     task: string;
+    taskPlaceholder: string;
+    /** Shown above the form when a specific plan was clicked. */
+    interest: string;
+    closeLabel: string;
     submit: string;
     note: string;
     sending: string;
@@ -114,7 +129,5 @@ export interface Copy {
     more: string;
     contact: string;
     contactLink: string;
-    /** Placeholder until the real KvK / VAT numbers are known. */
-    registration: string;
   };
 }

@@ -1,4 +1,3 @@
-import { NodeGraphBackground } from "performative-ui";
 import { site } from "../content/site";
 import { useCopy } from "../i18n/LanguageContext";
 import { ContactForm } from "./ContactForm";
@@ -8,14 +7,6 @@ export function Contact() {
   const t = useCopy().contact;
   return (
     <section className="section contact" id="contact">
-      <NodeGraphBackground
-        className="contact__bg"
-        density={30}
-        speed={0.2}
-        colors={["#7c3aed", "#3b82f6", "#22d3ee"]}
-        linkColor="#6d6df0"
-        baseOpacity={0.35}
-      />
       <div className="container contact__inner">
         <SectionHead eyebrow={t.eyebrow} title={t.title}>
           {t.intro} {t.emailPrompt} <a href={`mailto:${site.email}`}>{site.email}</a>

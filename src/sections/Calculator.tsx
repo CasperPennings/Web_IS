@@ -1,18 +1,16 @@
 import { useMemo, useState } from "react";
-import { GlassCard, StatCounter, Temperature } from "performative-ui";
+import { Button, GlassCard, StatCounter } from "performative-ui";
 import { useCopy } from "../i18n/LanguageContext";
 import { prices } from "../content/site";
+import type { OpenContact } from "../lib/contact";
 import { calculateRoi } from "../lib/roi";
 import { SectionHead } from "./shared";
 
-const shareOptions = [
-  { key: "0.3", label: "30%", color: "#d4920a" },
-  { key: "0.5", label: "50%", color: "#3b82f6" },
-  { key: "0.7", label: "70%", color: "#22d3ee" },
-];
+const shareValues = ["0.3", "0.5", "0.7"];
 
 function NumberField(props: {
   label: string;
+  unit: string;
   value: string;
   onChange: (v: string) => void;
   step?: number;
@@ -20,19 +18,24 @@ function NumberField(props: {
   return (
     <label className="field">
       {props.label}
-      <input
-        type="number"
-        inputMode="decimal"
-        min={0}
-        step={props.step ?? 1}
-        value={props.value}
-        onChange={(e) => props.onChange(e.target.value)}
-      />
+      <span className="field__wrap">
+        <input
+          type="number"
+          inputMode="decimal"
+          min={0}
+          step={props.step ?? 1}
+          value={props.value}
+          onChange={(e) => props.onChange(e.target.value)}
+        />
+        <span className="field__suffix" aria-hidden="true">
+          {props.unit}
+        </span>
+      </span>
     </label>
   );
 }
 
-export function Calculator() {
+export function Calculator({ onContact }: { onContact: OpenContact }) {
   const copy = useCopy();
   const t = copy.calc;
   const fmt = useMemo(
@@ -48,19 +51,27 @@ export function Calculator() {
   const [minutes, setMinutes] = useState("6");
   const [rate, setRate] = useState("45");
   const [share, setShare] = useState("0.5");
-  const [build, setBuild] = useState(String(prices.quickscan + prices.trial));
-  const [run, setRun] = useState(String(prices.support));
 
   const r = calculateRoi({
     tasksPerMonth: Number(tasks),
     minutesPerTask: Number(minutes),
     hourlyCost: Number(rate),
     automationShare: Number(share),
-    buildCost: Number(build),
-    monthlyRunCost: Number(run),
+    buildCost: prices.quickscan + prices.trial,
+    monthlyRunCost: prices.support,
   });
 
   const longPayback = r.paybackMonths === null || r.paybackMonths > 12;
+  const yearly = fmt.eur.format(Math.round(r.netYearlySaving));
+  const payback = r.paybackMonths === null ? "—" : fmt.oneDecimal.format(r.paybackMonths);
+
+  const discuss = () =>
+    onContact({
+      task: t.prefill
+        .replace("{tasks}", fmt.int.format(Number(tasks) || 0))
+        .replace("{minutes}", fmt.int.format(Number(minutes) || 0))
+        .replace("{year}", yearly),
+    });
 
   return (
     <section className="section" id="calculator">
@@ -71,24 +82,28 @@ export function Calculator() {
         <div className="calc">
           <GlassCard>
             <div className="calc__fields">
-              <NumberField label={t.tasks} value={tasks} onChange={setTasks} />
-              <NumberField label={t.minutes} value={minutes} onChange={setMinutes} />
-              <NumberField label={t.rate} value={rate} onChange={setRate} />
-              <NumberField label={t.build} value={build} onChange={setBuild} step={500} />
-              <NumberField label={t.run} value={run} onChange={setRun} step={50} />
+              <NumberField label={t.tasks} unit={t.unitTimes} value={tasks} onChange={setTasks} />
+              <NumberField label={t.minutes} unit={t.unitMin} value={minutes} onChange={setMinutes} />
+              <NumberField label={t.rate} unit={t.unitRate} value={rate} onChange={setRate} />
             </div>
-            <div className="calc__label" id="share-label">
-              {t.shareQuestion}
-            </div>
-            <div className="calc__temp" role="group" aria-labelledby="share-label">
-              <Temperature
-                options={shareOptions}
-                value={share}
-                onChange={setShare}
-                labelLow={t.low}
-                labelHigh={t.high}
-              />
-            </div>
+            <fieldset className="segmented">
+              <legend className="calc__label">{t.shareQuestion}</legend>
+              <div className="segmented__options">
+                {shareValues.map((v, i) => (
+                  <label key={v} className={v === share ? "is-active" : undefined}>
+                    <input
+                      type="radio"
+                      name="share"
+                      value={v}
+                      checked={v === share}
+                      onChange={() => setShare(v)}
+                    />
+                    {t.shareOptions[i]}
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+            <p className="caption">{t.fixedLine}</p>
             <p className="caption">{t.footnote}</p>
           </GlassCard>
 
@@ -116,14 +131,27 @@ export function Calculator() {
             </div>
             <div>
               <div className="big-num">
-                {r.paybackMonths === null ? "—" : fmt.oneDecimal.format(r.paybackMonths)}{" "}
-                <small>{t.monthsUnit}</small>
+                {payback} <small>{t.monthsUnit}</small>
               </div>
               <div className="out-label">{t.paybackLabel}</div>
             </div>
             {longPayback ? <div className="notice">{t.notice}</div> : null}
+            <div className="calc__cta">
+              <Button variant="glow" onClick={discuss}>
+                {t.cta}
+              </Button>
+              <span className="caption">{t.ctaNote}</span>
+            </div>
             <div className="formula">{t.formula}</div>
           </GlassCard>
+        </div>
+        <div className="calc__sticky" aria-hidden="true">
+          <span>
+            <strong>{yearly}</strong> {t.stickyYear}
+          </span>
+          <span>
+            <strong>{payback}</strong> {t.stickyPayback}
+          </span>
         </div>
       </div>
     </section>

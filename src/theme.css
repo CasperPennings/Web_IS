@@ -16,7 +16,7 @@
   --pui-font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --pui-font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
   --pui-radius: 16px;
-  --is-accent: #a3e635;
+  --is-accent: #84cc16;
   --is-heading: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -26,7 +26,7 @@
   --pui-bg-elev: #ffffff;
   --pui-fg: #0b0b14;
   --pui-fg-dim: #44445a;
-  --pui-fg-mute: #6c6c86;
+  --pui-fg-mute: #5f5f78;
   --pui-border: #e2e2ec;
   --pui-border-bright: #cfcfdd;
   --is-accent: #4d7c0f;
@@ -86,7 +86,7 @@ a {
 }
 
 .section {
-  padding: 96px 0;
+  padding: 80px 0;
 }
 
 .section--soft {
@@ -250,8 +250,9 @@ a {
 }
 
 @media (max-width: 420px) {
-  .wordmark__text {
-    display: none;
+  .wordmark {
+    gap: 8px;
+    font-size: 0.9375rem;
   }
 }
 
@@ -265,7 +266,7 @@ a {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 88px 0 96px;
+  padding: 88px 0 48px;
 }
 
 /* The node graph sets z-index 1 itself; keep the hero content above it so links stay clickable. */
@@ -300,7 +301,7 @@ a {
 .hero__sub {
   font-size: 1.25rem;
   color: var(--pui-fg-dim);
-  max-width: 560px;
+  max-width: 34em;
   margin: 0 0 32px;
 }
 
@@ -406,10 +407,104 @@ a {
   margin-bottom: 8px;
 }
 
-.calc__temp {
-  height: 96px;
-  border-radius: 16px;
-  overflow: hidden;
+.segmented {
+  border: 0;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.segmented__options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  padding: 4px;
+  border: 1px solid var(--pui-border);
+  border-radius: 12px;
+  background: var(--pui-bg-soft);
+}
+
+.segmented label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 6px 8px;
+  border-radius: 9px;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--pui-fg-dim);
+  cursor: pointer;
+}
+
+.segmented label.is-active {
+  background: var(--pui-bg-elev);
+  color: var(--pui-fg);
+  font-weight: 600;
+  box-shadow: inset 0 0 0 1px var(--pui-border-bright);
+}
+
+.segmented input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.segmented label:has(input:focus-visible) {
+  outline: 2px solid var(--pui-grad-mid);
+  outline-offset: 2px;
+}
+
+.field__wrap {
+  position: relative;
+  display: block;
+}
+
+.field__wrap input {
+  width: 100%;
+  padding-right: 96px;
+}
+
+.field__suffix {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8125rem;
+  color: var(--pui-fg-mute);
+  pointer-events: none;
+}
+
+.calc__cta {
+  display: grid;
+  gap: 8px;
+  justify-items: start;
+}
+
+.calc__sticky {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .calc__sticky {
+    position: sticky;
+    bottom: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 16px -16px 0;
+    padding: 12px 16px;
+    font-size: 0.875rem;
+    color: var(--pui-fg-dim);
+    background: var(--pui-bg-elev);
+    border-top: 1px solid var(--pui-border);
+  }
+
+  .calc__sticky strong {
+    color: var(--pui-fg);
+    font-size: 1rem;
+  }
 }
 
 .calc__out {
@@ -524,12 +619,6 @@ a {
 .contact {
   position: relative;
   overflow: hidden;
-}
-
-.contact__bg {
-  position: absolute;
-  inset: 0;
-  opacity: 0.3;
 }
 
 .contact__inner {
@@ -651,7 +740,7 @@ a {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 40px;
-  align-items: center;
+  align-items: start;
 }
 
 @media (max-width: 900px) {
@@ -664,6 +753,15 @@ a {
   max-width: 480px;
   width: 100%;
   margin: 0 auto;
+  position: sticky;
+  top: 112px;
+}
+
+@media (max-width: 900px) {
+  .approach__diagram {
+    position: static;
+    max-width: 300px;
+  }
 }
 
 .approach__steps {
@@ -765,4 +863,121 @@ a {
 
 .form__note--error {
   color: #e5484d;
+}
+
+/* Primary actions: a solid gradient fill so they read as the main button. */
+.hero__ctas .pui-btn--glow,
+.nav__cta.pui-btn--glow,
+.founding .pui-btn--glow,
+.form .pui-btn--glow,
+.calc .pui-btn--glow {
+  background: linear-gradient(135deg, #7c3aed, #3b82f6);
+  color: #fff;
+  border-color: transparent;
+}
+
+:root[data-theme="light"] .hero h1 {
+  --pui-grad: linear-gradient(90deg, #7c3aed, #2563eb);
+}
+
+/* Comfortable tap targets */
+.lang-switch button {
+  min-height: 36px;
+  padding: 8px 12px;
+}
+
+.nav__cta {
+  min-height: 44px;
+}
+
+.faq summary {
+  min-height: 44px;
+  align-items: center;
+}
+
+.pui-bigback__link {
+  display: inline-block;
+  padding: 12px 0;
+}
+
+.faq__more {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+  margin-top: 32px;
+  color: var(--pui-fg-dim);
+}
+
+/* Founding offer: gradient border */
+.founding {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--pui-bg-elev), var(--pui-bg-elev)) padding-box,
+    linear-gradient(135deg, #7c3aed, #3b82f6, #84cc16) border-box;
+}
+
+/* Contact dialog */
+.pui-popover {
+  position: relative;
+}
+
+.popover-x {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--pui-fg-dim);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.popover-x:hover {
+  color: var(--pui-fg);
+  background: var(--pui-bg-soft);
+}
+
+.pui-popover__title {
+  font-family: var(--is-heading);
+  padding-right: 40px;
+}
+
+.form__interest {
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--pui-bg-soft);
+  color: var(--pui-fg-dim);
+  font-size: 0.9375rem;
+}
+
+.form__interest strong {
+  color: var(--pui-fg);
+}
+
+.pui-price__amount-unit {
+  font-size: 1rem;
+  color: var(--pui-fg-dim);
+}
+
+/* Align the footer with the page container */
+.pui-bigback {
+  padding-inline: max(16px, calc((100% - 1128px) / 2));
+}
+
+.pui-bigback__svg {
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: 64px 0;
+  }
 }

@@ -1,9 +1,10 @@
 import { Button } from "performative-ui";
+import type { OpenContact } from "../lib/contact";
 import { useCopy } from "../i18n/LanguageContext";
 import { LanguageSwitch } from "./LanguageSwitch";
 import { Logo } from "./shared";
 
-export function Nav({ onContact }: { onContact: () => void }) {
+export function Nav({ onContact }: { onContact: OpenContact }) {
   const t = useCopy().nav;
   return (
     <header className="nav">
@@ -16,7 +17,7 @@ export function Nav({ onContact }: { onContact: () => void }) {
           <a href="#faq">{t.questions}</a>
         </nav>
         <LanguageSwitch />
-        <Button className="nav__cta" size="sm" variant="glow" onClick={onContact}>
+        <Button className="nav__cta" size="sm" variant="glow" onClick={() => onContact()}>
           <span className="nav__long">{t.cta}</span>
           <span className="nav__short">{t.ctaShort}</span>
         </Button>

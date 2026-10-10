@@ -1,8 +1,9 @@
 import { Button, GlassCard, PricingCard, StatusDot } from "performative-ui";
 import { useCopy } from "../i18n/LanguageContext";
+import type { OpenContact } from "../lib/contact";
 import { ExampleTag, SectionHead } from "./shared";
 
-export function Pricing({ onContact }: { onContact: () => void }) {
+export function Pricing({ onContact }: { onContact: OpenContact }) {
   const t = useCopy().pricing;
   return (
     <section className="section" id="pricing">
@@ -29,7 +30,7 @@ export function Pricing({ onContact }: { onContact: () => void }) {
                 href="#contact"
                 onClick={(e) => {
                   e.preventDefault();
-                  onContact();
+                  onContact({ plan: p.tier });
                 }}
               >
                 {p.cta}
@@ -48,7 +49,7 @@ export function Pricing({ onContact }: { onContact: () => void }) {
             <h3>{t.founding.title}</h3>
             <p>{t.founding.body}</p>
           </div>
-          <Button variant="glow" onClick={onContact}>
+          <Button variant="glow" onClick={() => onContact({ plan: `${t.founding.label}: ${t.founding.title}` })}>
             {t.founding.cta}
           </Button>
         </GlassCard>

@@ -18,7 +18,7 @@ export function SectionHead({
 }) {
   return (
     <div className="section-head">
-      <EyebrowPill>{eyebrow}</EyebrowPill>
+      <EyebrowPill icon={false}>{eyebrow}</EyebrowPill>
       <h2>{title}</h2>
       {children ? <p>{children}</p> : null}
     </div>

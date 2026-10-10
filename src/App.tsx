@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Popover } from "performative-ui";
 import { useCopy } from "./i18n/LanguageContext";
+import type { ContactContext, OpenContact } from "./lib/contact";
 import { Approach } from "./sections/Approach";
 import { Calculator } from "./sections/Calculator";
 import { Contact } from "./sections/Contact";
@@ -14,21 +15,29 @@ import { Problem } from "./sections/Problem";
 import { Safety } from "./sections/Safety";
 
 export function App() {
-  const t = useCopy().contact;
+  const copy = useCopy();
+  const t = copy.contact;
   const [contactOpen, setContactOpen] = useState(false);
-  const openContact = () => setContactOpen(true);
+  const [context, setContext] = useState<ContactContext>({});
+  // Each opening gets a fresh form, prefilled with what the visitor clicked.
+  const [formKey, setFormKey] = useState(0);
+  const openContact: OpenContact = (ctx = {}) => {
+    setContext(ctx);
+    setFormKey((k) => k + 1);
+    setContactOpen(true);
+  };
 
   return (
     <>
       <Nav onContact={openContact} />
       <main>
-        <Hero />
+        <Hero onContact={openContact} />
         <Problem />
         <Approach />
-        <Calculator />
+        <Calculator onContact={openContact} />
         <Safety />
         <Pricing onContact={openContact} />
-        <Faq />
+        <Faq onContact={openContact} />
         <Contact />
       </main>
       <Footer />
@@ -41,7 +50,15 @@ export function App() {
         closeOnBackdrop
       >
         <div className="popover-body">
-          <ContactForm />
+          <button
+            type="button"
+            className="popover-x"
+            aria-label={copy.form.closeLabel}
+            onClick={() => setContactOpen(false)}
+          >
+            ×
+          </button>
+          <ContactForm key={formKey} plan={context.plan} task={context.task} />
         </div>
       </Popover>
     </>

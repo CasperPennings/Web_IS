@@ -27,7 +27,7 @@ export function Footer() {
         },
         {
           heading: t.contact,
-          links: [{ label: site.email, href: `mailto:${site.email}` }, { label: t.registration }],
+          links: [{ label: site.email, href: `mailto:${site.email}` }],
         },
       ]}
       copyright={`© ${new Date().getFullYear()} Intelligent Software · ${site.domain}`}
