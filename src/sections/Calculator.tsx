@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Button, GlassCard, StatCounter } from "performative-ui";
 import { useCopy } from "../i18n/LanguageContext";
 import { prices } from "../content/site";
@@ -6,11 +6,21 @@ import type { OpenContact } from "../lib/contact";
 import { calculateRoi } from "../lib/roi";
 import { SectionHead } from "./shared";
 
+function useDebounced<T>(value: T, ms: number) {
+  const [v, setV] = useState(value);
+  useEffect(() => {
+    const id = setTimeout(() => setV(value), ms);
+    return () => clearTimeout(id);
+  }, [value, ms]);
+  return v;
+}
+
 const shareValues = ["0.3", "0.5", "0.7"];
 
 function NumberField(props: {
   label: string;
   unit: string;
+  placeholder?: string;
   value: string;
   onChange: (v: string) => void;
   step?: number;
@@ -24,6 +34,7 @@ function NumberField(props: {
           inputMode="decimal"
           min={0}
           step={props.step ?? 1}
+          placeholder={props.placeholder}
           value={props.value}
           onChange={(e) => props.onChange(e.target.value)}
         />
@@ -65,6 +76,14 @@ export function Calculator({ onContact }: { onContact: OpenContact }) {
   const yearly = fmt.eur.format(Math.round(r.netYearlySaving));
   const payback = r.paybackMonths === null ? "—" : fmt.oneDecimal.format(r.paybackMonths);
 
+  const announce = useDebounced(
+    t.srSummary
+      .replace("{hours}", fmt.int.format(Math.round(r.hoursSavedPerMonth)))
+      .replace("{year}", yearly)
+      .replace("{payback}", payback),
+    800,
+  );
+
   const discuss = () =>
     onContact({
       task: t.prefill
@@ -82,7 +101,7 @@ export function Calculator({ onContact }: { onContact: OpenContact }) {
         <div className="calc">
           <GlassCard>
             <div className="calc__fields">
-              <NumberField label={t.tasks} unit={t.unitTimes} value={tasks} onChange={setTasks} />
+              <NumberField label={t.tasks} unit={t.unitTimes} placeholder={t.tasksHint} value={tasks} onChange={setTasks} />
               <NumberField label={t.minutes} unit={t.unitMin} value={minutes} onChange={setMinutes} />
               <NumberField label={t.rate} unit={t.unitRate} value={rate} onChange={setRate} />
             </div>
@@ -107,7 +126,7 @@ export function Calculator({ onContact }: { onContact: OpenContact }) {
             <p className="caption">{t.footnote}</p>
           </GlassCard>
 
-          <GlassCard className="calc__out" aria-live="polite">
+          <GlassCard className="calc__out">
             <div>
               <div className="big-num">
                 <StatCounter
@@ -142,9 +161,15 @@ export function Calculator({ onContact }: { onContact: OpenContact }) {
               </Button>
               <span className="caption">{t.ctaNote}</span>
             </div>
-            <div className="formula">{t.formula}</div>
+            <details className="formula">
+              <summary>{t.formulaTitle}</summary>
+              <p>{t.formula}</p>
+            </details>
           </GlassCard>
         </div>
+        <p className="sr-only" aria-live="polite">
+          {announce}
+        </p>
         <div className="calc__sticky" aria-hidden="true">
           <span>
             <strong>{yearly}</strong> {t.stickyYear}

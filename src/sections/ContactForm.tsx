@@ -71,6 +71,7 @@ export function ContactForm({ plan, task }: { plan?: string; task?: string } = {
           <input type="hidden" name="plan" value={plan} />
         </p>
       ) : null}
+      <p className="form__required">{t.requiredNote}</p>
       <div className="form__row">
         <label className="field" htmlFor={`${id}-name`}>
           {t.name}

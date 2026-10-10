@@ -29,8 +29,11 @@ export function App() {
 
   return (
     <>
+      <a className="skip-link" href="#main">
+        {copy.common.skip}
+      </a>
       <Nav onContact={openContact} />
-      <main>
+      <main id="main">
         <Hero onContact={openContact} />
         <Problem />
         <Approach />

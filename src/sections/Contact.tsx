@@ -8,9 +8,19 @@ export function Contact() {
   return (
     <section className="section contact" id="contact">
       <div className="container contact__inner">
-        <SectionHead eyebrow={t.eyebrow} title={t.title}>
-          {t.intro} {t.emailPrompt} <a href={`mailto:${site.email}`}>{site.email}</a>
-        </SectionHead>
+        <div>
+          <SectionHead eyebrow={t.eyebrow} title={t.title}>
+            {t.intro} {t.emailPrompt} <a href={`mailto:${site.email}`}>{site.email}</a>
+          </SectionHead>
+          <div className="next-steps">
+            <h3>{t.nextTitle}</h3>
+            <ol>
+              {t.next.map((n) => (
+                <li key={n}>{n}</li>
+              ))}
+            </ol>
+          </div>
+        </div>
         <ContactForm />
       </div>
     </section>

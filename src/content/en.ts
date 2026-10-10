@@ -16,6 +16,7 @@ export const en: Copy = {
     example: "Example",
     examplesCaption:
       "These are example figures, based on a typical invoice-processing task. Real customer results will replace them.",
+    skip: "Skip to content",
     logoLabel: "Intelligent Software, home",
   },
   nav: {
@@ -105,7 +106,8 @@ export const en: Copy = {
     title: "Fill in your own numbers.",
     intro:
       "Pick one task your team does often and roughly fill in how long it takes. The calculation is shown below the result, and if it isn't worth it, we say so.",
-    tasks: "How often does the task happen per month? (e.g. number of invoices)",
+    tasks: "Times per month",
+    tasksHint: "e.g. the number of invoices",
     minutes: "Minutes each time",
     rate: "Hourly cost of an employee, incl. employer costs",
     unitTimes: "× per month",
@@ -127,8 +129,10 @@ export const en: Copy = {
     paybackLabel: "to earn back the one-off cost",
     notice:
       "With these numbers payback takes more than a year, so automating this task is probably not worth it. We would tell you the same in the first conversation, before you spend anything.",
+    formulaTitle: "How we calculate",
     formula:
-      "monthly saving = times per month × minutes ÷ 60 × cost per hour × share taken over − monthly cost",
+      "Times per month × minutes each time ÷ 60 × hourly cost × the share the assistant takes over, minus the monthly cost.",
+    srSummary: "{hours} hours a month, {year} saved per year, paid back in {payback} months.",
   },
   safety: {
     eyebrow: "Is it safe?",
@@ -207,7 +211,7 @@ export const en: Copy = {
           "A savings overview every quarter",
           "Minimum 12 months, 3 months' notice",
         ],
-        cta: "Ask a question",
+        cta: "Ask about support",
       },
     ],
     addon: `Building an extra task costs ${eur(prices.addon)} per task.`,
@@ -266,6 +270,12 @@ export const en: Copy = {
       "Tell us which task eats the most time. We'll say honestly whether we can help and roughly what it would save. No obligations, no technical talk.",
     emailPrompt: "Prefer email?",
     close: "Close",
+    nextTitle: "What happens next",
+    next: [
+      "You hear from us within one working day.",
+      "In a short call we discuss the task and the software you use.",
+      "You get honest advice, including when automating does not pay.",
+    ],
   },
   form: {
     name: "Name",
@@ -278,6 +288,7 @@ export const en: Copy = {
     taskPlaceholder: "e.g. retyping supplier invoices into Exact, ±1,000 a month",
     interest: "You are interested in:",
     closeLabel: "Close",
+    requiredNote: "All fields are required unless marked optional.",
     submit: "Request a free conversation",
     note: "We reply within one working day. The conversation is free.",
     sending: "Sending…",

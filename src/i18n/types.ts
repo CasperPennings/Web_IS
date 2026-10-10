@@ -23,7 +23,7 @@ export interface Copy {
   /** Used for number and currency formatting. */
   locale: string;
   meta: { title: string; description: string };
-  common: { example: string; examplesCaption: string; logoLabel: string };
+  common: { example: string; examplesCaption: string; logoLabel: string; skip: string };
   nav: {
     label: string;
     approach: string;
@@ -87,6 +87,9 @@ export interface Copy {
     paybackLabel: string;
     notice: string;
     formula: string;
+    formulaTitle: string;
+    srSummary: string;
+    tasksHint: string;
   };
   safety: { eyebrow: string; title: string; intro: string; items: TextCard[] };
   pricing: {
@@ -101,7 +104,15 @@ export interface Copy {
     founding: { label: string; title: string; body: string; cta: string };
   };
   faq: { eyebrow: string; title: string; items: { q: string; a: string }[]; more: string; moreCta: string };
-  contact: { eyebrow: string; title: string; intro: string; emailPrompt: string; close: string };
+  contact: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    emailPrompt: string;
+    close: string;
+    nextTitle: string;
+    next: string[];
+  };
   form: {
     name: string;
     company: string;
@@ -114,6 +125,7 @@ export interface Copy {
     /** Shown above the form when a specific plan was clicked. */
     interest: string;
     closeLabel: string;
+    requiredNote: string;
     submit: string;
     note: string;
     sending: string;

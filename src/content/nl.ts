@@ -18,6 +18,7 @@ export const nl: Copy = {
     example: "Voorbeeld",
     examplesCaption:
       "Voorbeeldcijfers, gebaseerd op het verwerken van inkoopfacturen. Zodra we resultaten van echte klanten hebben, ziet u die hier.",
+    skip: "Direct naar de inhoud",
     logoLabel: "Intelligent Software – terug naar boven",
   },
   nav: {
@@ -107,7 +108,8 @@ export const nl: Copy = {
     title: "Reken het zelf uit.",
     intro:
       "Kies een taak die uw team vaak doet en schat hoeveel tijd die kost. Onder de uitkomst ziet u hoe we rekenen. Loont het niet, dan ziet u dat meteen.",
-    tasks: "Hoe vaak gebeurt de taak per maand? (bijv. aantal facturen)",
+    tasks: "Aantal keer per maand",
+    tasksHint: "bijv. het aantal facturen",
     minutes: "Minuten per keer",
     rate: "Uurkosten medewerker, incl. werkgeverslasten",
     unitTimes: "× per maand",
@@ -129,8 +131,10 @@ export const nl: Copy = {
     paybackLabel: "tot de eenmalige kosten zijn terugverdiend",
     notice:
       "Bij deze cijfers duurt het meer dan een jaar voordat u de kosten terugverdient. Dan loont het waarschijnlijk niet om deze taak te automatiseren, en dat zeggen we u ook in het kennismakingsgesprek, voordat u iets uitgeeft.",
+    formulaTitle: "Zo rekenen we",
     formula:
-      "besparing per maand = aantal keer per maand × minuten per keer ÷ 60 × uurkosten × deel dat wordt overgenomen − maandkosten",
+      "Aantal keer per maand × minuten per keer ÷ 60 × uurkosten × het deel dat de assistent overneemt, min de maandkosten.",
+    srSummary: "{hours} uur per maand, {year} per jaar bespaard, terugverdiend in {payback} maanden.",
   },
   safety: {
     eyebrow: "Is het veilig?",
@@ -210,7 +214,7 @@ export const nl: Copy = {
           "Elk kwartaal een besparingsoverzicht",
           "Looptijd minimaal 12 maanden, daarna 3 maanden opzegtermijn",
         ],
-        cta: "Stel een vraag",
+        cta: "Vraag naar de ondersteuning",
       },
     ],
     addon: `Elke extra taak bouwen we voor ${eur(prices.addon)}.`,
@@ -269,6 +273,12 @@ export const nl: Copy = {
       "Vertel ons welke taak de meeste tijd kost. Wij zeggen eerlijk of we kunnen helpen en wat het ongeveer oplevert. In gewone taal, zonder technisch verhaal.",
     emailPrompt: "Liever mailen?",
     close: "Sluiten",
+    nextTitle: "Wat er daarna gebeurt",
+    next: [
+      "U hoort binnen één werkdag van ons.",
+      "In een kort gesprek bespreken we de taak en de software die u gebruikt.",
+      "U krijgt een eerlijk advies, ook als automatiseren niet loont.",
+    ],
   },
   form: {
     name: "Naam",
@@ -281,6 +291,7 @@ export const nl: Copy = {
     taskPlaceholder: "bijv. inkoopfacturen overtypen in Exact, ±1.000 per maand",
     interest: "U heeft interesse in:",
     closeLabel: "Sluiten",
+    requiredNote: "Alle velden zijn verplicht, tenzij anders aangegeven.",
     submit: "Vraag een kennismakingsgesprek aan",
     note: "We reageren binnen één werkdag. Het gesprek is kosteloos.",
     sending: "Bezig met versturen…",

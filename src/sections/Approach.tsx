@@ -102,7 +102,10 @@ export function Approach() {
             ))}
             <div className="approach__loop">
               <h3>
-                <GradientText>↻</GradientText> {t.loop.title}
+                <span aria-hidden="true">
+                  <GradientText>↻</GradientText>
+                </span>{" "}
+                {t.loop.title}
               </h3>
               <p>{t.loop.body}</p>
             </div>
