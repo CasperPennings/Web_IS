@@ -44,6 +44,7 @@ export function Hero({ onContact }: { onContact: OpenContact }) {
               <WordRoll key={lang} gradient words={t.rolling} intervalMs={3500} />
             )}
             {t.titleEnd ? <> {t.titleEnd}</> : null}
+            <span className="sr-only">{t.seo}</span>
           </h1>
           <p className="hero__sub">{t.sub}</p>
           <div className="hero__ctas">
@@ -54,6 +55,7 @@ export function Hero({ onContact }: { onContact: OpenContact }) {
               {t.ctaSecondary}
             </Button>
           </div>
+          <p className="hero__founding">{t.founding}</p>
           <ul className="hero__proof">
             {t.proof.map((p) => (
               <li key={p}>{p}</li>

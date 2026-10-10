@@ -45,9 +45,12 @@ export interface Copy {
     ctaSecondary: string;
     /** Short reassurances under the buttons. */
     proof: string[];
+    /** Visually hidden keyword phrase appended to the H1. */
+    seo: string;
+    founding: string;
   };
   chat: { question: string; agent: string; thinking: string; reply: string; caption: string };
-  problem: { eyebrow: string; title: string; intro: string; points: TextCard[] };
+  problem: { eyebrow: string; title: string; intro: string; points: TextCard[]; cost: string; whyNow: string };
   /** The three-step approach and the improvement cycle drawn beside it. */
   approach: {
     eyebrow: string;

@@ -36,10 +36,12 @@ export const nl: Copy = {
     titleStart: "Laat AI",
     rolling: ["het typewerk", "het factuurwerk", "de orderinvoer", "het controlewerk", "het routinewerk"],
     titleEnd: "overnemen.",
-    sub: `Met ${P} koppelen we uw bestaande software veilig aan een AI-assistent die herhalend computerwerk overneemt. U weet vooraf wat de automatisering oplevert, en u houdt zelf de regie.`,
+    sub: `Facturen overtypen, orders invoeren, gegevens controleren: met ${P} neemt een AI-assistent dit werk over in de software die u al gebruikt. U weet vooraf wat het oplevert, en u houdt zelf de regie.`,
     ctaPrimary: "Plan een gratis gesprek",
     ctaSecondary: "Bereken wat het oplevert",
-    proof: ["Werkt met uw huidige software", "Vaste prijzen", "Eerst meten, dan bouwen"],
+    proof: ["Werkt met uw huidige software", "Vaste prijzen", "Garantie op de proef"],
+    seo: " – administratief werk automatiseren voor het mkb",
+    founding: `De eerste drie klanten krijgen ${prices.foundingDiscount * 100}% korting op de proef.`,
   },
   chat: {
     question: "Kun je de inkoopfacturen van deze week verwerken?",
@@ -54,6 +56,9 @@ export const nl: Copy = {
     title: "Uw medewerkers zijn uren kwijt aan het overtypen van gegevens.",
     intro:
       "De meeste organisaties draaien op software die prima werkt, maar nooit is gemaakt om samen te werken. Wat de programma's niet doen, doen uw medewerkers met de hand.",
+    cost: "Twee uur overtypen per dag kost u al snel bijna € 20.000 per jaar, voor werk waar niemand beter van wordt.",
+    whyNow:
+      "Tot voor kort was daar weinig aan te doen. Sinds kort kan AI bestaande programma's veilig bedienen, ook oudere. En goede administratieve krachten vinden wordt er niet makkelijker op.",
     points: [
       {
         title: "Alles twee keer intypen",
@@ -130,7 +135,7 @@ export const nl: Copy = {
     monthsUnit: "maanden",
     paybackLabel: "tot de eenmalige kosten zijn terugverdiend",
     notice:
-      "Bij deze cijfers duurt het meer dan een jaar voordat u de kosten terugverdient. Dan loont het waarschijnlijk niet om deze taak te automatiseren, en dat zeggen we u ook in het kennismakingsgesprek, voordat u iets uitgeeft.",
+      "Bij deze cijfers duurt het meer dan een jaar voordat u de kosten terugverdient. Dan loont het waarschijnlijk niet om deze taak te automatiseren, en dat zeggen we u ook in het eerste gesprek, voordat u iets uitgeeft.",
     promising: "Dit ziet er kansrijk uit. In een gratis gesprek toetsen we samen of deze cijfers in de praktijk kloppen.",
     formulaTitle: "Zo rekenen we",
     formula:
@@ -224,7 +229,7 @@ export const nl: Copy = {
       label: "Voor de eerste drie klanten",
       title: `Proef voor ${eur(foundingTrial)} in plaats van ${eur(prices.trial)}`,
       body: `De eerste drie klanten krijgen ${prices.foundingDiscount * 100}% korting op de proef. In ruil daarvoor schrijven we samen een praktijkverhaal, mogen we uw naam noemen en stelt u ons voor aan twee bedrijven uit uw netwerk.`,
-      cta: "Meld u aan als eerste klant",
+      cta: "Bespreek het aanbod voor eerste klanten",
     },
   },
   faq: {
@@ -239,7 +244,7 @@ export const nl: Copy = {
       },
       {
         q: "Is dit niet gewoon weer een AI-hype?",
-        a: "Agentic AI is AI die niet alleen antwoord geeft, maar zelf stappen uitvoert, zoals een factuur invoeren of een bestelling controleren. Over AI wordt veel beloofd. Daarom beginnen we met één taak en meten we wat die oplevert. U betaalt voor tijdwinst die u kunt narekenen, niet voor mooie verhalen.",
+        a: "Begrijpelijke vraag: over AI wordt veel beloofd. Daarom beginnen we klein. We kiezen één taak, meten vooraf wat die kost en laten na de proef zien wat de assistent echt heeft overgenomen. U betaalt voor tijdwinst die u zelf kunt narekenen, niet voor mooie verhalen.",
       },
       {
         q: "Moeten we onze software vervangen?",
@@ -271,7 +276,7 @@ export const nl: Copy = {
       },
       {
         q: "Zitten we daarna aan u vast?",
-        a: `Nee. Alles wat we voor u inrichten, zoals de regels, rechten en tests, is van u. U krijgt een eeuwigdurende licentie om de opgeleverde software te gebruiken en door een andere partij te laten beheren. De ondersteuning loopt minimaal 12 maanden; daarna geldt een opzegtermijn van 3 maanden.`,
+        a: `Alleen aan de afgesproken looptijd: de ondersteuning loopt minimaal 12 maanden, daarna kunt u stoppen met 3 maanden opzegtermijn. Alles wat we voor u inrichten, zoals de regels, rechten en tests, is van u. U krijgt een eeuwigdurende licentie om de software te blijven gebruiken en door een andere partij te laten beheren.`,
       },
       {
         q: "Wat moet ik onze IT-afdeling vertellen?",
@@ -281,7 +286,7 @@ export const nl: Copy = {
   },
   contact: {
     eyebrow: "Contact",
-    title: "Plan een vrijblijvend kennismakingsgesprek.",
+    title: "Plan een gratis gesprek.",
     intro:
       "Vertel ons welke taak de meeste tijd kost. Wij zeggen eerlijk of we kunnen helpen en wat het ongeveer oplevert. In gewone taal, zonder technisch verhaal.",
     emailPrompt: "Liever mailen?",
@@ -297,7 +302,7 @@ export const nl: Copy = {
     name: "Naam",
     company: "Organisatie",
     email: "Zakelijk e-mailadres",
-    program: "Om welk programma gaat het?",
+    program: "Om welk programma gaat het? (optioneel)",
     programPlaceholder: "bijv. Exact, AFAS",
     phone: "Telefoon (optioneel, als u liever gebeld wordt)",
     task: "Welke taak kost te veel tijd? (optioneel)",
@@ -305,7 +310,7 @@ export const nl: Copy = {
     interest: "U heeft interesse in:",
     closeLabel: "Sluiten",
     requiredNote: "Alle velden zijn verplicht, tenzij anders aangegeven.",
-    submit: "Vraag een kennismakingsgesprek aan",
+    submit: "Vraag het gratis gesprek aan",
     note: "We reageren binnen één werkdag. Het gesprek is kosteloos.",
     sending: "Bezig met versturen…",
     sent: "Bedankt, uw aanvraag is verstuurd. We nemen binnen één werkdag contact met u op.",

@@ -18,6 +18,10 @@ export function Problem() {
             </GlassCard>
           ))}
         </div>
+        <div className="problem__now">
+          <p className="problem__cost">{t.cost}</p>
+          <p>{t.whyNow}</p>
+        </div>
       </div>
     </section>
   );

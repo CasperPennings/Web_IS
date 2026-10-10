@@ -35,10 +35,12 @@ export const en: Copy = {
     titleStart: "Let AI do the",
     rolling: ["data entry", "invoice checks", "absence records", "weekly reports", "copy-pasting"],
     titleEnd: "",
-    sub: `With ${P} we connect your existing software, safely, to an AI assistant that takes over repetitive computer work. You know up front what the automation saves, and you stay in control.`,
+    sub: `Retyping invoices, entering orders, checking data: with ${P}, an AI assistant takes over this work in the software you already use. You know the return up front, and you stay in control.`,
     ctaPrimary: "Book a free call",
     ctaSecondary: "Calculate what it saves",
-    proof: ["Works with your current software", "Fixed prices", "Measure first, build second"],
+    proof: ["Works with your current software", "Fixed prices", "Guarantee on the trial"],
+    seo: " – automating administrative work for SMEs",
+    founding: `Our first three customers get ${prices.foundingDiscount * 100}% off the trial.`,
   },
   chat: {
     question: "Can you process this week's supplier invoices?",
@@ -53,6 +55,9 @@ export const en: Copy = {
     title: "Your people spend hours being the link between programs.",
     intro:
       "Most organisations run on software that works fine, but was never made to work together. So people fill the gaps by hand.",
+    cost: "Two hours of retyping a day easily costs you nearly €20,000 a year, for work nobody benefits from.",
+    whyNow:
+      "Until recently there was little you could do about that. AI can now safely operate existing programs, including older ones. And good administrative staff aren't getting any easier to find.",
     points: [
       {
         title: "Typing the same thing twice",
@@ -222,7 +227,7 @@ export const en: Copy = {
       label: "For the first three customers",
       title: `Trial for ${eur(foundingTrial)} instead of ${eur(prices.trial)}`,
       body: `The first three customers get ${prices.foundingDiscount * 100}% off the trial. In return we write a case study together, we may mention your name, and you introduce us to two companies in your network.`,
-      cta: "Ask about a founding place",
+      cta: "Discuss the founding-customer offer",
     },
   },
   faq: {
@@ -237,7 +242,7 @@ export const en: Copy = {
       },
       {
         q: "Isn't this just more AI hype?",
-        a: "Agentic AI is AI that doesn't just answer, but carries out steps itself, such as entering an invoice or checking an order. There is a lot of hype around AI, which is why we start with one task and measure what it saves. You pay for hours you can check, not for promises.",
+        a: "A fair question: AI comes with a lot of promises. That's why we start small. We pick one task, measure what it costs beforehand and show you afterwards what the assistant actually took over. You pay for time savings you can check yourself, not for big stories.",
       },
       {
         q: "Do we have to replace our software?",
@@ -269,7 +274,7 @@ export const en: Copy = {
       },
       {
         q: "Are we tied to you afterwards?",
-        a: "No. What we set up for you (the agreements, permissions and tests) is yours, and you get a perpetual licence to use the delivered software and have another party manage it. Support runs for at least 12 months, then with 3 months' notice.",
+        a: "Only for the agreed term: support runs for at least 12 months, after which you can stop with 3 months' notice. Everything we set up for you, such as the rules, permissions and tests, is yours. You get a perpetual licence to keep using the software and to have another party maintain it.",
       },
       {
         q: "What should I tell our IT person?",
@@ -279,7 +284,7 @@ export const en: Copy = {
   },
   contact: {
     eyebrow: "Contact",
-    title: "Step in, with a free conversation.",
+    title: "Book a free call.",
     intro:
       "Tell us which task eats the most time. We'll say honestly whether we can help and roughly what it would save. No obligations, no technical talk.",
     emailPrompt: "Prefer email?",
@@ -295,7 +300,7 @@ export const en: Copy = {
     name: "Name",
     company: "Organisation",
     email: "Work email",
-    program: "Which program is it about?",
+    program: "Which program is it about? (optional)",
     programPlaceholder: "e.g. Exact, AFAS",
     phone: "Phone (optional, if you prefer a call)",
     task: "Which task takes too much time? (optional)",
@@ -303,7 +308,7 @@ export const en: Copy = {
     interest: "You are interested in:",
     closeLabel: "Close",
     requiredNote: "All fields are required unless marked optional.",
-    submit: "Request a free conversation",
+    submit: "Request the free call",
     note: "We reply within one working day. The conversation is free.",
     sending: "Sending…",
     sent: "Thank you, your request has been sent. We will get back to you within one working day.",

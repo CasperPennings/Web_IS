@@ -1221,3 +1221,33 @@ a {
   border-color: color-mix(in srgb, var(--is-accent) 45%, transparent);
   color: var(--pui-fg);
 }
+
+.problem__now {
+  margin-top: 32px;
+  max-width: 46em;
+  color: var(--pui-fg-dim);
+}
+
+.problem__now p {
+  margin: 0 0 8px;
+}
+
+.problem__cost {
+  font-family: var(--is-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--pui-fg);
+}
+
+.hero__founding {
+  margin: 16px 0 12px;
+  font-size: 0.9375rem;
+  color: var(--pui-fg-dim);
+}
+
+.founding .pui-btn,
+.hero__ctas .pui-btn {
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+}
